@@ -17,7 +17,7 @@
     [_window release];
     [_viewController release];
     
-    
+    //jhgjhg jhg jhg jhg 
     
     [super dealloc];
 }
