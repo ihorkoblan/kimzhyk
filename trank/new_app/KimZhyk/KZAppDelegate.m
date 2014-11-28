@@ -17,7 +17,7 @@
     [_window release];
     [_viewController release];
     
-    
+    //jhgjhg jhg jhg jhg
     
     [super dealloc];
 }
@@ -30,6 +30,9 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    
+    //hgih ih oi oi o 
+    
     return YES;
 }
 
