@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4B17BAC14500040730 /* Bayan_key_black_active.png */; };
+		63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4C17BAC14500040730 /* Bayan_key_black.png */; };
+		63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4D17BAC14500040730 /* Bayan_key_white_active.png */; };
+		63922F5217BAC14500040730 /* Bayan_key_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4E17BAC14500040730 /* Bayan_key_white.png */; };
+		63946FFA17B45B2800EADDD0 /* Black_key_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF417B45B2800EADDD0 /* Black_key_active.png */; };
+		63946FFB17B45B2800EADDD0 /* Black_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF517B45B2800EADDD0 /* Black_key.png */; };
+		63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF617B45B2800EADDD0 /* White_key_active.png */; };
+		63946FFD17B45B2800EADDD0 /* White_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF717B45B2800EADDD0 /* White_key.png */; };
+		7D09726D1911756400A23E8A /* KZPianoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09726C1911756400A23E8A /* KZPianoKey.m */; };
+		7D097271191175DB00A23E8A /* KZKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D097270191175DB00A23E8A /* KZKey.m */; };
+		7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */; };
+		7DFCB7E917B231A3001CDD53 /* KZTubaKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */; };
+		84ABFC041A12B6BE00B6F95D /* Common.c in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC021A12B6BE00B6F95D /* Common.c */; };
+		84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC051A12C14E00B6F95D /* KZSound.m */; };
+		C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF717AD179500050EB5 /* UIKit.framework */; };
+		C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF917AD179500050EB5 /* Foundation.framework */; };
+		C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CFB17AD179500050EB5 /* CoreGraphics.framework */; };
+		C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3864D0017AD179500050EB5 /* InfoPlist.strings */; };
+		C3864D0417AD179500050EB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D0317AD179500050EB5 /* main.m */; };
+		C3864D0817AD179500050EB5 /* KZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D0717AD179500050EB5 /* KZAppDelegate.m */; };
+		C3864D0A17AD179500050EB5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3864D0917AD179500050EB5 /* Default.png */; };
+		C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3864D0B17AD179500050EB5 /* Default@2x.png */; };
+		C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3864D0D17AD179500050EB5 /* Default-568h@2x.png */; };
+		C3864D1117AD179500050EB5 /* KZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1017AD179500050EB5 /* KZViewController.m */; };
+		C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3864D1217AD179500050EB5 /* KZViewController.xib */; };
+		C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1C17AD17F800050EB5 /* KZKeyboard.m */; };
+		C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */; };
+		C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */; };
+		C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */; };
+		C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */; };
+		C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3417AD1D8100050EB5 /* KZSettingsView.m */; };
+		C3864D3917AD1DD100050EB5 /* KZSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */; };
+		C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */; };
+		C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */; };
+		C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63922F4B17BAC14500040730 /* Bayan_key_black_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_black_active.png; sourceTree = "<group>"; };
+		63922F4C17BAC14500040730 /* Bayan_key_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black.png; path = KimZhyk/Resources/images/keys/Bayan_key_black.png; sourceTree = "<group>"; };
+		63922F4D17BAC14500040730 /* Bayan_key_white_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_white_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_white_active.png; sourceTree = "<group>"; };
+		63922F4E17BAC14500040730 /* Bayan_key_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_white.png; path = KimZhyk/Resources/images/keys/Bayan_key_white.png; sourceTree = "<group>"; };
+		63946FF417B45B2800EADDD0 /* Black_key_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Black_key_active.png; path = KimZhyk/Resources/images/keys/Black_key_active.png; sourceTree = "<group>"; };
+		63946FF517B45B2800EADDD0 /* Black_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Black_key.png; path = KimZhyk/Resources/images/keys/Black_key.png; sourceTree = "<group>"; };
+		63946FF617B45B2800EADDD0 /* White_key_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key_active.png; path = KimZhyk/Resources/images/keys/White_key_active.png; sourceTree = "<group>"; };
+		63946FF717B45B2800EADDD0 /* White_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key.png; path = KimZhyk/Resources/images/keys/White_key.png; sourceTree = "<group>"; };
+		7D09726B1911756400A23E8A /* KZPianoKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoKey.h; path = Custom/KZPianoKey.h; sourceTree = "<group>"; };
+		7D09726C1911756400A23E8A /* KZPianoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoKey.m; path = Custom/KZPianoKey.m; sourceTree = "<group>"; };
+		7D09726F191175DB00A23E8A /* KZKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZKey.h; path = Custom/KZKey.h; sourceTree = "<group>"; };
+		7D097270191175DB00A23E8A /* KZKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZKey.m; path = Custom/KZKey.m; sourceTree = "<group>"; };
+		7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZBajanKeyboard.xib; path = Keyboards/BajanKeyboard/KZBajanKeyboard.xib; sourceTree = "<group>"; };
+		7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZTubaKeyboard.xib; path = Keyboards/TubaKeyboard/KZTubaKeyboard.xib; sourceTree = "<group>"; };
+		84ABFC021A12B6BE00B6F95D /* Common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Common.c; sourceTree = "<group>"; };
+		84ABFC031A12B6BE00B6F95D /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		84ABFC051A12C14E00B6F95D /* KZSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSound.m; path = Sound/KZSound.m; sourceTree = "<group>"; };
+		84ABFC071A12C1E200B6F95D /* KZSoundStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZSoundStruct.h; sourceTree = "<group>"; };
+		C3864CF417AD179500050EB5 /* KimZhyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimZhyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3864CF717AD179500050EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3864CF917AD179500050EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3864CFB17AD179500050EB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3864CFF17AD179500050EB5 /* KimZhyk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KimZhyk-Info.plist"; sourceTree = "<group>"; };
+		C3864D0117AD179500050EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3864D0317AD179500050EB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3864D0517AD179500050EB5 /* KimZhyk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KimZhyk-Prefix.pch"; sourceTree = "<group>"; };
+		C3864D0617AD179500050EB5 /* KZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZAppDelegate.h; sourceTree = "<group>"; };
+		C3864D0717AD179500050EB5 /* KZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZAppDelegate.m; sourceTree = "<group>"; };
+		C3864D0917AD179500050EB5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C3864D0B17AD179500050EB5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C3864D0D17AD179500050EB5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C3864D0F17AD179500050EB5 /* KZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZViewController.h; sourceTree = "<group>"; };
+		C3864D1017AD179500050EB5 /* KZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZViewController.m; sourceTree = "<group>"; };
+		C3864D1317AD179500050EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KZViewController.xib; sourceTree = "<group>"; };
+		C3864D1B17AD17F800050EB5 /* KZKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZKeyboard.h; path = Keyboards/Keyboard/KZKeyboard.h; sourceTree = "<group>"; };
+		C3864D1C17AD17F800050EB5 /* KZKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZKeyboard.m; path = Keyboards/Keyboard/KZKeyboard.m; sourceTree = "<group>"; };
+		C3864D1E17AD182600050EB5 /* KZPianoKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoKeyboard.h; path = Keyboards/PianoKeyboard/KZPianoKeyboard.h; sourceTree = "<group>"; };
+		C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoKeyboard.m; path = Keyboards/PianoKeyboard/KZPianoKeyboard.m; sourceTree = "<group>"; };
+		C3864D2117AD184F00050EB5 /* KZBajanKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZBajanKeyboard.h; path = Keyboards/BajanKeyboard/KZBajanKeyboard.h; sourceTree = "<group>"; };
+		C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZBajanKeyboard.m; path = Keyboards/BajanKeyboard/KZBajanKeyboard.m; sourceTree = "<group>"; };
+		C3864D2B17AD1C7B00050EB5 /* KZTubaKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZTubaKeyboard.h; path = Keyboards/TubaKeyboard/KZTubaKeyboard.h; sourceTree = "<group>"; };
+		C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZTubaKeyboard.m; path = Keyboards/TubaKeyboard/KZTubaKeyboard.m; sourceTree = "<group>"; };
+		C3864D2F17AD1D3A00050EB5 /* KZGuitarKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZGuitarKeyboard.h; path = Keyboards/Guitar/KZGuitarKeyboard.h; sourceTree = "<group>"; };
+		C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZGuitarKeyboard.m; path = Keyboards/Guitar/KZGuitarKeyboard.m; sourceTree = "<group>"; };
+		C3864D3317AD1D8100050EB5 /* KZSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSettingsView.h; path = Settings/KZSettingsView.h; sourceTree = "<group>"; };
+		C3864D3417AD1D8100050EB5 /* KZSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSettingsView.m; path = Settings/KZSettingsView.m; sourceTree = "<group>"; };
+		C3864D3717AD1DD100050EB5 /* KZSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSynthesizer.h; path = Synthesizer/KZSynthesizer.h; sourceTree = "<group>"; };
+		C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSynthesizer.m; path = Synthesizer/KZSynthesizer.m; sourceTree = "<group>"; };
+		C3864D3B17AD221300050EB5 /* KZGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZGlobal.h; sourceTree = "<group>"; };
+		C3864D4117AD3F2F00050EB5 /* KZAlternativeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZAlternativeKeyboard.h; path = Keyboards/AlternativeKeyboard/KZAlternativeKeyboard.h; sourceTree = "<group>"; };
+		C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZAlternativeKeyboard.m; path = Keyboards/AlternativeKeyboard/KZAlternativeKeyboard.m; sourceTree = "<group>"; };
+		C3864D4517AD405300050EB5 /* KZSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSound.h; path = Sound/KZSound.h; sourceTree = "<group>"; };
+		C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3864CF117AD179500050EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */,
+				C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */,
+				C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */,
+				C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */,
+				C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		638FE8B917B43D43009212D9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				638FE8BA17B43DAC009212D9 /* Images */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		638FE8BA17B43DAC009212D9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				638FE8BB17B43DC6009212D9 /* keys */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		638FE8BB17B43DC6009212D9 /* keys */ = {
+			isa = PBXGroup;
+			children = (
+				63922F4B17BAC14500040730 /* Bayan_key_black_active.png */,
+				63922F4C17BAC14500040730 /* Bayan_key_black.png */,
+				63922F4D17BAC14500040730 /* Bayan_key_white_active.png */,
+				63922F4E17BAC14500040730 /* Bayan_key_white.png */,
+				63946FF417B45B2800EADDD0 /* Black_key_active.png */,
+				63946FF517B45B2800EADDD0 /* Black_key.png */,
+				63946FF617B45B2800EADDD0 /* White_key_active.png */,
+				63946FF717B45B2800EADDD0 /* White_key.png */,
+			);
+			name = keys;
+			sourceTree = "<group>";
+		};
+		7D09726E1911758100A23E8A /* KZPianoKey */ = {
+			isa = PBXGroup;
+			children = (
+				7D09726B1911756400A23E8A /* KZPianoKey.h */,
+				7D09726C1911756400A23E8A /* KZPianoKey.m */,
+			);
+			name = KZPianoKey;
+			sourceTree = "<group>";
+		};
+		7D097272191175E800A23E8A /* KZKey */ = {
+			isa = PBXGroup;
+			children = (
+				7D09726F191175DB00A23E8A /* KZKey.h */,
+				7D097270191175DB00A23E8A /* KZKey.m */,
+			);
+			name = KZKey;
+			sourceTree = "<group>";
+		};
+		C3864CEB17AD179500050EB5 = {
+			isa = PBXGroup;
+			children = (
+				C3864CFD17AD179500050EB5 /* KimZhyk */,
+				638FE8B917B43D43009212D9 /* Resource */,
+				C3864CF617AD179500050EB5 /* Frameworks */,
+				C3864CF517AD179500050EB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3864CF517AD179500050EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3864CF417AD179500050EB5 /* KimZhyk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3864CF617AD179500050EB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */,
+				C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */,
+				C3864CF717AD179500050EB5 /* UIKit.framework */,
+				C3864CF917AD179500050EB5 /* Foundation.framework */,
+				C3864CFB17AD179500050EB5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3864CFD17AD179500050EB5 /* KimZhyk */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D3B17AD221300050EB5 /* KZGlobal.h */,
+				84ABFC031A12B6BE00B6F95D /* Common.h */,
+				84ABFC021A12B6BE00B6F95D /* Common.c */,
+				C3864D0617AD179500050EB5 /* KZAppDelegate.h */,
+				C3864D0717AD179500050EB5 /* KZAppDelegate.m */,
+				7D097272191175E800A23E8A /* KZKey */,
+				7D09726E1911758100A23E8A /* KZPianoKey */,
+				C3864D4817AD405700050EB5 /* Sound */,
+				C3864D1A17AD17A600050EB5 /* ViewController */,
+				C3864D2E17AD1C8B00050EB5 /* Keyboards */,
+				C3864D3617AD1D8900050EB5 /* Settings */,
+				C3864D3A17AD1DD600050EB5 /* Synthesizer */,
+				C3864CFE17AD179500050EB5 /* Supporting Files */,
+			);
+			path = KimZhyk;
+			sourceTree = "<group>";
+		};
+		C3864CFE17AD179500050EB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3864CFF17AD179500050EB5 /* KimZhyk-Info.plist */,
+				C3864D0017AD179500050EB5 /* InfoPlist.strings */,
+				C3864D0317AD179500050EB5 /* main.m */,
+				C3864D0517AD179500050EB5 /* KimZhyk-Prefix.pch */,
+				C3864D0917AD179500050EB5 /* Default.png */,
+				C3864D0B17AD179500050EB5 /* Default@2x.png */,
+				C3864D0D17AD179500050EB5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3864D1A17AD17A600050EB5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D0F17AD179500050EB5 /* KZViewController.h */,
+				C3864D1017AD179500050EB5 /* KZViewController.m */,
+				C3864D1217AD179500050EB5 /* KZViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C3864D2417AD1B4E00050EB5 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D1B17AD17F800050EB5 /* KZKeyboard.h */,
+				C3864D1C17AD17F800050EB5 /* KZKeyboard.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		C3864D2517AD1B5F00050EB5 /* Piano */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D1E17AD182600050EB5 /* KZPianoKeyboard.h */,
+				C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */,
+			);
+			name = Piano;
+			sourceTree = "<group>";
+		};
+		C3864D2617AD1B6C00050EB5 /* Bajan */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D2117AD184F00050EB5 /* KZBajanKeyboard.h */,
+				C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */,
+				7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */,
+			);
+			name = Bajan;
+			sourceTree = "<group>";
+		};
+		C3864D2A17AD1C4900050EB5 /* Tuba */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D2B17AD1C7B00050EB5 /* KZTubaKeyboard.h */,
+				C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */,
+				7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */,
+			);
+			name = Tuba;
+			sourceTree = "<group>";
+		};
+		C3864D2E17AD1C8B00050EB5 /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D2417AD1B4E00050EB5 /* Keyboard */,
+				C3864D2517AD1B5F00050EB5 /* Piano */,
+				C3864D2617AD1B6C00050EB5 /* Bajan */,
+				C3864D2A17AD1C4900050EB5 /* Tuba */,
+				C3864D3217AD1D4100050EB5 /* Guitar */,
+				C3864D4417AD3F3300050EB5 /* Alternative */,
+			);
+			name = Keyboards;
+			sourceTree = "<group>";
+		};
+		C3864D3217AD1D4100050EB5 /* Guitar */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D2F17AD1D3A00050EB5 /* KZGuitarKeyboard.h */,
+				C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */,
+			);
+			name = Guitar;
+			sourceTree = "<group>";
+		};
+		C3864D3617AD1D8900050EB5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D3317AD1D8100050EB5 /* KZSettingsView.h */,
+				C3864D3417AD1D8100050EB5 /* KZSettingsView.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		C3864D3A17AD1DD600050EB5 /* Synthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D3717AD1DD100050EB5 /* KZSynthesizer.h */,
+				C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */,
+			);
+			name = Synthesizer;
+			sourceTree = "<group>";
+		};
+		C3864D4417AD3F3300050EB5 /* Alternative */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D4117AD3F2F00050EB5 /* KZAlternativeKeyboard.h */,
+				C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */,
+			);
+			name = Alternative;
+			sourceTree = "<group>";
+		};
+		C3864D4817AD405700050EB5 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				C3864D4517AD405300050EB5 /* KZSound.h */,
+				84ABFC051A12C14E00B6F95D /* KZSound.m */,
+				84ABFC071A12C1E200B6F95D /* KZSoundStruct.h */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3864CF317AD179500050EB5 /* KimZhyk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3864D1717AD179500050EB5 /* Build configuration list for PBXNativeTarget "KimZhyk" */;
+			buildPhases = (
+				C3864CF017AD179500050EB5 /* Sources */,
+				C3864CF117AD179500050EB5 /* Frameworks */,
+				C3864CF217AD179500050EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KimZhyk;
+			productName = KimZhyk;
+			productReference = C3864CF417AD179500050EB5 /* KimZhyk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3864CEC17AD179500050EB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KZ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = HostelDevelopers;
+				TargetAttributes = {
+					C3864CF317AD179500050EB5 = {
+						DevelopmentTeam = 62Q52YVG78;
+					};
+				};
+			};
+			buildConfigurationList = C3864CEF17AD179500050EB5 /* Build configuration list for PBXProject "KimZhyk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3864CEB17AD179500050EB5;
+			productRefGroup = C3864CF517AD179500050EB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3864CF317AD179500050EB5 /* KimZhyk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3864CF217AD179500050EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
+				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
+				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
+				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
+				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
+				7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */,
+				7DFCB7E917B231A3001CDD53 /* KZTubaKeyboard.xib in Resources */,
+				63946FFA17B45B2800EADDD0 /* Black_key_active.png in Resources */,
+				63946FFB17B45B2800EADDD0 /* Black_key.png in Resources */,
+				63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */,
+				63946FFD17B45B2800EADDD0 /* White_key.png in Resources */,
+				63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */,
+				63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */,
+				63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */,
+				63922F5217BAC14500040730 /* Bayan_key_white.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3864CF017AD179500050EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3864D0417AD179500050EB5 /* main.m in Sources */,
+				C3864D0817AD179500050EB5 /* KZAppDelegate.m in Sources */,
+				C3864D1117AD179500050EB5 /* KZViewController.m in Sources */,
+				C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */,
+				7D097271191175DB00A23E8A /* KZKey.m in Sources */,
+				C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */,
+				C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */,
+				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
+				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
+				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,
+				C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */,
+				C3864D3917AD1DD100050EB5 /* KZSynthesizer.m in Sources */,
+				7D09726D1911756400A23E8A /* KZPianoKey.m in Sources */,
+				C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */,
+				84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3864D0017AD179500050EB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3864D0117AD179500050EB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3864D1217AD179500050EB5 /* KZViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3864D1317AD179500050EB5 /* en */,
+			);
+			name = KZViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3864D1517AD179500050EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3864D1617AD179500050EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3864D1817AD179500050EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
+				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3864D1917AD179500050EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
+				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3864CEF17AD179500050EB5 /* Build configuration list for PBXProject "KimZhyk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3864D1517AD179500050EB5 /* Debug */,
+				C3864D1617AD179500050EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3864D1717AD179500050EB5 /* Build configuration list for PBXNativeTarget "KimZhyk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3864D1817AD179500050EB5 /* Debug */,
+				C3864D1917AD179500050EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3864CEC17AD179500050EB5 /* Project object */;
+}
