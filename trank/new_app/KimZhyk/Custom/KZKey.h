@@ -13,7 +13,7 @@ typedef enum {
     KZPianoKeyTypeBlack = 1,
 }KZPianoKeyType;
 
-@interface KZKey : UIControl
+@interface KZKey : UIImageView
 
 @property (assign) KZPianoKeyType keyType;
 - (id)initWithKeyType:(KZPianoKeyType)pKeyType;

@@ -17,10 +17,10 @@ NSString const *constStr = @"const str";
 #define NUMBER_OF_KEYS_IN_OCTAVE NUMBER_OF_BLACK_KEYS_IN_OCTAVE + NUMBER_OF_WHITE_KEYS_IN_OCTAVE
 
 #define WHITE_KEY_WIDTH 50.0
-#define WHITE_KEY_HEIGHT 120.0
+#define WHITE_KEY_HEIGHT 200.0
 
 #define BLACK_KEY_WIDTH 30.0
-#define BLACK_KEY_HEIGHT 80.0
+#define BLACK_KEY_HEIGHT 120.0
 
 @interface KZPianoKeyboard()
 
@@ -49,20 +49,6 @@ NSString const *constStr = @"const str";
     return _pressedBlackkeysArray;
 }
 
-- (NSArray *)keysArray {
-    if (_keysArray == nil) {
-        _keysArray = [NSArray new];
-    }
-    return _keysArray;
-}
-
-- (NSArray *)blackKeysArray {
-    if (_blackKeysArray == nil) {
-        _blackKeysArray = [NSArray new];
-    }
-    return _blackKeysArray;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -77,43 +63,45 @@ NSString const *constStr = @"const str";
     CGFloat lMarginX = 0.0;
     CGFloat lMarginY = 0.0;
     
-    NSUInteger lNumberOfKeys = 10;
-
-    NSMutableArray *lTempArray = [NSMutableArray new];
-    
-    NSMutableArray *lTempBlackKeysArray = [NSMutableArray new];
-    
+    NSUInteger lNumberOfKeys = 11;
+    NSInteger lTagIndex = 0;
     for (NSUInteger keyIndex = 0; keyIndex < lNumberOfKeys; keyIndex++) {
         
-        KZKey *lKey = [[KZKey alloc] initWithFrame:CGRectMake(lMarginX + keyIndex * (WHITE_KEY_WIDTH + 1.0), lMarginY, WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT)];
-        lKey.backgroundColor = [UIColor redColor];
-        lKey.keyType = KZPianoKeyTypeWhite;
-        lKey.userInteractionEnabled = NO;
-        [lTempArray addObject:lKey];
-        [self addSubview:lKey];
         
         if ([KZKey isKeyBlack:keyIndex]) {
-            KZKey *lBlackKey = [[KZKey alloc] initWithFrame:CGRectMake(-BLACK_KEY_WIDTH / 2.0 + keyIndex * ((WHITE_KEY_WIDTH + 1.0)) , lMarginY, BLACK_KEY_WIDTH, BLACK_KEY_HEIGHT)];
+            KZKey *lBlackKey = [[KZKey alloc] initWithFrame:CGRectMake(-BLACK_KEY_WIDTH / 2.0 + keyIndex * ((WHITE_KEY_WIDTH)) , lMarginY, BLACK_KEY_WIDTH, BLACK_KEY_HEIGHT)];
+            lBlackKey.tag = ++lTagIndex;
+            NSLog(@"tagB: %li",(long)lBlackKey.tag);
+            [lBlackKey setImage:[UIImage imageNamed:@"Black_key.png"]];
+            [lBlackKey setHighlightedImage:[UIImage imageNamed:@"Black_key_active.png"]];
             lBlackKey.keyType = KZPianoKeyTypeBlack;
-            lBlackKey.backgroundColor = [UIColor yellowColor];
             lBlackKey.userInteractionEnabled = NO;
+            lBlackKey.layer.zPosition = MAXFLOAT;
             [self addSubview:lBlackKey];
-            [lTempBlackKeysArray addObject:lBlackKey];
         }
+        
+        KZKey *lKey = [[KZKey alloc] initWithFrame:CGRectMake(lMarginX + keyIndex * (WHITE_KEY_WIDTH), lMarginY, WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT)];
+        [lKey setImage:[UIImage imageNamed:@"White_key.png"]];
+        [lKey setHighlightedImage:[UIImage imageNamed:@"White_key_active.png"]];
+        lKey.keyType = KZPianoKeyTypeWhite;
+        lKey.tag = ++lTagIndex;
+        NSLog(@"tagW: %li",(long)lKey.tag);
+        lKey.userInteractionEnabled = NO;
+        [self addSubview:lKey];
+        
+     
     }
-    _blackKeysArray = lTempBlackKeysArray;
-    _keysArray = lTempArray;
 }
 
 #pragma mark - touch interruption handlers
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    DLog(@"%i",[event allTouches].count);
+
     
     for (UITouch *touch in [event allTouches]) {
          CGPoint lTPoint = [touch locationInView:self];
-        [self touchDownAtPoint:lTPoint];
+        [self touchAtPoint:lTPoint];
     }
     
 //    CGPoint lTouchPoint = [[touches anyObject] locationInView:self];
@@ -123,7 +111,7 @@ NSString const *constStr = @"const str";
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in [event allTouches]) {
         CGPoint lTPoint = [touch locationInView:self];
-        [self touchDownAtPoint:lTPoint];
+        [self touchAtPoint:lTPoint];
     }
 //    CGPoint lTouchPoint = [[touches anyObject] locationInView:self];
 //    [self touchDownAtPoint:lTouchPoint];
@@ -136,24 +124,34 @@ NSString const *constStr = @"const str";
 }
 
 #pragma mark - touch handlers
-
-- (void)touchDownAtPoint:(CGPoint)touchPoint {
-   
-    NSPredicate *lPredicate = [NSPredicate predicateWithBlock:^BOOL(KZKey *evaluatedObject, NSDictionary *bindings) {
-        return CGRectContainsPoint(evaluatedObject.frame, touchPoint);
-    }];
-    NSArray *lBlackKeys = [self.blackKeysArray filteredArrayUsingPredicate:lPredicate];
-    if (lBlackKeys.count > 0) {
-        KZKey *lKey = lBlackKeys[0];
-        lKey.backgroundColor = [UIColor grayColor];
-        
-        if (![self.pressedkeysArray containsObject:lKey]) {
-            [self.pressedkeysArray addObject:lKey];
-        }
+- (NSInteger)tagForTouchPoint:(CGPoint)point {
+    
+    CGPoint lNewPoint = CGPointMake(point.x - BLACK_KEY_WIDTH, point.y);
+    
+    NSUInteger lKeyIndex = (lNewPoint.x ) / WHITE_KEY_WIDTH;
+    
+    UIView *lV = [[UIView alloc] initWithFrame:CGRectMake(point.x, point.y, 2, 2)];
+    
+    lV.layer.zPosition = MAXFLOAT;
+    [self addSubview:lV];
+    
+    if (CGRectContainsPoint(CGRectMake(WHITE_KEY_WIDTH * lKeyIndex , 0, BLACK_KEY_WIDTH, BLACK_KEY_HEIGHT), CGPointMake(lNewPoint.x  , lNewPoint.y))) {
+        NSLog(@"black");
+        lV.backgroundColor = [UIColor brownColor];
     } else {
-        NSUInteger lKeyIndex = touchPoint.x / WHITE_KEY_WIDTH;
-        KZKey *lKey = self.keysArray[lKeyIndex];
-        lKey.backgroundColor = [UIColor blackColor];
+        NSLog(@"white");
+        lV.backgroundColor = [UIColor greenColor];
+    }
+    
+    
+    return lKeyIndex;
+}
+- (void)touchAtPoint:(CGPoint)touchPoint {
+   
+    KZKey *lKey = [[self.subviews filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"tag == %i",[self tagForTouchPoint:touchPoint]]] firstObject];
+    
+    if ([lKey isKindOfClass:[KZKey class]]) {
+        lKey.highlighted = YES;
         if (![self.pressedkeysArray containsObject:lKey]) {
             [self.pressedkeysArray addObject:lKey];
         }
@@ -168,11 +166,7 @@ NSString const *constStr = @"const str";
 - (void)leaveKeyAndContinueMoving:(BOOL)continueMove {
     if (self.pressedkeysArray.count > continueMove) {
         KZKey *lKey = self.pressedkeysArray.firstObject;
-        if (lKey.keyType == KZPianoKeyTypeBlack) {
-            lKey.backgroundColor = [UIColor greenColor];
-        } else {
-            lKey.backgroundColor = [UIColor brownColor];
-        }
+        lKey.highlighted = NO;
         [self.pressedkeysArray removeObject:lKey];
     }
 }

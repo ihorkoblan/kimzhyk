@@ -53,7 +53,7 @@
 - (void)mainInit {
     _pianoKeyboard = [[KZPianoKeyboard alloc] initWithFrame:CGRectMake(
                                                                        0.0,
-                                                                       80.0,
+                                                                       0.0,
                                                                        self.view.frame.size.height,
                                                                        self.view.frame.size.width)];
     _pianoKeyboard.backgroundColor = [UIColor yellowColor];

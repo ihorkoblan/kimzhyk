@@ -10,29 +10,29 @@
 	<string>KimZhyk</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E97EF1DFE8801101A77BB9C1FFB43BDBD47724B0</key>
-		<string>https://bitbucket.org/ihor_koblan/kimzhyk.git</string>
+		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
+		<string>https://github.com/ihorkoblan/kimzhyk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trunk/KimZhyk/KimZhyk.xcodeproj/project.xcworkspace</string>
+	<string>trank/new_app/KimZhyk.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E97EF1DFE8801101A77BB9C1FFB43BDBD47724B0</key>
+		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/ihor_koblan/kimzhyk.git</string>
+	<string>https://github.com/ihorkoblan/kimzhyk.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E97EF1DFE8801101A77BB9C1FFB43BDBD47724B0</string>
+	<string>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E97EF1DFE8801101A77BB9C1FFB43BDBD47724B0</string>
+			<string>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</string>
 			<key>IDESourceControlWCCName</key>
 			<string>kimzhyk</string>
 		</dict>
