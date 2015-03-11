@@ -9,6 +9,7 @@
 #import "KZAppDelegate.h"
 
 #import "KZViewController.h"
+#import "KZVoiceRecordingViewController.h"
 
 @implementation KZAppDelegate
 
@@ -26,8 +27,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+//    self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];//KZVoiceRecordingViewController
+
+    self.window.rootViewController = [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
     [self.window makeKeyAndVisible];
 
     

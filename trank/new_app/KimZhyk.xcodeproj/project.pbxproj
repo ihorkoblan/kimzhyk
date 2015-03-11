@@ -42,6 +42,10 @@
 		C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */; };
 		C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */; };
 		C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */; };
+		CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */; };
+		CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */; };
+		CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */; };
+		CECDFEC51AB05EA20062ECBB /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +103,12 @@
 		C3864D4517AD405300050EB5 /* KZSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSound.h; path = Sound/KZSound.h; sourceTree = "<group>"; };
 		C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CECDFEBB1AB05C150062ECBB /* KZVoiceRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVoiceRecordingViewController.h; sourceTree = "<group>"; };
+		CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVoiceRecordingViewController.m; sourceTree = "<group>"; };
+		CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZVoiceRecordingViewController.xib; sourceTree = "<group>"; };
+		CECDFEC01AB05E880062ECBB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECDFEC51AB05EA20062ECBB /* CoreAudioKit.framework in Frameworks */,
+				CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */,
 				C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */,
 				C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */,
 				C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */,
@@ -187,6 +199,9 @@
 		C3864CF617AD179500050EB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */,
+				CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */,
+				CECDFEC01AB05E880062ECBB /* AudioUnit.framework */,
 				C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */,
 				C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */,
 				C3864CF717AD179500050EB5 /* UIKit.framework */,
@@ -204,6 +219,9 @@
 				84ABFC021A12B6BE00B6F95D /* Common.c */,
 				C3864D0617AD179500050EB5 /* KZAppDelegate.h */,
 				C3864D0717AD179500050EB5 /* KZAppDelegate.m */,
+				CECDFEBB1AB05C150062ECBB /* KZVoiceRecordingViewController.h */,
+				CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */,
+				CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */,
 				7D097272191175E800A23E8A /* KZKey */,
 				7D09726E1911758100A23E8A /* KZPianoKey */,
 				C3864D4817AD405700050EB5 /* Sound */,
@@ -368,7 +386,7 @@
 				ORGANIZATIONNAME = HostelDevelopers;
 				TargetAttributes = {
 					C3864CF317AD179500050EB5 = {
-						DevelopmentTeam = 62Q52YVG78;
+						DevelopmentTeam = UYNA956A2N;
 					};
 				};
 			};
@@ -396,6 +414,7 @@
 			files = (
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
+				CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
 				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
 				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
@@ -423,6 +442,7 @@
 				C3864D0817AD179500050EB5 /* KZAppDelegate.m in Sources */,
 				C3864D1117AD179500050EB5 /* KZViewController.m in Sources */,
 				C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */,
+				CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */,
 				7D097271191175DB00A23E8A /* KZKey.m in Sources */,
 				C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */,
 				C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */,
@@ -518,13 +538,13 @@
 		C3864D1817AD179500050EB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -538,7 +558,7 @@
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
