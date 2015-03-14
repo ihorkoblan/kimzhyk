@@ -15,8 +15,8 @@
 @class KZPianoSlider;
 @class KZPianoView;
 @protocol KZPianoSliderDelegate;
-
-@interface KZPianoKeyboard : KZKeyboard<KZPianoSliderDelegate> {
+@protocol KZPianoViewDelegate;
+@interface KZPianoKeyboard : KZKeyboard<KZPianoSliderDelegate,KZPianoViewDelegate> {
     KZPianoView *_pianoView;
 }
 
@@ -24,14 +24,19 @@
 
 
 // - - - - - - - - KZPianoView - - - - - - -
+@protocol KZPianoViewDelegate <NSObject>
+- (void)KZPianoView:(id)pianoView pressedKey:(KZKey *)key;
+@end
+
 @interface KZPianoView : UIScrollView
+@property (nonatomic, unsafe_unretained) id<KZPianoViewDelegate> delegate;
 @end
 
 
 // - - - - - - - - KZPianoSlider - - - - - - -
 @interface KZPianoSlider : UIImageView {
     UIImageView *_thumb;
-    CGFloat _positionXDelta;
+    CGFloat _deltaX;
 }
 @property (nonatomic, assign) CGFloat thumbWidth;
 @property (nonatomic, assign) CGFloat position;

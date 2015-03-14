@@ -44,6 +44,14 @@
     [super layoutSubviews];
 }
 
+- (instancetype)initWithWhiteKeysAmount:(NSInteger)whiteKeys whiteKeyWidth:(CGFloat)whiteKeyWidth {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -53,7 +61,7 @@
         
         self.whiteKeySize = CGSizeMake(50, frame.size.height);
         self.blackKeySize = CGSizeMake(30, frame.size.height * 0.7);
-        self.numberOfWhiteKeys = 55;
+        self.numberOfWhiteKeys = 35;
         
         [self mainInit];
         _currentTouchNumber = 0;
@@ -65,8 +73,9 @@
 
     CGFloat lMarginX = 0.0;
     CGFloat lMarginY = 0.0;
-
     NSInteger lTagIndex = 0;
+    
+    self.contentSize = CGSizeMake(self.numberOfWhiteKeys * self.whiteKeySize.width - self.bounds.size.width, self.whiteKeySize.height);
     
     for (NSUInteger keyIndex = 0; keyIndex < self.numberOfWhiteKeys; keyIndex++) {
         
@@ -89,7 +98,6 @@
         lKey.userInteractionEnabled = NO;
         [self addSubview:lKey];
     }
-    self.contentSize = CGSizeMake(self.numberOfWhiteKeys * self.whiteKeySize.width, self.whiteKeySize.height);
 }
 
 #pragma mark - Touch interruption handlers
@@ -134,6 +142,9 @@
         lKey.highlighted = YES;
         if (![self.pressedkeysArray containsObject:lKey]) {
             [self.pressedkeysArray addObject:lKey];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(KZPianoView:pressedKey:)]) {
+                [self.delegate performSelector:@selector(KZPianoView:pressedKey:) withObject:self withObject:lKey];
+            }
         }
     }
     [self leaveKeys];
@@ -161,11 +172,12 @@
         CGFloat lOffset = 30;
 
         _pianoView = [[KZPianoView alloc] initWithFrame:CGRectMake(0, lOffset, self.bounds.size.width, frame.size.height - lOffset)];
+        _pianoView.delegate = self;
         [self addSubview:_pianoView];
         
         KZPianoSlider *lPianoSlider = [[KZPianoSlider alloc] initWithFrame:CGRectMake(0.0, 0.0, frame.size.width, lOffset)];
         lPianoSlider.delegate = self;
-        lPianoSlider.thumbWidth = self.bounds.size.width * self.bounds.size.width / _pianoView.bounds.size.width;
+        lPianoSlider.thumbWidth = self.bounds.size.width * self.bounds.size.width / _pianoView.contentSize.width;
         lPianoSlider.backgroundColor = [UIColor greenColor];
         [self addSubview:lPianoSlider];
     }
@@ -173,8 +185,11 @@
 }
 
 - (void)KZPianoSlider:(id)sender valueChanged:(CGFloat)value {
-//    _pianoView.center = CGPointMake(self.bounds.size.width * value, self.bounds.size.height / 2.0 + 15.0);
-    _pianoView.contentOffset = CGPointMake(value * _pianoView.contentSize.width, 0);
+    _pianoView.contentOffset = CGPointMake(value * (_pianoView.contentSize.width ), 0);
+}
+
+- (void)KZPianoView:(id)pianoView pressedKey:(KZKey *)key {
+    NSLog(@"key.tag: %i",key.tag);
 }
 
 @end
@@ -192,7 +207,7 @@
 - (void)setPosition:(CGFloat)position {
     assert(position >= 0);
     assert(position <= 1);
-    
+
     _position = position;
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(KZPianoSlider:valueChanged:)]) {
@@ -200,18 +215,18 @@
     }
     
     if (_thumb) {
-        _thumb.center = CGPointMake(_position * self.bounds.size.width, self.bounds.size.height / 2.0);
+        _thumb.center = CGPointMake(_position * (self.bounds.size.width -_thumb.bounds.size.width) + _thumb.bounds.size.width / 2.0, self.bounds.size.height / 2.0);
     }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint lTouchLocation = [event.allTouches.anyObject locationInView:self];
-    _positionXDelta = _thumb.center.x - lTouchLocation.x;
+    _deltaX = - lTouchLocation.x + _thumb.frame.origin.x;
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint lTouchLocation = [event.allTouches.anyObject locationInView:self];
-    CGFloat lNewPosition = (lTouchLocation.x + _positionXDelta) / self.bounds.size.width ;
+    CGFloat lNewPosition = ((lTouchLocation.x + _deltaX) / (self.bounds.size.width - _thumb.bounds.size.width));
     if (lNewPosition > 1) {
         lNewPosition = 1;
     }
@@ -221,11 +236,6 @@
     self.position = lNewPosition;
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    CGPoint lTouchLocation = [event.allTouches.anyObject locationInView:self];
-    _positionXDelta = lTouchLocation.x;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -233,9 +243,9 @@
         self.clipsToBounds = YES;
         _thumb = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, 30.0, 30.0)];
         _thumb.backgroundColor = [UIColor blackColor];
-        _thumb.alpha = 0.5;
+        _thumb.alpha = 0.7;
 
-        self.position = 0.5;
+        self.position = 0.0;
         [self addSubview:_thumb];
     }
     return self;
