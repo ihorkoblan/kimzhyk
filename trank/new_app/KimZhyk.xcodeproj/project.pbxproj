@@ -45,7 +45,6 @@
 		CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */; };
 		CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */; };
 		CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */; };
-		CECDFEC51AB05EA20062ECBB /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECDFEC51AB05EA20062ECBB /* CoreAudioKit.framework in Frameworks */,
 				CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */,
 				C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */,
 				C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */,

@@ -27,14 +27,12 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-//    self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];//KZVoiceRecordingViewController
+    self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];//KZVoiceRecordingViewController
 
-    self.window.rootViewController = [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
+//    [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
     [self.window makeKeyAndVisible];
 
-    
-    //hgih ih oi oi o 
-    
     return YES;
 }
 

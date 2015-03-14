@@ -10,9 +10,9 @@
 #import "KZSound.h"
 
 @interface KZKeyboard : UIView {
-   int _stateMask;
+
 }
 
-
+@property (nonatomic, strong) UIView *contentView;
 
 @end

@@ -51,17 +51,14 @@
 }
 
 - (void)mainInit {
+    CGFloat lOffset = 200.0;
     _pianoKeyboard = [[KZPianoKeyboard alloc] initWithFrame:CGRectMake(
                                                                        0.0,
-                                                                       0.0,
-                                                                       self.view.frame.size.height,
-                                                                       self.view.frame.size.width)];
+                                                                       self.view.bounds.size.height - lOffset,
+                                                                       self.view.bounds.size.width,
+                                                                       lOffset)];
     _pianoKeyboard.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:_pianoKeyboard];
-    
-
-    
-    
 }
 
 @end
