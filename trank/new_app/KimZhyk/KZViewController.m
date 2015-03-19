@@ -55,7 +55,7 @@
     
 
 //    test label
-    _infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 70, 180, 40)];
+    __strong _infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 70, 250, 40)];
     _infoLabel.text = @"sdf";
     _infoLabel.backgroundColor = [UIColor greenColor];
     [self.view addSubview:_infoLabel];
@@ -88,16 +88,49 @@
 }
 
 - (void)frequencyChangedWithValue:(CGFloat)newFrequency {
-    NSLog(@"freq: %f",newFrequency);
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        float maxMag = newFrequency;
+        int counter = 0;
+        while (maxMag > 55.000f) {
+            counter++;
+            maxMag/=2.0f;
+        }
+        
+        NSString *note = nil;
+        if ((maxMag >= 27.500f) && (maxMag < 29.135f)) {
+            note = @"A";
+        } else if ((maxMag >= 29.135f) && (maxMag < 30.868f)) {
+            note = @"A#";
+        } else if ((maxMag >= 30.868f) && (maxMag < 32.703f)) {
+            note = @"H";
+        } else if ((maxMag >= 32.703f) && (maxMag < 34.648f)) {
+            note = @"C";
+        } else if ((maxMag >= 34.648f) && (maxMag < 36.708f)) {
+            note = @"C#";
+        } else if ((maxMag >= 36.708f) && (maxMag < 38.891f)) {
+            note = @"D";
+        } else if ((maxMag >= 38.891f) && (maxMag < 41.203f)) {
+            note = @"D#";
+        } else if ((maxMag >= 41.203f) && (maxMag < 43.654f)) {
+            note = @"E";
+        } else if ((maxMag >= 43.654f) && (maxMag < 46.249f)) {
+            note = @"F";
+        } else if ((maxMag >= 46.249f) && (maxMag < 48.999f)) {
+            note = @"F#";
+        } else if ((maxMag >= 48.999f) && (maxMag < 51.913f)) {
+            note = @"G";
+        } else if ((maxMag >= 51.913f) && (maxMag < 55.000f)) {
+            note = @"G#";
+        }
+        
+        [_infoLabel setText:[NSString stringWithFormat:@"freq: %f note: %@%i",newFrequency, note,counter]];
+        [_infoLabel setNeedsDisplay];
+    });
     
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
-    [_infoLabel setText:[NSString stringWithFormat:@"freq: %f",newFrequency]];
-    [_infoLabel setNeedsDisplay];
 
-    [pool drain];
-    pool = nil;
-//    [_pianoKeyboard startPlayingSound:nil];
 }
 
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender {
