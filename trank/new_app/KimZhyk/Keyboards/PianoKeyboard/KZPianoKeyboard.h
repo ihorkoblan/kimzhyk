@@ -36,18 +36,3 @@
 - (void)startPlayingSound:(KZSound *)sound;
 - (void)stopPlayingSound:(KZSound *)sound;
 @end
-
-// - - - - - - - - KZPianoSlider - - - - - - -
-
-@interface KZPianoSlider : UIImageView {
-    UIImageView *_thumb;
-    CGFloat _deltaX;
-}
-@property (nonatomic, assign) CGFloat thumbWidth;
-@property (nonatomic, assign) CGFloat position;
-@property (nonatomic, unsafe_unretained) id<KZPianoSliderDelegate> delegate;
-@end
-
-@protocol KZPianoSliderDelegate <NSObject>
-- (void)KZPianoSlider:(id)sender valueChanged:(CGFloat)value;
-@end

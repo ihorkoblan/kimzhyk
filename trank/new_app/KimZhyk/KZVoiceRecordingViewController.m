@@ -33,14 +33,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (IBAction)startRecording:(id)sender{
-//    
-//}
-//
-//- (IBAction)stopRecording:(id)sender {
-//    
-//}
-
 - (IBAction)startRecording:(id)sender {
     
     UIBarButtonItem *stopButton = [[UIBarButtonItem alloc] initWithTitle:@"Stop" style:UIBarButtonItemStyleBordered  target:self action:@selector(stopRecording)];
@@ -51,13 +43,13 @@
     NSError *err = nil;
     [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&err];
     if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        NSLog(@"audioSession: %@ %ld %@", [err domain], (long)[err code], [[err userInfo] description]);
         return;
     }
     [audioSession setActive:YES error:&err];
     err = nil;
     if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        NSLog(@"audioSession: %@ %ld %@", [err domain], (long)[err code], [[err userInfo] description]);
         return;
     }
     
@@ -71,18 +63,16 @@
     [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
     [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
     
-    
-    
     // Create a new dated file
     NSDate *now = [NSDate dateWithTimeIntervalSinceNow:0];
     NSString *caldate = [now description];
-    recorderFilePath = [[NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate] retain];
+    recorderFilePath = [NSString stringWithFormat:@"%@/%@.caf", DOCUMENTS_FOLDER, caldate];
     
     NSURL *url = [NSURL fileURLWithPath:recorderFilePath];
     err = nil;
     recorder = [[ AVAudioRecorder alloc] initWithURL:url settings:recordSetting error:&err];
     if(!recorder){
-        NSLog(@"recorder: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        NSLog(@"recorder: %@ %li %@", [err domain], (long)[err code], [[err userInfo] description]);
         UIAlertView *alert =
         [[UIAlertView alloc] initWithTitle: @"Warning"
                                    message: [err localizedDescription]
@@ -125,20 +115,17 @@
     NSError *err = nil;
     NSData *audioData = [NSData dataWithContentsOfFile:[url path] options: 0 error:&err];
     if(!audioData)
-        NSLog(@"audio data: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+        NSLog(@"audio data: %@ %ld %@", [err domain], (long)[err code], [[err userInfo] description]);
     [editedObject setValue:[NSData dataWithContentsOfURL:url] forKey:@"edited_field_key"];
     
     //[recorder deleteRecording];
-    
     
     NSFileManager *fm = [NSFileManager defaultManager];
     
     err = nil;
     [fm removeItemAtPath:[url path] error:&err];
     if(err)
-        NSLog(@"File Manager: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-    
-    
+        NSLog(@"File Manager: %@ %ld %@", [err domain], (long)[err code], [[err userInfo] description]);
     
     UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Record" style:UIBarButtonItemStyleBordered  target:self action:@selector(startRecording)];
     self.navigationItem.rightBarButtonItem = startButton;

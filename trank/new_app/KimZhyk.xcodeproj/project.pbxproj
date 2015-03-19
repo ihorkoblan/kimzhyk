@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */; };
+		5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */; };
+		5DC4DFA51ABB1A3600C21071 /* KZSongsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4DFA31ABB1A3600C21071 /* KZSongsListViewController.m */; };
+		5DC4DFA61ABB1A3600C21071 /* KZSongsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC4DFA41ABB1A3600C21071 /* KZSongsListViewController.xib */; };
 		5DCECA491AB9C918002CDCB1 /* KeyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA461AB9C918002CDCB1 /* KeyHelper.m */; };
 		5DCECA4A1AB9C918002CDCB1 /* RIOInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA481AB9C918002CDCB1 /* RIOInterface.mm */; };
 		5DCECA501AB9C969002CDCB1 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA4E1AB9C969002CDCB1 /* CAXException.cpp */; };
@@ -55,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZSettingsView.xib; path = Settings/KZSettingsView.xib; sourceTree = "<group>"; };
+		5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoSlider.h; path = Utils/KZPianoSlider.h; sourceTree = "<group>"; };
+		5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoSlider.m; path = Utils/KZPianoSlider.m; sourceTree = "<group>"; };
+		5DC4DFA21ABB1A3600C21071 /* KZSongsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSongsListViewController.h; sourceTree = "<group>"; };
+		5DC4DFA31ABB1A3600C21071 /* KZSongsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSongsListViewController.m; sourceTree = "<group>"; };
+		5DC4DFA41ABB1A3600C21071 /* KZSongsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSongsListViewController.xib; sourceTree = "<group>"; };
 		5DCECA451AB9C918002CDCB1 /* KeyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHelper.h; sourceTree = "<group>"; };
 		5DCECA461AB9C918002CDCB1 /* KeyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHelper.m; sourceTree = "<group>"; };
 		5DCECA471AB9C918002CDCB1 /* RIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIOInterface.h; sourceTree = "<group>"; };
@@ -145,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DC4DFA11ABB154600C21071 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */,
+				5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		5DCECA441AB9C918002CDCB1 /* FFT */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +274,7 @@
 			children = (
 				5DCECA441AB9C918002CDCB1 /* FFT */,
 				C3864D3B17AD221300050EB5 /* KZGlobal.h */,
+				5DC4DFA11ABB154600C21071 /* Utils */,
 				84ABFC031A12B6BE00B6F95D /* Common.h */,
 				84ABFC021A12B6BE00B6F95D /* Common.c */,
 				C3864D0617AD179500050EB5 /* KZAppDelegate.h */,
@@ -296,6 +314,9 @@
 				C3864D0F17AD179500050EB5 /* KZViewController.h */,
 				C3864D1017AD179500050EB5 /* KZViewController.m */,
 				C3864D1217AD179500050EB5 /* KZViewController.xib */,
+				5DC4DFA21ABB1A3600C21071 /* KZSongsListViewController.h */,
+				5DC4DFA31ABB1A3600C21071 /* KZSongsListViewController.m */,
+				5DC4DFA41ABB1A3600C21071 /* KZSongsListViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -458,6 +479,7 @@
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
 				CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */,
 				5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */,
+				5DC4DFA61ABB1A3600C21071 /* KZSongsListViewController.xib in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
 				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
 				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
@@ -494,12 +516,14 @@
 				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
 				5DCECA4A1AB9C918002CDCB1 /* RIOInterface.mm in Sources */,
 				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
+				5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */,
 				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,
 				C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */,
 				C3864D3917AD1DD100050EB5 /* KZSynthesizer.m in Sources */,
 				7D09726D1911756400A23E8A /* KZPianoKey.m in Sources */,
 				C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */,
 				84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */,
+				5DC4DFA51ABB1A3600C21071 /* KZSongsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
