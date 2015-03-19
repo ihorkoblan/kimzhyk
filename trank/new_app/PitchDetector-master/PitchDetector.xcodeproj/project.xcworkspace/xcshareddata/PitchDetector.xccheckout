@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B8C3A564-667E-4609-815B-B5B17D9CD080</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PitchDetector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
+		<string>https://github.com/ihorkoblan/kimzhyk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trank/new_app/PitchDetector-master/PitchDetector.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ihorkoblan/kimzhyk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kimzhyk</string>
+		</dict>
+	</array>
+</dict>
+</plist>

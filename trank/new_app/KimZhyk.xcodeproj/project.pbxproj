@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */; };
+		5DCECA491AB9C918002CDCB1 /* KeyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA461AB9C918002CDCB1 /* KeyHelper.m */; };
+		5DCECA4A1AB9C918002CDCB1 /* RIOInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA481AB9C918002CDCB1 /* RIOInterface.mm */; };
+		5DCECA501AB9C969002CDCB1 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DCECA4E1AB9C969002CDCB1 /* CAXException.cpp */; };
+		5DCECA521AB9C9AB002CDCB1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */; };
+		5DCECA541AB9C9D6002CDCB1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */; };
 		63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4B17BAC14500040730 /* Bayan_key_black_active.png */; };
 		63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4C17BAC14500040730 /* Bayan_key_black.png */; };
 		63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4D17BAC14500040730 /* Bayan_key_white_active.png */; };
@@ -48,6 +54,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZSettingsView.xib; path = Settings/KZSettingsView.xib; sourceTree = "<group>"; };
+		5DCECA451AB9C918002CDCB1 /* KeyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHelper.h; sourceTree = "<group>"; };
+		5DCECA461AB9C918002CDCB1 /* KeyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHelper.m; sourceTree = "<group>"; };
+		5DCECA471AB9C918002CDCB1 /* RIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIOInterface.h; sourceTree = "<group>"; };
+		5DCECA481AB9C918002CDCB1 /* RIOInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RIOInterface.mm; sourceTree = "<group>"; };
+		5DCECA4C1AB9C969002CDCB1 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		5DCECA4D1AB9C969002CDCB1 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		5DCECA4E1AB9C969002CDCB1 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		5DCECA4F1AB9C969002CDCB1 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		63922F4B17BAC14500040730 /* Bayan_key_black_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_black_active.png; sourceTree = "<group>"; };
 		63922F4C17BAC14500040730 /* Bayan_key_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black.png; path = KimZhyk/Resources/images/keys/Bayan_key_black.png; sourceTree = "<group>"; };
 		63922F4D17BAC14500040730 /* Bayan_key_white_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_white_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_white_active.png; sourceTree = "<group>"; };
@@ -65,7 +82,6 @@
 		84ABFC021A12B6BE00B6F95D /* Common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Common.c; sourceTree = "<group>"; };
 		84ABFC031A12B6BE00B6F95D /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		84ABFC051A12C14E00B6F95D /* KZSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSound.m; path = Sound/KZSound.m; sourceTree = "<group>"; };
-		84ABFC071A12C1E200B6F95D /* KZSoundStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZSoundStruct.h; sourceTree = "<group>"; };
 		C3864CF417AD179500050EB5 /* KimZhyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimZhyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3864CF717AD179500050EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3864CF917AD179500050EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,10 +131,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */,
+				5DCECA541AB9C9D6002CDCB1 /* CoreFoundation.framework in Frameworks */,
+				5DCECA521AB9C9AB002CDCB1 /* Accelerate.framework in Frameworks */,
 				CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */,
 				C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */,
 				C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */,
-				C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */,
 				C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */,
 				C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -127,6 +145,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DCECA441AB9C918002CDCB1 /* FFT */ = {
+			isa = PBXGroup;
+			children = (
+				5DCECA451AB9C918002CDCB1 /* KeyHelper.h */,
+				5DCECA461AB9C918002CDCB1 /* KeyHelper.m */,
+				5DCECA471AB9C918002CDCB1 /* RIOInterface.h */,
+				5DCECA481AB9C918002CDCB1 /* RIOInterface.mm */,
+				5DCECA4B1AB9C969002CDCB1 /* CAUtil */,
+			);
+			path = FFT;
+			sourceTree = "<group>";
+		};
+		5DCECA4B1AB9C969002CDCB1 /* CAUtil */ = {
+			isa = PBXGroup;
+			children = (
+				5DCECA4C1AB9C969002CDCB1 /* CADebugMacros.h */,
+				5DCECA4D1AB9C969002CDCB1 /* CAStreamBasicDescription.h */,
+				5DCECA4E1AB9C969002CDCB1 /* CAXException.cpp */,
+				5DCECA4F1AB9C969002CDCB1 /* CAXException.h */,
+			);
+			path = CAUtil;
+			sourceTree = "<group>";
+		};
 		638FE8B917B43D43009212D9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +238,8 @@
 		C3864CF617AD179500050EB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */,
+				5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */,
 				CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */,
 				CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */,
 				CECDFEC01AB05E880062ECBB /* AudioUnit.framework */,
@@ -212,6 +255,7 @@
 		C3864CFD17AD179500050EB5 /* KimZhyk */ = {
 			isa = PBXGroup;
 			children = (
+				5DCECA441AB9C918002CDCB1 /* FFT */,
 				C3864D3B17AD221300050EB5 /* KZGlobal.h */,
 				84ABFC031A12B6BE00B6F95D /* Common.h */,
 				84ABFC021A12B6BE00B6F95D /* Common.c */,
@@ -321,6 +365,7 @@
 			children = (
 				C3864D3317AD1D8100050EB5 /* KZSettingsView.h */,
 				C3864D3417AD1D8100050EB5 /* KZSettingsView.m */,
+				5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -348,7 +393,6 @@
 			children = (
 				C3864D4517AD405300050EB5 /* KZSound.h */,
 				84ABFC051A12C14E00B6F95D /* KZSound.m */,
-				84ABFC071A12C1E200B6F95D /* KZSoundStruct.h */,
 			);
 			name = Sound;
 			sourceTree = "<group>";
@@ -413,6 +457,7 @@
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
 				CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */,
+				5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
 				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
 				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
@@ -438,13 +483,16 @@
 			files = (
 				C3864D0417AD179500050EB5 /* main.m in Sources */,
 				C3864D0817AD179500050EB5 /* KZAppDelegate.m in Sources */,
+				5DCECA491AB9C918002CDCB1 /* KeyHelper.m in Sources */,
 				C3864D1117AD179500050EB5 /* KZViewController.m in Sources */,
 				C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */,
 				CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */,
 				7D097271191175DB00A23E8A /* KZKey.m in Sources */,
 				C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */,
+				5DCECA501AB9C969002CDCB1 /* CAXException.cpp in Sources */,
 				C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */,
 				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
+				5DCECA4A1AB9C918002CDCB1 /* RIOInterface.mm in Sources */,
 				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
 				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,
 				C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */,
@@ -536,8 +584,11 @@
 		C3864D1817AD179500050EB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
@@ -550,8 +601,11 @@
 		C3864D1917AD179500050EB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";

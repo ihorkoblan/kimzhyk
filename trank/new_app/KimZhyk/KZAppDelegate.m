@@ -10,6 +10,7 @@
 
 #import "KZViewController.h"
 #import "KZVoiceRecordingViewController.h"
+#import "RIOInterface.h"
 
 @implementation KZAppDelegate
 
@@ -25,6 +26,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    RIOInterface *rioRef = [RIOInterface sharedInstance];
+    [rioRef setSampleRate:44100];
+    [rioRef setFrequency:294];
+    [rioRef initializeAudioSession];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];//KZVoiceRecordingViewController
@@ -32,6 +39,10 @@
     self.window.rootViewController = self.viewController;
 //    [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
     [self.window makeKeyAndVisible];
+    
+
+
+
 
     return YES;
 }

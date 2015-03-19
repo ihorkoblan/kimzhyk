@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "KZPianoKeyboard.h"
 #import "KZPianoKey.h"
+#import "RIOInterface.h"
+#import "KeyHelper.h"
+#import "KZSettingsView.h"
 
-@interface KZViewController : UIViewController {
+@interface KZViewController : UIViewController<KZSettingsViewDelegate, RIOInterfaceDelegate> {
     NSMutableArray *_keysArray;
+    KZSettingsView *_settingsView;
+    UILabel *_infoLabel;
 }
 
-
+@property(nonatomic, assign) RIOInterface *rioRef;
 
 @end

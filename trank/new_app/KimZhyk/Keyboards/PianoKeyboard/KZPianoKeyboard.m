@@ -24,6 +24,15 @@
 
 @implementation KZPianoView
 
+- (void)startPlayingSound:(KZSound *)sound {
+    KZKey *lKey = (KZKey *)[self viewWithTag:sound.tone.octave * 12 + sound.tone.note];
+    lKey.highlighted = YES;
+}
+
+- (void)stopPlayingSound:(KZSound *)sound {
+    KZKey *lKey = (KZKey *)[self viewWithTag:sound.tone.octave * 12 + sound.tone.note];
+    lKey.highlighted = NO;
+}
 
 - (NSMutableArray *)pressedkeysArray {
     if (_pressedkeysArray == nil) {
@@ -31,14 +40,6 @@
     }
     return _pressedkeysArray;
 }
-
-//- (void)setNumberOfWhiteKeys:(NSUInteger)numberOfWhiteKeys {
-//    _numberOfWhiteKeys = numberOfWhiteKeys;
-//    for (UIView *view in self.subviews) {
-//        [view removeFromSuperview];
-//    }
-//    [self mainInit];
-//}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -126,6 +127,7 @@
 #pragma mark - Local
 
 - (NSInteger)tagForTouchAtPoint:(CGPoint)point {
+    
     CGPoint lNewPoint = CGPointMake(point.x - self.blackKeySize.width, point.y);
     NSUInteger lKeyIndex = lNewPoint.x / self.whiteKeySize.width;
 
@@ -160,8 +162,6 @@
 
 @end
 
-
-
 // - - - - - - - - KZPianoKeyboard - - - - - - -
 
 @implementation KZPianoKeyboard
@@ -190,6 +190,14 @@
 
 - (void)KZPianoView:(id)pianoView pressedKey:(KZKey *)key {
     NSLog(@"key.tag: %i",key.tag);
+}
+
+- (void)startPlayingSound:(KZSound *)sound {
+    [_pianoView startPlayingSound:sound];
+}
+
+- (void)stopPlayingSound:(KZSound *)sound {
+    [_pianoView stopPlayingSound:sound];
 }
 
 @end

@@ -262,6 +262,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -280,6 +281,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PitchDetector_Prefix.pch;
 				INFOPLIST_FILE = "PitchDetector-Info.plist";
