@@ -14,8 +14,11 @@
 
 #import "RIOInterface.h"
 #import "KeyHelper.h"
+#import "KZStaveView.h"
 
-@interface KZViewController ()
+@interface KZViewController () {
+    KZStaveView *_staveView;
+}
 
 @property(nonatomic, strong) KZPianoKeyboard *pianoKeyboard;
 
@@ -77,10 +80,15 @@
     _settingsView.delegate = self;
     _settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0 - 100.0);
     [self.view addSubview:_settingsView];
+    
+    _staveView = [[KZStaveView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    [self.view addSubview:_staveView];
+
 }
 
 - (void)startListener {
-    [self.rioRef startListening];
+    [_staveView drawSound:nil];
+//    [self.rioRef startListening];
 }
 
 - (void)stopListener {
@@ -124,13 +132,11 @@
         } else if ((maxMag >= 51.913f) && (maxMag < 55.000f)) {
             note = @"G#";
         }
-        
-        [_infoLabel setText:[NSString stringWithFormat:@"freq: %f note: %@%i",newFrequency, note,counter]];
+    
+        int keyNumber = 12 * log2f(newFrequency / 27.5);
+        [_infoLabel setText:[NSString stringWithFormat:@"freq: %.3f N: %i",newFrequency,keyNumber]];
         [_infoLabel setNeedsDisplay];
     });
-    
-
-
 }
 
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender {

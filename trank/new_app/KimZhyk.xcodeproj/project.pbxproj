@@ -51,6 +51,7 @@
 		C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */; };
 		C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */; };
 		C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */; };
+		CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */; };
 		CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */; };
 		CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */; };
 		CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */; };
@@ -126,6 +127,8 @@
 		C3864D4517AD405300050EB5 /* KZSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSound.h; path = Sound/KZSound.h; sourceTree = "<group>"; };
 		C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CEC377B31ABC9A4600EE0CEA /* KZStaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZStaveView.h; path = Utils/KZStaveView.h; sourceTree = "<group>"; };
+		CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZStaveView.m; path = Utils/KZStaveView.m; sourceTree = "<group>"; };
 		CECDFEBB1AB05C150062ECBB /* KZVoiceRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVoiceRecordingViewController.h; sourceTree = "<group>"; };
 		CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVoiceRecordingViewController.m; sourceTree = "<group>"; };
 		CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZVoiceRecordingViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 			children = (
 				5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */,
 				5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */,
+				CEC377B31ABC9A4600EE0CEA /* KZStaveView.h */,
+				CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
 				5DCECA4A1AB9C918002CDCB1 /* RIOInterface.mm in Sources */,
 				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
+				CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */,
 				5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */,
 				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,
 				C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */,
