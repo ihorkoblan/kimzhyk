@@ -15,6 +15,7 @@
 #import "RIOInterface.h"
 #import "KeyHelper.h"
 #import "KZStaveView.h"
+#import "KZRecordViewController.h"
 
 @interface KZViewController () {
     KZStaveView *_staveView;
@@ -145,6 +146,11 @@
 
 - (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender {
     [self stopListener];
+}
+
+- (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
+    KZRecordViewController *recordVC = [[KZRecordViewController alloc] initWithNibName:@"KZRecordViewController" bundle:nil];
+    [self presentViewController:recordVC animated:YES completion:nil];
 }
 
 @end

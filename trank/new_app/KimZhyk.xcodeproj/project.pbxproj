@@ -52,8 +52,8 @@
 		C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */; };
 		C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */; };
 		CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */; };
-		CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */; };
-		CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */; };
+		CECDFEBE1AB05C150062ECBB /* KZRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZRecordViewController.m */; };
+		CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZRecordViewController.xib */; };
 		CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,9 +129,9 @@
 		C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CEC377B31ABC9A4600EE0CEA /* KZStaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZStaveView.h; path = Utils/KZStaveView.h; sourceTree = "<group>"; };
 		CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZStaveView.m; path = Utils/KZStaveView.m; sourceTree = "<group>"; };
-		CECDFEBB1AB05C150062ECBB /* KZVoiceRecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVoiceRecordingViewController.h; sourceTree = "<group>"; };
-		CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVoiceRecordingViewController.m; sourceTree = "<group>"; };
-		CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZVoiceRecordingViewController.xib; sourceTree = "<group>"; };
+		CECDFEBB1AB05C150062ECBB /* KZRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZRecordViewController.h; sourceTree = "<group>"; };
+		CECDFEBC1AB05C150062ECBB /* KZRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZRecordViewController.m; sourceTree = "<group>"; };
+		CECDFEBD1AB05C150062ECBB /* KZRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZRecordViewController.xib; sourceTree = "<group>"; };
 		CECDFEC01AB05E880062ECBB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
@@ -284,9 +284,6 @@
 				84ABFC021A12B6BE00B6F95D /* Common.c */,
 				C3864D0617AD179500050EB5 /* KZAppDelegate.h */,
 				C3864D0717AD179500050EB5 /* KZAppDelegate.m */,
-				CECDFEBB1AB05C150062ECBB /* KZVoiceRecordingViewController.h */,
-				CECDFEBC1AB05C150062ECBB /* KZVoiceRecordingViewController.m */,
-				CECDFEBD1AB05C150062ECBB /* KZVoiceRecordingViewController.xib */,
 				7D097272191175E800A23E8A /* KZKey */,
 				7D09726E1911758100A23E8A /* KZPianoKey */,
 				C3864D4817AD405700050EB5 /* Sound */,
@@ -316,6 +313,9 @@
 		C3864D1A17AD17A600050EB5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CECDFEBB1AB05C150062ECBB /* KZRecordViewController.h */,
+				CECDFEBC1AB05C150062ECBB /* KZRecordViewController.m */,
+				CECDFEBD1AB05C150062ECBB /* KZRecordViewController.xib */,
 				C3864D0F17AD179500050EB5 /* KZViewController.h */,
 				C3864D1017AD179500050EB5 /* KZViewController.m */,
 				C3864D1217AD179500050EB5 /* KZViewController.xib */,
@@ -482,7 +482,7 @@
 			files = (
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
-				CECDFEBF1AB05C150062ECBB /* KZVoiceRecordingViewController.xib in Resources */,
+				CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */,
 				5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */,
 				5DC4DFA61ABB1A3600C21071 /* KZSongsListViewController.xib in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
@@ -513,7 +513,7 @@
 				5DCECA491AB9C918002CDCB1 /* KeyHelper.m in Sources */,
 				C3864D1117AD179500050EB5 /* KZViewController.m in Sources */,
 				C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */,
-				CECDFEBE1AB05C150062ECBB /* KZVoiceRecordingViewController.m in Sources */,
+				CECDFEBE1AB05C150062ECBB /* KZRecordViewController.m in Sources */,
 				7D097271191175DB00A23E8A /* KZKey.m in Sources */,
 				C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */,
 				5DCECA501AB9C969002CDCB1 /* CAXException.cpp in Sources */,
@@ -623,7 +623,7 @@
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
+				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -640,7 +640,7 @@
 				GCC_PREFIX_HEADER = "KimZhyk/KimZhyk-Prefix.pch";
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
+				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

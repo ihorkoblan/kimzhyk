@@ -9,7 +9,6 @@
 #import "KZAppDelegate.h"
 
 #import "KZViewController.h"
-#import "KZVoiceRecordingViewController.h"
 #import "RIOInterface.h"
 
 @implementation KZAppDelegate

@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 HostelDevelopers. All rights reserved.
 //
 
-#import "KZVoiceRecordingViewController.h"
+#import "KZRecordViewController.h"
 
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 
-@interface KZVoiceRecordingViewController () {
+@interface KZRecordViewController () {
     NSMutableDictionary *recordSetting;
     NSString *recorderFilePath;
     AVAudioRecorder *recorder;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation KZVoiceRecordingViewController
+@implementation KZRecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

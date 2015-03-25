@@ -49,6 +49,13 @@
             }
             break;
         }
+        case 3: {
+            SEL selector = @selector(KZSettingView:recordBtnPressed:);
+            if (self.delegate && [self.delegate respondsToSelector:selector]) {
+                [self.delegate performSelector:selector withObject:self withObject:sender];
+            }
+            break;
+        }
         default:
             break;
     }

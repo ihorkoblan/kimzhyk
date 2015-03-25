@@ -8,7 +8,9 @@
 
 #import "KZSongsListViewController.h"
 
-@interface KZSongsListViewController ()
+@interface KZSongsListViewController () {
+    NSArray *_songs;
+}
 
 @end
 
@@ -16,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

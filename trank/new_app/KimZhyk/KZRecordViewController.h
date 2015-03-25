@@ -11,6 +11,6 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface KZVoiceRecordingViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
+@interface KZRecordViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @end
