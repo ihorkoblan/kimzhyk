@@ -256,8 +256,8 @@ enum {
                                                        &errorRef
                                                        );
     // DLog(@"presetPropertyList %@", presetPropertyList);
-    if ([(id)presetPropertyList isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *lConverFiles = (NSDictionary*)presetPropertyList;
+    if ([(__bridge id)presetPropertyList isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *lConverFiles = (__bridge NSDictionary*)presetPropertyList;
         NSDictionary *lSoundList = [lConverFiles objectForKey:@"file-references"];
         NSArray *lKeyList = [lSoundList allKeys];
         for (NSInteger i = 0; i < [lKeyList count]; i++) {
@@ -454,9 +454,6 @@ enum {
 }
 - (void)dealloc
 {
-    //    [delegate release];
-    //    [mSettingsViewDelegate release];
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning

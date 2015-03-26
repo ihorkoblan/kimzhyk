@@ -9,31 +9,32 @@
 #import "KZAppDelegate.h"
 
 #import "KZViewController.h"
-#import "RIOInterface.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation KZAppDelegate
 
 - (void)dealloc
 {
-    [_window release];
-    [_viewController release];
-    
-    //jhgjhg jhg jhg jhg
-    
-    [super dealloc];
+
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    RIOInterface *rioRef = [RIOInterface sharedInstance];
-    [rioRef setSampleRate:44100];
-    [rioRef setFrequency:294];
-    [rioRef initializeAudioSession];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *err = NULL;
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+    if( err ){
+        NSLog(@"There was an error creating the audio session");
+    }
+    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
+    if( err ){
+        NSLog(@"There was an error sending the audio to the speakers");
+    }
     
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil] autorelease];//KZVoiceRecordingViewController
+    self.viewController = [[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil];//KZVoiceRecordingViewController
 
     self.window.rootViewController = self.viewController;
 //    [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];

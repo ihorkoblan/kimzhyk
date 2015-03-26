@@ -16,7 +16,7 @@
 #pragma mark - life cicle
 
 - (void)dealloc{
-    [super dealloc];
+
     
 }
 

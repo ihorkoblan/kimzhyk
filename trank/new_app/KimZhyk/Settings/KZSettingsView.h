@@ -27,4 +27,5 @@
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender;
+- (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender;
 @end

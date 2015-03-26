@@ -12,10 +12,9 @@
 #import "KZSynthesizer.h"
 #import "KZGlobal.h"
 
-#import "RIOInterface.h"
-#import "KeyHelper.h"
 #import "KZStaveView.h"
 #import "KZRecordViewController.h"
+#import "KZSongsListViewController.h"
 
 @interface KZViewController () {
     KZStaveView *_staveView;
@@ -54,15 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self mainInit];
-    self.rioRef = [RIOInterface sharedInstance];
-    self.rioRef.delegate = self;
-    
 
-//    test label
-    __strong _infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 70, 250, 40)];
-    _infoLabel.text = @"sdf";
-    _infoLabel.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:_infoLabel];
 }
 
 - (void)mainInit {
@@ -88,12 +79,10 @@
 }
 
 - (void)startListener {
-    [_staveView drawSound:nil];
-//    [self.rioRef startListening];
+
 }
 
 - (void)stopListener {
-    [self.rioRef stopListening];
 }
 
 - (void)frequencyChangedWithValue:(CGFloat)newFrequency {
@@ -150,6 +139,12 @@
 
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
     KZRecordViewController *recordVC = [[KZRecordViewController alloc] initWithNibName:@"KZRecordViewController" bundle:nil];
+    [self presentViewController:recordVC animated:YES completion:nil];
+}
+
+- (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender {
+    
+    KZSongsListViewController *recordVC = [[KZSongsListViewController alloc] initWithNibName:@"KZSongsListViewController" bundle:nil];
     [self presentViewController:recordVC animated:YES completion:nil];
 }
 
