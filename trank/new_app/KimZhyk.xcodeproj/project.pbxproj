@@ -30,6 +30,11 @@
 		5DD4FDCE1AC4214800BAF31E /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FDC01AC4214800BAF31E /* CHANGELOG */; };
 		5DD4FDCF1AC4214800BAF31E /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FDC11AC4214800BAF31E /* VERSION */; };
 		5DD4FE2D1AC4266C00BAF31E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD4FE2C1AC4266C00BAF31E /* OpenGLES.framework */; };
+		5DD4FE341AC464B800BAF31E /* pause_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FE311AC464B800BAF31E /* pause_btn.png */; };
+		5DD4FE351AC464B800BAF31E /* play_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FE321AC464B800BAF31E /* play_btn.png */; };
+		5DD4FE361AC464B800BAF31E /* record_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FE331AC464B800BAF31E /* record_btn.png */; };
+		5DD4FE381AC4664E00BAF31E /* stop_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FE371AC4664E00BAF31E /* stop_btn.png */; };
+		5DD4FE3A1AC467B100BAF31E /* goon_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD4FE391AC467B100BAF31E /* goon_btn.png */; };
 		63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4B17BAC14500040730 /* Bayan_key_black_active.png */; };
 		63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4C17BAC14500040730 /* Bayan_key_black.png */; };
 		63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63922F4D17BAC14500040730 /* Bayan_key_white_active.png */; };
@@ -110,6 +115,11 @@
 		5DD4FDC01AC4214800BAF31E /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
 		5DD4FDC11AC4214800BAF31E /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		5DD4FE2C1AC4266C00BAF31E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5DD4FE311AC464B800BAF31E /* pause_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_btn.png; path = KimZhyk/Resources/images/pause_btn.png; sourceTree = "<group>"; };
+		5DD4FE321AC464B800BAF31E /* play_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_btn.png; path = KimZhyk/Resources/images/play_btn.png; sourceTree = "<group>"; };
+		5DD4FE331AC464B800BAF31E /* record_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record_btn.png; path = KimZhyk/Resources/images/record_btn.png; sourceTree = "<group>"; };
+		5DD4FE371AC4664E00BAF31E /* stop_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_btn.png; path = KimZhyk/Resources/images/stop_btn.png; sourceTree = "<group>"; };
+		5DD4FE391AC467B100BAF31E /* goon_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = goon_btn.png; path = KimZhyk/Resources/images/goon_btn.png; sourceTree = "<group>"; };
 		63922F4B17BAC14500040730 /* Bayan_key_black_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_black_active.png; sourceTree = "<group>"; };
 		63922F4C17BAC14500040730 /* Bayan_key_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_black.png; path = KimZhyk/Resources/images/keys/Bayan_key_black.png; sourceTree = "<group>"; };
 		63922F4D17BAC14500040730 /* Bayan_key_white_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bayan_key_white_active.png; path = KimZhyk/Resources/images/keys/Bayan_key_white_active.png; sourceTree = "<group>"; };
@@ -257,6 +267,11 @@
 		638FE8BA17B43DAC009212D9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5DD4FE391AC467B100BAF31E /* goon_btn.png */,
+				5DD4FE311AC464B800BAF31E /* pause_btn.png */,
+				5DD4FE321AC464B800BAF31E /* play_btn.png */,
+				5DD4FE331AC464B800BAF31E /* record_btn.png */,
+				5DD4FE371AC4664E00BAF31E /* stop_btn.png */,
 				638FE8BB17B43DC6009212D9 /* keys */,
 			);
 			name = Images;
@@ -540,12 +555,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD4FE341AC464B800BAF31E /* pause_btn.png in Resources */,
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
+				5DD4FE351AC464B800BAF31E /* play_btn.png in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
 				CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */,
+				5DD4FE3A1AC467B100BAF31E /* goon_btn.png in Resources */,
 				5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */,
 				5DD4FD4C1AC3F35F00BAF31E /* KZSongsListViewController.xib in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
+				5DD4FE381AC4664E00BAF31E /* stop_btn.png in Resources */,
 				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
 				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
 				7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */,
@@ -558,6 +577,7 @@
 				63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */,
 				63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */,
 				5DD4FDCE1AC4214800BAF31E /* CHANGELOG in Resources */,
+				5DD4FE361AC464B800BAF31E /* record_btn.png in Resources */,
 				63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */,
 				63922F5217BAC14500040730 /* Bayan_key_white.png in Resources */,
 			);

@@ -17,6 +17,8 @@
 @property (nonatomic,weak) IBOutlet UILabel *playingTextField;
 @property (nonatomic,weak) IBOutlet UISwitch *recordSwitch;
 @property (nonatomic,weak) IBOutlet UILabel *recordingTextField;
+@property (nonatomic,weak) IBOutlet UIButton *recordBtn;
+@property (nonatomic,weak) IBOutlet UIButton *stopRecBtn;
 @end
 
 @implementation KZRecordViewController
@@ -35,7 +37,7 @@
 -(id)init {
     self = [super init];
     if(self){
-        [self initializeViewController];
+//        [self initializeViewController];
     }
     return self;
 }
@@ -43,7 +45,7 @@
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if(self){
-        [self initializeViewController];
+//        [self initializeViewController];
     }
     return self;
 }
@@ -51,6 +53,7 @@
 #pragma mark - Initialize View Controller Here
 -(void)initializeViewController {
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
+
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -65,7 +68,8 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
+    self.stopRecBtn.enabled = NO;
     /*
      Customizing the audio plot's look
      */
@@ -74,11 +78,11 @@
     // Waveform color
     self.audioPlot.color           = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     // Plot type
-    self.audioPlot.plotType        = EZPlotTypeRolling;
+    self.audioPlot.plotType        = EZPlotTypeBuffer;
     // Fill
-    self.audioPlot.shouldFill      = YES;
+    self.audioPlot.shouldFill      = NO;
     // Mirror
-    self.audioPlot.shouldMirror    = YES;
+    self.audioPlot.shouldMirror    = NO;
     
     /*
      Start the microphone
@@ -155,6 +159,14 @@
     }
 }
 
+- (void)startRecording {
+    
+}
+
+- (void)stopRecording {
+    
+}
+
 -(void)toggleRecording:(id)sender {
     
     self.playingTextField.text = @"Not Playing";
@@ -197,6 +209,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     // See the Thread Safety warning above, but in a nutshell these callbacks happen on a separate audio thread. We wrap any UI updating in a GCD block on the main thread to avoid blocking that audio flow.
     dispatch_async(dispatch_get_main_queue(),^{
         // All the audio plot needs is the buffer data (float*) and the size. Internally the audio plot will handle all the drawing related code, history management, and freeing its own resources. Hence, one badass line of code gets you a pretty plot :)
+
         [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
     });
 }
@@ -245,4 +258,18 @@ withNumberOfChannels:(UInt32)numberOfChannels {
                                    kAudioFilePath]];
 }
 
+- (IBAction)closeBtnPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)recordBtnPressed:(id)sender {
+    [self.recordBtn setImage:_isRecording ? [UIImage imageNamed:@"goon_btn.png"] : [UIImage imageNamed:@"pause_btn.png"] forState:UIControlStateNormal];
+    self.stopRecBtn.enabled = YES;
+    _isRecording = !_isRecording;
+}
+
+- (IBAction)stopRecordBtnPressed:(id)sender {
+    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
+    _isRecording = NO;
+}
 @end
