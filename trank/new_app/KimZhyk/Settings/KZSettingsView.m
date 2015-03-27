@@ -7,17 +7,29 @@
 //
 
 #import "KZSettingsView.h"
+#import "KZStaveView.h"
 
 @implementation KZSettingsView
 @synthesize delegate;
+
+
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+
+
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    _instrumentsScrollView.layer.cornerRadius = 15.0f;
+    _instrumentsScrollView.layer.masksToBounds = YES;
+    _instrumentsScrollView.layer.borderWidth = 3.0f;
+    _instrumentsScrollView.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 + (KZSettingsView *)settingsView {
@@ -32,32 +44,18 @@
     return resultView;
 }
 
-- (IBAction)listeningBtnPressed:(id)sender {
+- (IBAction)buttonPressed:(id)sender {
     UIButton *currentBtn = sender;
     switch (currentBtn.tag) {
-        case 1:{
-            SEL selector = @selector(KZSettingView:startListeningBtnPressed:);
-            if (self.delegate && [self.delegate respondsToSelector:selector]) {
-                [self.delegate KZSettingView:self startListeningBtnPressed:sender];
-            }
-            break;
-        }
-        case 2:{
-            SEL selector = @selector(KZSettingView:stopListeningBtnPressed:);
-            if (self.delegate && [self.delegate respondsToSelector:selector]) {
-                [self.delegate KZSettingView:self stopListeningBtnPressed:sender];
-            }
-            break;
-        }
-        case 3: {
-            SEL selector = @selector(KZSettingView:recordBtnPressed:);
+        case 1: {
+            SEL selector = @selector(KZSettingView:backBtnPressed:);
             if (self.delegate && [self.delegate respondsToSelector:selector]) {
                 [self.delegate performSelector:selector withObject:self withObject:sender];
             }
             break;
         }
-        case 4: {
-            SEL selector = @selector(KZSettingView:openBtnPressed:);
+        case 2: {
+            SEL selector = @selector(KZSettingView:openInstrumentsBtnPressed:);
             if (self.delegate && [self.delegate respondsToSelector:selector]) {
                 [self.delegate performSelector:selector withObject:self withObject:sender];
             }

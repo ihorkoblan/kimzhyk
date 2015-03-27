@@ -9,6 +9,7 @@
 #import "KZAppDelegate.h"
 
 #import "KZViewController.h"
+#import "KZMenuViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @implementation KZAppDelegate
@@ -34,9 +35,13 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil];//KZVoiceRecordingViewController
+//    self.viewController = [[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil];//KZVoiceRecordingViewController
 
-    self.window.rootViewController = self.viewController;
+    KZMenuViewController *lMenuVC = [[KZMenuViewController alloc] initWithNibName:@"KZMenuViewController" bundle:nil];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lMenuVC];
+    
+    self.window.rootViewController = nav;//self.viewController;
 //    [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
     [self.window makeKeyAndVisible];
     

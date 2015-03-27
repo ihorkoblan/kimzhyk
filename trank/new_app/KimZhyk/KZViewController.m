@@ -15,12 +15,14 @@
 #import "KZStaveView.h"
 #import "KZRecordViewController.h"
 #import "KZSongsListViewController.h"
+#import "KZListViewController.h"
 
 @interface KZViewController () {
     KZStaveView *_staveView;
 }
 
 @property(nonatomic, strong) KZPianoKeyboard *pianoKeyboard;
+@property(nonatomic, strong) KZSettingsView *settingsView;
 
 @end
 
@@ -52,6 +54,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.multipleTouchEnabled = YES;
+    self.view.userInteractionEnabled = YES;
     [self mainInit];
 
 }
@@ -68,21 +72,10 @@
     [self.view addSubview:_pianoKeyboard];
     
 //    settingsView
-    _settingsView = [KZSettingsView settingsView];
-    _settingsView.delegate = self;
-    _settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0 - 100.0);
-    [self.view addSubview:_settingsView];
-    
-    _staveView = [[KZStaveView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
-    [self.view addSubview:_staveView];
-
-}
-
-- (void)startListener {
-
-}
-
-- (void)stopListener {
+    self.settingsView = [KZSettingsView settingsView];
+    self.settingsView.delegate = self;
+    self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, -40.0f);
+    [self.view addSubview:self.settingsView];
 }
 
 - (void)frequencyChangedWithValue:(CGFloat)newFrequency {
@@ -130,11 +123,12 @@
 }
 
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender {
-    [self startListener];
+    KZListViewController *listVC = [[KZListViewController alloc] initWithNibName:@"KZListViewController" bundle:nil listData:@[@"song 1", @"song 2",@"song 3"]];
+    [listVC showInView:self.view];
 }
 
 - (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender {
-    [self stopListener];
+
 }
 
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
@@ -148,4 +142,18 @@
     [self presentViewController:recordVC animated:YES completion:nil];
 }
 
+- (void)KZSettingView:(id)settingsView backBtnPressed:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)KZSettingView:(id)settingsView openInstrumentsBtnPressed:(UIButton *)sender {
+    if (self.settingsView) {
+        static BOOL sIsOpen = NO;
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, sIsOpen ? -40.0f : self.view.bounds.size.height / 2.0f);
+        }];
+        sIsOpen = !sIsOpen;
+    }
+}
 @end

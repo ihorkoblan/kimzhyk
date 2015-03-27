@@ -18,7 +18,7 @@
 @property (nonatomic,weak) IBOutlet UISwitch *recordSwitch;
 @property (nonatomic,weak) IBOutlet UILabel *recordingTextField;
 @property (nonatomic,weak) IBOutlet UIButton *recordBtn;
-@property (nonatomic,weak) IBOutlet UIButton *stopRecBtn;
+@property (nonatomic,weak) IBOutlet UIView *songNameAlertView;
 @end
 
 @implementation KZRecordViewController
@@ -68,8 +68,7 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
-    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
-    self.stopRecBtn.enabled = NO;
+//    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
     /*
      Customizing the audio plot's look
      */
@@ -99,7 +98,6 @@
      Log out where the file is being written to within the app's documents directory
      */
     NSLog(@"File written to application sandbox's documents directory: %@",[self testFilePathURL]);
-    
 }
 
 #pragma mark - Actions
@@ -258,18 +256,70 @@ withNumberOfChannels:(UInt32)numberOfChannels {
                                    kAudioFilePath]];
 }
 
-- (IBAction)closeBtnPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)backBtnPressed:(id)sender {
+    [self.recorder closeAudioFile];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
 }
 
 - (IBAction)recordBtnPressed:(id)sender {
-    [self.recordBtn setImage:_isRecording ? [UIImage imageNamed:@"goon_btn.png"] : [UIImage imageNamed:@"pause_btn.png"] forState:UIControlStateNormal];
-    self.stopRecBtn.enabled = YES;
+//    [self.recordBtn setImage:_isRecording ? [UIImage imageNamed:@"goon_btn.png"] : [UIImage imageNamed:@"pause_btn.png"] forState:UIControlStateNormal];
+
     _isRecording = !_isRecording;
+    
+    UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
+    [lActionSheet showInView:self.view];
 }
 
 - (IBAction)stopRecordBtnPressed:(id)sender {
     [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
     _isRecording = NO;
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    DLog(@"actionSheet: %i",buttonIndex);
+    if (actionSheet.tag == 0) {
+        switch (buttonIndex) {
+            case 0:{// retake
+                
+                break;
+            }
+            case 1:{//save
+//                [self.view addSubview:self.songNameAlertView];
+//                self.songNameAlertView.center = CGPointMake(160.0f, self.view.bounds.size.height / 2.0f);
+                break;
+            }
+            case 2:{//cancel
+                
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    DLog(@"actionSheet: %i",buttonIndex);
+    if (alertView.tag == 0) {
+        switch (buttonIndex) {
+            case 0:{
+                
+                break;
+            }
+            case 1:{
+
+
+                break;
+            }
+            case 2:{
+                
+                break;
+            }
+            default:
+                break;
+        }
+    }
 }
 @end

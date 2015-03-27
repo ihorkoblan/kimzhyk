@@ -25,7 +25,7 @@
 // By default this will record a file to the application's documents directory (within the application's sandbox)
 #define kAudioFilePath @"EZAudioTest1.m4a"
 
-@interface KZRecordViewController : UIViewController <AVAudioPlayerDelegate,EZMicrophoneDelegate>
+@interface KZRecordViewController : UIViewController <AVAudioPlayerDelegate,EZMicrophoneDelegate, UIActionSheetDelegate, UIAlertViewDelegate, UITextFieldDelegate>
 
 /**
  Use a OpenGL based plot to visualize the data coming in

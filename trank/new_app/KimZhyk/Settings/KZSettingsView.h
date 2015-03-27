@@ -11,7 +11,7 @@
 @protocol KZSettingsViewDelegate;
 
 @interface KZSettingsView : UIView {
-
+    IBOutlet UIScrollView *_instrumentsScrollView;
 }
 
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *infoLabel;
@@ -28,4 +28,6 @@
 - (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender;
+- (void)KZSettingView:(id)settingsView backBtnPressed:(UIButton *)sender;
+- (void)KZSettingView:(id)settingsView openInstrumentsBtnPressed:(UIButton *)sender;
 @end
