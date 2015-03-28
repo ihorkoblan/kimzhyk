@@ -15,16 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-1j-aFe">
-                    <rect key="frame" x="179" y="181" width="251" height="74"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvB-Ei-2Ki">
+                    <rect key="frame" x="179" y="76" width="251" height="72"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <state key="normal" title="Edit current melody">
+                    <state key="normal" title="Play current melody in piano">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="editMelodyBtnPressed:" destination="-1" eventType="touchUpInside" id="tzb-eh-EVa"/>
+                        <action selector="playMelodyBtnPressed:" destination="-1" eventType="touchUpInside" id="Cnh-tB-jdf"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-mJ-ePe">
@@ -51,16 +51,16 @@
                         <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="L3s-yK-408"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvB-Ei-2Ki">
-                    <rect key="frame" x="179" y="76" width="251" height="72"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-1j-aFe">
+                    <rect key="frame" x="179" y="181" width="251" height="74"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <state key="normal" title="Play current melody in piano">
+                    <state key="normal" title="Edit current melody">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="playMelodyBtnPressed:" destination="-1" eventType="touchUpInside" id="Cnh-tB-jdf"/>
+                        <action selector="editMelodyBtnPressed:" destination="-1" eventType="touchUpInside" id="tzb-eh-EVa"/>
                     </connections>
                 </button>
             </subviews>

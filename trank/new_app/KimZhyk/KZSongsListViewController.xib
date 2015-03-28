@@ -16,17 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW2-Lk-Ib0">
-                    <rect key="frame" x="222" y="264" width="35" height="30"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VFy-6g-MMn">
+                    <rect key="frame" x="0.0" y="8" width="568" height="231"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="x36-8V-xEj"/>
+                        <outlet property="dataSource" destination="-1" id="YpJ-60-oJc"/>
+                        <outlet property="delegate" destination="-1" id="FaF-KB-wZu"/>
                     </connections>
-                </button>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-4N-eLi">
-                    <rect key="frame" x="305" y="264" width="41" height="30"/>
+                    <rect key="frame" x="308" y="272" width="198" height="35"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Home">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -34,14 +34,16 @@
                         <action selector="homeBtnPressed:" destination="-1" eventType="touchUpInside" id="DyL-1g-aEL"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VFy-6g-MMn">
-                    <rect key="frame" x="51" y="8" width="467" height="211"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW2-Lk-Ib0">
+                    <rect key="frame" x="63" y="272" width="198" height="35"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="YpJ-60-oJc"/>
-                        <outlet property="delegate" destination="-1" id="FaF-KB-wZu"/>
+                        <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="x36-8V-xEj"/>
                     </connections>
-                </tableView>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>

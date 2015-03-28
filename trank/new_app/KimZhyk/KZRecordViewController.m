@@ -8,6 +8,7 @@
 
 #import "KZRecordViewController.h"
 #import "KZRecordNavigationViewController.h"
+#import "KZSongsListViewController.h"
 
 @interface KZRecordViewController ()
 // Using AVPlayer for example
@@ -101,6 +102,16 @@
     NSLog(@"File written to application sandbox's documents directory: %@",[self testFilePathURL]);
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self toggleRecording:NO];
+    [self toggleMicrophone:NO];
+    [self.recorder closeAudioFile];
+}
 #pragma mark - Actions
 - (void)playFile:(id)sender
 {
@@ -245,15 +256,13 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (IBAction)homeBtnPressed:(id)sender {
-    [self.recorder closeAudioFile];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController popToRootViewControllerAnimated:YES];
     });
 }
 
 - (IBAction)recordBtnPressed:(id)sender {
-//    [self.recordBtn setImage:_isRecording ? [UIImage imageNamed:@"goon_btn.png"] : [UIImage imageNamed:@"pause_btn.png"] forState:UIControlStateNormal];
-
     _isRecording = !_isRecording;
     
     UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
@@ -265,7 +274,8 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (IBAction)listOfSongsBtnPressed:(id)sender {
-    
+    KZSongsListViewController *lSongsListVC = [[KZSongsListViewController alloc] initWithNibName:@"KZSongsListViewController" bundle:nil];
+    [self.navigationController pushViewController:lSongsListVC animated:YES];
 }
 
 - (IBAction)goNextBtnPressed:(id)sender {

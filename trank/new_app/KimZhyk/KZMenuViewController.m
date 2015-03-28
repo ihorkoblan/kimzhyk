@@ -55,11 +55,14 @@
         }
         case 6:{
             lVC = [[KZAboutViewController alloc] initWithNibName:@"KZAboutViewController" bundle:nil];
+            [self.navigationController presentViewController:lVC animated:YES completion:nil];
+            return;
             break;
         }
         default:
             break;
     }
+    
     [UIView beginAnimations:@"View Flip" context:nil];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
