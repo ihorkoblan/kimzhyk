@@ -79,6 +79,8 @@
 		CECDFEBE1AB05C150062ECBB /* KZRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECDFEBC1AB05C150062ECBB /* KZRecordViewController.m */; };
 		CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECDFEBD1AB05C150062ECBB /* KZRecordViewController.xib */; };
 		CECDFEC31AB05E9A0062ECBB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */; };
+		CED037B91AC70CE8006D8BD5 /* KZRecordNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED037B71AC70CE8006D8BD5 /* KZRecordNavigationViewController.m */; };
+		CED037BA1AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED037B81AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +196,9 @@
 		CECDFEC01AB05E880062ECBB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		CECDFEC21AB05E9A0062ECBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		CECDFEC41AB05EA20062ECBB /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		CED037B61AC70CE8006D8BD5 /* KZRecordNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZRecordNavigationViewController.h; sourceTree = "<group>"; };
+		CED037B71AC70CE8006D8BD5 /* KZRecordNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZRecordNavigationViewController.m; sourceTree = "<group>"; };
+		CED037B81AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZRecordNavigationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +409,9 @@
 				CECDFEBB1AB05C150062ECBB /* KZRecordViewController.h */,
 				CECDFEBC1AB05C150062ECBB /* KZRecordViewController.m */,
 				CECDFEBD1AB05C150062ECBB /* KZRecordViewController.xib */,
+				CED037B61AC70CE8006D8BD5 /* KZRecordNavigationViewController.h */,
+				CED037B71AC70CE8006D8BD5 /* KZRecordNavigationViewController.m */,
+				CED037B81AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib */,
 				C3864D0F17AD179500050EB5 /* KZViewController.h */,
 				C3864D1017AD179500050EB5 /* KZViewController.m */,
 				C3864D1217AD179500050EB5 /* KZViewController.xib */,
@@ -592,6 +600,7 @@
 				7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */,
 				5DD4FDCF1AC4214800BAF31E /* VERSION in Resources */,
 				7DFCB7E917B231A3001CDD53 /* KZTubaKeyboard.xib in Resources */,
+				CED037BA1AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib in Resources */,
 				63946FFA17B45B2800EADDD0 /* Black_key_active.png in Resources */,
 				63946FFB17B45B2800EADDD0 /* Black_key.png in Resources */,
 				63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */,
@@ -613,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED037B91AC70CE8006D8BD5 /* KZRecordNavigationViewController.m in Sources */,
 				5DD4FDC81AC4214800BAF31E /* EZAudioPlotGLKViewController.m in Sources */,
 				5DD4FD4B1AC3F35F00BAF31E /* KZSongsListViewController.m in Sources */,
 				C3864D0417AD179500050EB5 /* main.m in Sources */,
@@ -684,8 +694,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -700,6 +710,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -715,8 +726,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Volodymyr Shevchyk (M43AJU8B7V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -724,6 +735,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -735,7 +747,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -743,7 +755,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -754,7 +766,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -762,7 +774,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "fdc029b0-3420-4058-9120-40bd1b38bbde";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

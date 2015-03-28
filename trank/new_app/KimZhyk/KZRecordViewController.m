@@ -7,6 +7,7 @@
 //
 
 #import "KZRecordViewController.h"
+#import "KZRecordNavigationViewController.h"
 
 @interface KZRecordViewController ()
 // Using AVPlayer for example
@@ -51,7 +52,7 @@
 }
 
 #pragma mark - Initialize View Controller Here
--(void)initializeViewController {
+- (void)initializeViewController {
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
 
 }
@@ -139,7 +140,7 @@
     
 }
 
--(void)toggleMicrophone:(id)sender {
+-(void)toggleMicrophone:(BOOL)isOn {
     
     self.playingTextField.text = @"Not Playing";
     if( self.audioPlayer ){
@@ -147,25 +148,14 @@
         self.audioPlayer = nil;
     }
     
-    if( ![(UISwitch*)sender isOn] ){
-        [self.microphone stopFetchingAudio];
-        self.microphoneTextField.text = @"Microphone Off";
-    }
-    else {
+    if(isOn){
         [self.microphone startFetchingAudio];
-        self.microphoneTextField.text = @"Microphone On";
+    } else {//Microphone Off
+        [self.microphone stopFetchingAudio];
     }
 }
 
-- (void)startRecording {
-    
-}
-
-- (void)stopRecording {
-    
-}
-
--(void)toggleRecording:(id)sender {
+-(void)toggleRecording:(BOOL)isOn {
     
     self.playingTextField.text = @"Not Playing";
     if( self.audioPlayer )
@@ -178,8 +168,7 @@
     }
     self.playButton.hidden = NO;
     
-    if( [sender isOn] )
-    {
+    if(isOn) {
         /*
          Create the recorder
          */
@@ -191,8 +180,7 @@
     {
         [self.recorder closeAudioFile];
     }
-    self.isRecording = (BOOL)[sender isOn];
-    self.recordingTextField.text = self.isRecording ? @"Recording" : @"Not Recording";
+    self.isRecording = isOn;
 }
 
 #pragma mark - EZMicrophoneDelegate
@@ -256,7 +244,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
                                    kAudioFilePath]];
 }
 
-- (IBAction)backBtnPressed:(id)sender {
+- (IBAction)homeBtnPressed:(id)sender {
     [self.recorder closeAudioFile];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController popToRootViewControllerAnimated:YES];
@@ -270,6 +258,19 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     
     UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
     [lActionSheet showInView:self.view];
+}
+
+- (IBAction)detailedReviewBtnPressed:(id)sender {
+    
+}
+
+- (IBAction)listOfSongsBtnPressed:(id)sender {
+    
+}
+
+- (IBAction)goNextBtnPressed:(id)sender {
+    KZRecordNavigationViewController *lGoNextNavVC = [[KZRecordNavigationViewController alloc] initWithNibName:@"KZRecordNavigationViewController" bundle:nil];
+    [self.navigationController pushViewController:lGoNextNavVC animated:YES];
 }
 
 - (IBAction)stopRecordBtnPressed:(id)sender {
