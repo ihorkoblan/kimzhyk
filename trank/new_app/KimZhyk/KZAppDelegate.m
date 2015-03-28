@@ -21,15 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory,    NSUserDomainMask ,YES );
-    NSString *documentsDir = paths[0];
-    DLog(@"paths: %@",paths);
-    BOOL exist = [[NSFileManager defaultManager] fileExistsAtPath:paths[0]];
-    NSError *error;
-    NSArray *dirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDir error:&error];
-    
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *err = NULL;
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];

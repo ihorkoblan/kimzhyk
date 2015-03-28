@@ -23,8 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *path = [KZFileManager defaultFolderPath];
-    
     _songs = [[NSMutableArray alloc] initWithArray:@[@"song 1",@"song 2",@"song 3",@"song 4",@"song 5"]];
     // Uncomment the following line to preserve selection between presentations.
     //     self.clearsSelectionOnViewWillAppear = NO;

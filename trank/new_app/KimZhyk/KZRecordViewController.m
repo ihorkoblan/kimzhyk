@@ -9,6 +9,7 @@
 #import "KZRecordViewController.h"
 #import "KZRecordNavigationViewController.h"
 #import "KZSongsListViewController.h"
+#import "KZFileManager.h"
 
 @interface KZRecordViewController ()
 // Using AVPlayer for example
@@ -205,7 +206,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 withNumberOfChannels:(UInt32)numberOfChannels {
     
     // Getting audio data as a buffer list that can be directly fed into the EZRecorder. This is happening on the audio thread - any UI updating needs a GCD main queue block. This will keep appending data to the tail of the audio file.
-    if( self.isRecording){
+    if(self.isRecording) {
         [self.recorder appendDataFromBufferList:bufferList
                                  withBufferSize:bufferSize];
     }
