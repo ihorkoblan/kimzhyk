@@ -2,7 +2,7 @@
 //  KZSongsListViewController.m
 //  KimZhyk
 //
-//  Created by Ihor Koblan on 3/26/15.
+//  Created by Пользователь on 28.03.15.
 //  Copyright (c) 2015 HostelDevelopers. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 @interface KZSongsListViewController () {
     NSMutableArray *_songs;
 }
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @end
 
 @implementation KZSongsListViewController
@@ -20,10 +21,10 @@
     [super viewDidLoad];
     _songs = [[NSMutableArray alloc] initWithArray:@[@"song 1",@"song 2",@"song 3",@"song 4",@"song 5"]];
     // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
+    //     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +49,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static  NSString *lCellIdentifier = @"song_cell_identifier";
     UITableViewCell *lCell = [tableView dequeueReusableCellWithIdentifier:lCellIdentifier];
-
+    
     if (!lCell) {
         lCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:lCellIdentifier];
     }
@@ -72,7 +73,7 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 #pragma mark - Table view delegate
@@ -81,6 +82,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     KZRecordNavigationViewController *lRecNavVC = [[KZRecordNavigationViewController alloc] initWithNibName:@"KZRecordNavigationViewController" bundle:nil];
     [self.navigationController pushViewController:lRecNavVC animated:YES];
+}
+
+- (IBAction)backBtnPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)homeBtnPressed:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "KZViewController.h"
 #import "KZRecordViewController.h"
 #import "KZSongsListViewController.h"
+#import "KZAboutViewController.h"
 
 @interface KZMenuViewController ()
 
@@ -53,7 +54,7 @@
             break;
         }
         case 6:{
-            
+            lVC = [[KZAboutViewController alloc] initWithNibName:@"KZAboutViewController" bundle:nil];
             break;
         }
         default:

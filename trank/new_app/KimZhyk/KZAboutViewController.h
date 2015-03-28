@@ -1,5 +1,5 @@
 //
-//  KZSongsListViewController.h
+//  KZAboutViewController.h
 //  KimZhyk
 //
 //  Created by Пользователь on 28.03.15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KZSongsListViewController : UIViewController
+@interface KZAboutViewController : UIViewController
 
 @end
