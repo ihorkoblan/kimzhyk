@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */; };
 		5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */; };
-		5DC8D0BF1AC5383F00315372 /* KZListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8D0BD1AC5383F00315372 /* KZListViewController.m */; };
-		5DC8D0C01AC5383F00315372 /* KZListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8D0BE1AC5383F00315372 /* KZListViewController.xib */; };
 		5DC8D0C31AC5433C00315372 /* KZLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C21AC5433C00315372 /* KZLockView.m */; };
 		5DC8D0C81AC570F700315372 /* KZMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C61AC570F700315372 /* KZMenuViewController.m */; };
 		5DC8D0C91AC570F700315372 /* KZMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C71AC570F700315372 /* KZMenuViewController.xib */; };
@@ -89,9 +87,6 @@
 		5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZSettingsView.xib; path = Settings/KZSettingsView.xib; sourceTree = "<group>"; };
 		5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoSlider.h; path = Utils/KZPianoSlider.h; sourceTree = "<group>"; };
 		5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoSlider.m; path = Utils/KZPianoSlider.m; sourceTree = "<group>"; };
-		5DC8D0BC1AC5383F00315372 /* KZListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZListViewController.h; sourceTree = "<group>"; };
-		5DC8D0BD1AC5383F00315372 /* KZListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZListViewController.m; sourceTree = "<group>"; };
-		5DC8D0BE1AC5383F00315372 /* KZListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZListViewController.xib; sourceTree = "<group>"; };
 		5DC8D0C11AC5433C00315372 /* KZLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZLockView.h; sourceTree = "<group>"; };
 		5DC8D0C21AC5433C00315372 /* KZLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZLockView.m; sourceTree = "<group>"; };
 		5DC8D0C51AC570F700315372 /* KZMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZMenuViewController.h; sourceTree = "<group>"; };
@@ -426,9 +421,6 @@
 				CED037BB1AC719CA006D8BD5 /* KZSongsListViewController.h */,
 				CED037BC1AC719CA006D8BD5 /* KZSongsListViewController.m */,
 				CED037BD1AC719CA006D8BD5 /* KZSongsListViewController.xib */,
-				5DC8D0BC1AC5383F00315372 /* KZListViewController.h */,
-				5DC8D0BD1AC5383F00315372 /* KZListViewController.m */,
-				5DC8D0BE1AC5383F00315372 /* KZListViewController.xib */,
 				5DC8D0C11AC5433C00315372 /* KZLockView.h */,
 				5DC8D0C21AC5433C00315372 /* KZLockView.m */,
 				CED037C01AC71C4F006D8BD5 /* KZAboutViewController.h */,
@@ -617,7 +609,6 @@
 				63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */,
 				5DD4FDCE1AC4214800BAF31E /* CHANGELOG in Resources */,
 				5DD4FE361AC464B800BAF31E /* record_btn.png in Resources */,
-				5DC8D0C01AC5383F00315372 /* KZListViewController.xib in Resources */,
 				CED037C41AC71C4F006D8BD5 /* KZAboutViewController.xib in Resources */,
 				63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */,
 				63922F5217BAC14500040730 /* Bayan_key_white.png in Resources */,
@@ -667,7 +658,6 @@
 				CED037BE1AC719CA006D8BD5 /* KZSongsListViewController.m in Sources */,
 				5DD4FDCA1AC4214800BAF31E /* EZOutput.m in Sources */,
 				84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */,
-				5DC8D0BF1AC5383F00315372 /* KZListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

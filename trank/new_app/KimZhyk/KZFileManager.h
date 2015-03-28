@@ -13,5 +13,12 @@
 @interface KZFileManager : NSObject
 
 + (KZFileManager *)manager;
++ (NSString *)defaultFolderPath;
++ (NSArray *)itemsAtDefaultFolder;
++ (NSArray *)itemsAtFolderPath:(NSString *)path;
++ (BOOL)saveToDefaultFolderWithTitle:(NSString *)title;
++ (BOOL)removeFileAtPath:(NSString *)path;
++ (BOOL)removeFileWithTitle:(NSString *)fileTitle;
++ (BOOL)fileExistAtPath:(NSString *)path;
 
 @end

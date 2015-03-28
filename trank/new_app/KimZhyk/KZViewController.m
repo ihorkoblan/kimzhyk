@@ -15,7 +15,6 @@
 #import "KZStaveView.h"
 #import "KZRecordViewController.h"
 #import "KZSongsListViewController.h"
-#import "KZListViewController.h"
 
 @interface KZViewController () {
     KZStaveView *_staveView;
@@ -123,8 +122,7 @@
 }
 
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender {
-    KZListViewController *listVC = [[KZListViewController alloc] initWithNibName:@"KZListViewController" bundle:nil listData:@[@"song 1", @"song 2",@"song 3"]];
-    [listVC showInView:self.view];
+
 }
 
 - (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender {

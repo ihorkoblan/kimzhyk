@@ -95,11 +95,6 @@
     
     // Hide the play button
     self.playButton.hidden = YES;
-    
-    /*
-     Log out where the file is being written to within the app's documents directory
-     */
-    NSLog(@"File written to application sandbox's documents directory: %@",[self testFilePathURL]);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -113,28 +108,19 @@
     [self.recorder closeAudioFile];
 }
 #pragma mark - Actions
-- (void)playFile:(id)sender
-{
-    
-    // Update microphone state
+- (void)playFile:(id)sender {
     [self.microphone stopFetchingAudio];
-    self.microphoneTextField.text = @"Microphone Off";
-    self.microphoneSwitch.on = NO;
-    
-    // Update recording state
     self.isRecording = NO;
-    self.recordingTextField.text = @"Not Recording";
-    self.recordSwitch.on = NO;
     
     // Create Audio Player
-    if( self.audioPlayer )
-    {
-        if( self.audioPlayer.playing )
-        {
-            [self.audioPlayer stop];
-        }
-        self.audioPlayer = nil;
-    }
+//    if( self.audioPlayer )
+//    {
+//        if( self.audioPlayer.playing )
+//        {
+//            [self.audioPlayer stop];
+//        }
+//        self.audioPlayer = nil;
+//    }
     
     // Close the audio file
     if( self.recorder )
@@ -142,12 +128,12 @@
         [self.recorder closeAudioFile];
     }
     
-    NSError *err;
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self testFilePathURL]
-                                                              error:&err];
-    [self.audioPlayer play];
-    self.audioPlayer.delegate = self;
-    self.playingTextField.text = @"Playing";
+//    NSError *err;
+//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self testFilePathURL]
+//                                                              error:&err];
+//    [self.audioPlayer play];
+//    self.audioPlayer.delegate = self;
+//    self.playingTextField.text = @"Playing";
     
 }
 
@@ -155,7 +141,9 @@
     
     self.playingTextField.text = @"Not Playing";
     if( self.audioPlayer ){
-        if( self.audioPlayer.playing ) [self.audioPlayer stop];
+        if( self.audioPlayer.playing ) {
+            [self.audioPlayer stop];
+        }
         self.audioPlayer = nil;
     }
     
@@ -217,7 +205,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 withNumberOfChannels:(UInt32)numberOfChannels {
     
     // Getting audio data as a buffer list that can be directly fed into the EZRecorder. This is happening on the audio thread - any UI updating needs a GCD main queue block. This will keep appending data to the tail of the audio file.
-    if( self.isRecording ){
+    if( self.isRecording){
         [self.recorder appendDataFromBufferList:bufferList
                                  withBufferSize:bufferSize];
     }
@@ -232,9 +220,9 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     self.audioPlayer = nil;
     self.playingTextField.text = @"Finished Playing";
     
-    [self.microphone startFetchingAudio];
-    self.microphoneSwitch.on = YES;
-    self.microphoneTextField.text = @"Microphone On";
+//    [self.microphone startFetchingAudio];
+//    self.microphoneSwitch.on = YES;
+//    self.microphoneTextField.text = @"Microphone On";
 }
 
 #pragma mark - Utility
@@ -255,6 +243,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
                                    kAudioFilePath]];
 }
 
+#pragma mark - Interruption handlers
 - (IBAction)homeBtnPressed:(id)sender {
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -263,10 +252,14 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (IBAction)recordBtnPressed:(id)sender {
-    _isRecording = !_isRecording;
+
+    [((UIButton *)sender) setTitle:(_isRecording ? @"Stop" : @"Record") forState:UIControlStateNormal];
     
-    UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
-    [lActionSheet showInView:self.view];
+    if (!_isRecording) {
+        UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
+        [lActionSheet showInView:self.view];
+    }
+    _isRecording = !_isRecording;
 }
 
 - (IBAction)detailedReviewBtnPressed:(id)sender {
@@ -290,6 +283,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     DLog(@"actionSheet: %i",buttonIndex);
+    
     if (actionSheet.tag == 0) {
         switch (buttonIndex) {
             case 0:{// retake
