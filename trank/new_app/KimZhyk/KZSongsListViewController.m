@@ -13,22 +13,24 @@
 
 
 @interface KZSongsListViewController () {
-    NSMutableArray *_songs;
+
 }
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @end
 
 @implementation KZSongsListViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _songs = [[NSMutableArray alloc] initWithArray:@[@"song 1",@"song 2",@"song 3",@"song 4",@"song 5"]];
-    // Uncomment the following line to preserve selection between presentations.
-    //     self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +41,7 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 40.0f;
+    return 45.0f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -47,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _songs.count;
+    return [KZFileManager itemsAtDefaultFolder].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +59,7 @@
     if (!lCell) {
         lCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:lCellIdentifier];
     }
-    lCell.textLabel.text = _songs[indexPath.row];
+    lCell.textLabel.text = [KZFileManager itemsAtDefaultFolder][indexPath.row];
     return lCell;
 }
 
@@ -69,7 +71,8 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_songs removeObjectAtIndex:indexPath.row];
+    
+        [KZFileManager removeFileAtPath:[NSString stringWithFormat:@"%@/%@",[KZFileManager defaultFolderPath],[KZFileManager itemsAtDefaultFolder][indexPath.row]]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

@@ -10,8 +10,9 @@
 #import "KZRecordNavigationViewController.h"
 #import "KZSongsListViewController.h"
 #import "KZFileManager.h"
+#import "KZTextAlert.h"
 
-@interface KZRecordViewController ()
+@interface KZRecordViewController ()<KZTextAlertDelegate>
 // Using AVPlayer for example
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic,weak) IBOutlet UISwitch *microphoneSwitch;
@@ -21,7 +22,9 @@
 @property (nonatomic,weak) IBOutlet UISwitch *recordSwitch;
 @property (nonatomic,weak) IBOutlet UILabel *recordingTextField;
 @property (nonatomic,weak) IBOutlet UIButton *recordBtn;
-@property (nonatomic,weak) IBOutlet UIView *songNameAlertView;
+@property (nonatomic,weak) IBOutlet KZTextAlert *textAlert;
+@property (nonatomic,strong) NSString *songPath;
+@property (nonatomic, assign) BOOL isPlaying;
 @end
 
 @implementation KZRecordViewController
@@ -37,26 +40,12 @@
 @synthesize recordingTextField;
 
 #pragma mark - Initialization
--(id)init {
-    self = [super init];
-    if(self){
-//        [self initializeViewController];
-    }
-    return self;
-}
 
--(id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if(self){
-//        [self initializeViewController];
-    }
-    return self;
-}
 
 #pragma mark - Initialize View Controller Here
 - (void)initializeViewController {
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
-
+    
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -71,6 +60,11 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
+    self.textAlert = [KZTextAlert textAlert];
+    self.textAlert.delegate = self;
+    [self.view addSubview:self.textAlert];
+    self.textAlert.center = CGPointMake(self.view.bounds.size.width / 2.0f, -self.view.bounds.size.height / 2.0f);
+
 //    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
     /*
      Customizing the audio plot's look
@@ -89,76 +83,32 @@
     /*
      Start the microphone
      */
-    [self.microphone startFetchingAudio];
-    self.microphoneTextField.text = @"Microphone On";
-    self.recordingTextField.text = @"Not Recording";
-    self.playingTextField.text = @"Not Playing";
+ 
     
-    // Hide the play button
-    self.playButton.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.microphone startFetchingAudio];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self toggleRecording:NO];
-    [self toggleMicrophone:NO];
-    [self.recorder closeAudioFile];
+//    if (self.recorder)
+//    {
+//        [self.recorder closeAudioFile];
+//    }
+    [self.microphone stopFetchingAudio];
 }
+
 #pragma mark - Actions
 - (void)playFile:(id)sender {
+ 
     [self.microphone stopFetchingAudio];
     self.isRecording = NO;
     
     // Create Audio Player
-//    if( self.audioPlayer )
-//    {
-//        if( self.audioPlayer.playing )
-//        {
-//            [self.audioPlayer stop];
-//        }
-//        self.audioPlayer = nil;
-//    }
-    
-    // Close the audio file
-    if( self.recorder )
-    {
-        [self.recorder closeAudioFile];
-    }
-    
-//    NSError *err;
-//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self testFilePathURL]
-//                                                              error:&err];
-//    [self.audioPlayer play];
-//    self.audioPlayer.delegate = self;
-//    self.playingTextField.text = @"Playing";
-    
-}
-
--(void)toggleMicrophone:(BOOL)isOn {
-    
-    self.playingTextField.text = @"Not Playing";
-    if( self.audioPlayer ){
-        if( self.audioPlayer.playing ) {
-            [self.audioPlayer stop];
-        }
-        self.audioPlayer = nil;
-    }
-    
-    if(isOn){
-        [self.microphone startFetchingAudio];
-    } else {//Microphone Off
-        [self.microphone stopFetchingAudio];
-    }
-}
-
--(void)toggleRecording:(BOOL)isOn {
-    
-    self.playingTextField.text = @"Not Playing";
-    if( self.audioPlayer )
+    if(self.audioPlayer)
     {
         if( self.audioPlayer.playing )
         {
@@ -166,21 +116,32 @@
         }
         self.audioPlayer = nil;
     }
-    self.playButton.hidden = NO;
     
-    if(isOn) {
-        /*
-         Create the recorder
-         */
-        self.recorder = [EZRecorder recorderWithDestinationURL:[self testFilePathURL]
-                                                  sourceFormat:self.microphone.audioStreamBasicDescription
-                                           destinationFileType:EZRecorderFileTypeM4A];
-    }
-    else
+    // Close the audio file
+    if( self.recorder )
     {
         [self.recorder closeAudioFile];
     }
+    
+    NSError *err;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:self.songPath]
+                                                              error:&err];
+    [self.audioPlayer play];
+    self.audioPlayer.delegate = self;
+    
+}
+
+-(void)toggleRecording:(BOOL)isOn {
+
     self.isRecording = isOn;
+    if(isOn) {
+        
+        self.recorder = [EZRecorder recorderWithDestinationURL:[NSURL URLWithString:self.songPath]
+                                                  sourceFormat:self.microphone.audioStreamBasicDescription
+                                           destinationFileType:EZRecorderFileTypeM4A];
+    } else {
+        [self.recorder closeAudioFile];
+    }
 }
 
 #pragma mark - EZMicrophoneDelegate
@@ -206,11 +167,10 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 withNumberOfChannels:(UInt32)numberOfChannels {
     
     // Getting audio data as a buffer list that can be directly fed into the EZRecorder. This is happening on the audio thread - any UI updating needs a GCD main queue block. This will keep appending data to the tail of the audio file.
-    if(self.isRecording) {
+    if(self.recorder && self.isRecording) {
         [self.recorder appendDataFromBufferList:bufferList
                                  withBufferSize:bufferSize];
     }
-    
 }
 
 #pragma mark - AVAudioPlayerDelegate
@@ -218,49 +178,24 @@ withNumberOfChannels:(UInt32)numberOfChannels {
  Occurs when the audio player instance completes playback
  */
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    self.audioPlayer = nil;
-    self.playingTextField.text = @"Finished Playing";
     
-//    [self.microphone startFetchingAudio];
-//    self.microphoneSwitch.on = YES;
-//    self.microphoneTextField.text = @"Microphone On";
-}
 
-#pragma mark - Utility
--(NSArray*)applicationDocuments {
-    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-}
-
--(NSString*)applicationDocumentsDirectory
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    return basePath;
-}
-
--(NSURL*)testFilePathURL {
-    return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",
-                                   [self applicationDocumentsDirectory],
-                                   kAudioFilePath]];
 }
 
 #pragma mark - Interruption handlers
 - (IBAction)homeBtnPressed:(id)sender {
-
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController popToRootViewControllerAnimated:YES];
     });
 }
 
 - (IBAction)recordBtnPressed:(id)sender {
-
-    [((UIButton *)sender) setTitle:(_isRecording ? @"Stop" : @"Record") forState:UIControlStateNormal];
-    
-    if (!_isRecording) {
-        UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Retake", @"Save", nil];
+    if (_isRecording) {
+        UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Delete" destructiveButtonTitle:nil otherButtonTitles:@"Save", nil];
         [lActionSheet showInView:self.view];
+    } else {
+        self.textAlert.center = CGPointMake(self.view.bounds.size.width / 2.0f, self.view.bounds.size.height / 2.0f);
     }
-    _isRecording = !_isRecording;
 }
 
 - (IBAction)detailedReviewBtnPressed:(id)sender {
@@ -277,26 +212,26 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     [self.navigationController pushViewController:lGoNextNavVC animated:YES];
 }
 
-- (IBAction)stopRecordBtnPressed:(id)sender {
-    [self.recordBtn setImage:[UIImage imageNamed:@"record_btn.png"] forState:UIControlStateNormal];
-    _isRecording = NO;
-}
-
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     DLog(@"actionSheet: %i",buttonIndex);
     
+    
+    [self.recordBtn setTitle:@"Record" forState:UIControlStateNormal];
+    self.isRecording = NO;
     if (actionSheet.tag == 0) {
         switch (buttonIndex) {
-            case 0:{// retake
+            case 0:{//save
                 
+                if (self.recorder)
+                {
+//                    [self.recorder closeAudioFile];
+                }
+                [self.microphone stopFetchingAudio];
                 break;
             }
-            case 1:{//save
-//                [self.view addSubview:self.songNameAlertView];
-//                self.songNameAlertView.center = CGPointMake(160.0f, self.view.bounds.size.height / 2.0f);
-                break;
-            }
-            case 2:{//cancel
+            case 1:{//cancel delete
+                
+                [KZFileManager removeFileAtPath:self.songPath];
                 
                 break;
             }
@@ -316,7 +251,6 @@ withNumberOfChannels:(UInt32)numberOfChannels {
             }
             case 1:{
 
-
                 break;
             }
             case 2:{
@@ -328,4 +262,16 @@ withNumberOfChannels:(UInt32)numberOfChannels {
         }
     }
 }
+
+- (void)KZTextAlert:(KZTextAlert *)textAlert gotText:(NSString *)text {
+    [UIView animateWithDuration:0.3f animations:^{
+       textAlert.center = CGPointMake(self.view.bounds.size.width / 2.0f, -self.view.bounds.size.height / 2.0f);
+    }];
+    self.songPath = [NSString stringWithFormat:@"%@/%@.m4a",[KZFileManager defaultFolderPath], text];
+    self.isRecording = YES;
+    [self toggleRecording:YES];
+    [self.recordBtn setTitle:@"Stop" forState:UIControlStateNormal];
+
+}
+
 @end
