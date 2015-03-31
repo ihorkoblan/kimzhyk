@@ -224,7 +224,7 @@ withNumberOfChannels:(UInt32)numberOfChannels {
                 
                 if (self.recorder)
                 {
-//                    [self.recorder closeAudioFile];
+                    [self.recorder closeAudioFile];
                 }
                 [self.microphone stopFetchingAudio];
                 break;

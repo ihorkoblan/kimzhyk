@@ -7,6 +7,7 @@
 //
 
 #import "KZRecordNavigationViewController.h"
+#import "KZSoundHendlingViewController.h"
 
 @interface KZRecordNavigationViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +38,8 @@
 }
 
 - (IBAction)editMelodyBtnPressed:(id)sender {
-    
+    KZSoundHendlingViewController *lHendlingVC = [[KZSoundHendlingViewController alloc] initWithSoundPathURL:self.songUrl];
+    [self.navigationController pushViewController:lHendlingVC animated:YES];
 }
 
 @end

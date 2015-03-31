@@ -84,6 +84,8 @@
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     KZRecordNavigationViewController *lRecNavVC = [[KZRecordNavigationViewController alloc] initWithNibName:@"KZRecordNavigationViewController" bundle:nil];
+    NSURL *lURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",[KZFileManager defaultFolderPath],(NSString *)[KZFileManager itemsAtDefaultFolder][indexPath.row]]];
+    lRecNavVC.songUrl = lURL;
     [self.navigationController pushViewController:lRecNavVC animated:YES];
 }
 

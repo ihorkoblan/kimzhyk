@@ -14,6 +14,10 @@
 		5DC8D0C31AC5433C00315372 /* KZLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C21AC5433C00315372 /* KZLockView.m */; };
 		5DC8D0C81AC570F700315372 /* KZMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C61AC570F700315372 /* KZMenuViewController.m */; };
 		5DC8D0C91AC570F700315372 /* KZMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C71AC570F700315372 /* KZMenuViewController.xib */; };
+		5DCC83EB1ACA787400A7BEFC /* KZSoundHendlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */; };
+		5DCC83EC1ACA787400A7BEFC /* KZSoundHendlingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */; };
+		5DCC83EE1ACA813000A7BEFC /* simple-drum-beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */; };
+		5DCC83F11ACA986300A7BEFC /* KZFFTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */; };
 		5DCECA521AB9C9AB002CDCB1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */; };
 		5DCECA541AB9C9D6002CDCB1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */; };
 		5DD4FD4F1AC3FAF700BAF31E /* KZFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD4FD4E1AC3FAF700BAF31E /* KZFileManager.m */; };
@@ -97,6 +101,12 @@
 		5DC8D0C51AC570F700315372 /* KZMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZMenuViewController.h; sourceTree = "<group>"; };
 		5DC8D0C61AC570F700315372 /* KZMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZMenuViewController.m; sourceTree = "<group>"; };
 		5DC8D0C71AC570F700315372 /* KZMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZMenuViewController.xib; sourceTree = "<group>"; };
+		5DCC83E81ACA787400A7BEFC /* KZSoundHendlingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSoundHendlingViewController.h; sourceTree = "<group>"; };
+		5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSoundHendlingViewController.m; sourceTree = "<group>"; };
+		5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSoundHendlingViewController.xib; sourceTree = "<group>"; };
+		5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "simple-drum-beat.wav"; sourceTree = "<group>"; };
+		5DCC83EF1ACA986300A7BEFC /* KZFFTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFFTHelper.h; sourceTree = "<group>"; };
+		5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZFFTHelper.m; sourceTree = "<group>"; };
 		5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5DD4FD4D1AC3FAF700BAF31E /* KZFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFileManager.h; sourceTree = "<group>"; };
@@ -237,6 +247,8 @@
 				5DC83D631AC980E400124BB0 /* KZTextAlert.h */,
 				5DC83D641AC980E400124BB0 /* KZTextAlert.m */,
 				5DC83D661AC9811300124BB0 /* KZTextAlert.xib */,
+				5DCC83EF1ACA986300A7BEFC /* KZFFTHelper.h */,
+				5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -434,6 +446,10 @@
 				CED037C01AC71C4F006D8BD5 /* KZAboutViewController.h */,
 				CED037C11AC71C4F006D8BD5 /* KZAboutViewController.m */,
 				CED037C21AC71C4F006D8BD5 /* KZAboutViewController.xib */,
+				5DCC83E81ACA787400A7BEFC /* KZSoundHendlingViewController.h */,
+				5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */,
+				5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */,
+				5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -595,6 +611,7 @@
 				5DD4FE341AC464B800BAF31E /* pause_btn.png in Resources */,
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
 				5DD4FE351AC464B800BAF31E /* play_btn.png in Resources */,
+				5DCC83EE1ACA813000A7BEFC /* simple-drum-beat.wav in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
 				CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */,
 				5DD4FE3A1AC467B100BAF31E /* goon_btn.png in Resources */,
@@ -614,6 +631,7 @@
 				63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */,
 				63946FFD17B45B2800EADDD0 /* White_key.png in Resources */,
 				63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */,
+				5DCC83EC1ACA787400A7BEFC /* KZSoundHendlingViewController.xib in Resources */,
 				63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */,
 				5DD4FDCE1AC4214800BAF31E /* CHANGELOG in Resources */,
 				5DD4FE361AC464B800BAF31E /* record_btn.png in Resources */,
@@ -655,7 +673,9 @@
 				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
 				5DD4FDC21AC4214800BAF31E /* AEFloatConverter.m in Sources */,
 				5DC8D0C81AC570F700315372 /* KZMenuViewController.m in Sources */,
+				5DCC83EB1ACA787400A7BEFC /* KZSoundHendlingViewController.m in Sources */,
 				CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */,
+				5DCC83F11ACA986300A7BEFC /* KZFFTHelper.m in Sources */,
 				5DD4FDCD1AC4214800BAF31E /* TPCircularBuffer.c in Sources */,
 				5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */,
 				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,

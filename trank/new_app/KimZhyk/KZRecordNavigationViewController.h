@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface KZRecordNavigationViewController : UIViewController
-
+@property (nonatomic, strong) NSURL *songUrl;
 @end
