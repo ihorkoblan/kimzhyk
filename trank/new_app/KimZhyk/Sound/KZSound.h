@@ -46,10 +46,10 @@ typedef struct  {
 
 @property (nonatomic, assign) KZTone tone;
 @property (nonatomic, assign) CGFloat frequency;
-@property (nonatomic, assign, readonly) NSInteger noteNumber;
+@property (nonatomic, assign) NSInteger noteNumber;
 
 + (KZSound *)soundWithTone:(KZTone)tone;
 + (KZSound *)soundWithFreq:(CGFloat)freq;
-+ (KZSound *)soundWithNoteNumber:(NSInteger)noteNumber;
+- (KZSound *)initSoundWithNoteNumber:(NSInteger)noteNumber;
 
 @end

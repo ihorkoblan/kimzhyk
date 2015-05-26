@@ -11,43 +11,33 @@
 #import "KZViewController.h"
 #import "KZMenuViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "KZRainbow.h"
 
 @implementation KZAppDelegate
 
-- (void)dealloc
-{
-
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    
+    
     NSError *err = NULL;
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
     if( err ){
         NSLog(@"There was an error creating the audio session");
     }
-    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
-    if( err ){
+    [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
+    if (err) {
         NSLog(@"There was an error sending the audio to the speakers");
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-//    self.viewController = [[KZViewController alloc] initWithNibName:@"KZViewController" bundle:nil];//KZVoiceRecordingViewController
 
     KZMenuViewController *lMenuVC = [[KZMenuViewController alloc] initWithNibName:@"KZMenuViewController" bundle:nil];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lMenuVC];
     
-    self.window.rootViewController = nav;//self.viewController;
-//    [[KZVoiceRecordingViewController alloc] initWithNibName:@"KZVoiceRecordingViewController" bundle:nil];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    
-
-
-
-
     return YES;
 }
 

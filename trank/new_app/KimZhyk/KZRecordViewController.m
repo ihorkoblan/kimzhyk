@@ -11,19 +11,19 @@
 #import "KZSongsListViewController.h"
 #import "KZFileManager.h"
 #import "KZTextAlert.h"
-
+#import "KZRainbow.h"
 @interface KZRecordViewController ()<KZTextAlertDelegate>
 // Using AVPlayer for example
-@property (nonatomic,strong) AVAudioPlayer *audioPlayer;
-@property (nonatomic,weak) IBOutlet UISwitch *microphoneSwitch;
-@property (nonatomic,weak) IBOutlet UILabel *microphoneTextField;
-@property (nonatomic,weak) IBOutlet UIButton *playButton;
-@property (nonatomic,weak) IBOutlet UILabel *playingTextField;
-@property (nonatomic,weak) IBOutlet UISwitch *recordSwitch;
-@property (nonatomic,weak) IBOutlet UILabel *recordingTextField;
-@property (nonatomic,weak) IBOutlet UIButton *recordBtn;
-@property (nonatomic,weak) IBOutlet KZTextAlert *textAlert;
-@property (nonatomic,strong) NSString *songPath;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@property (nonatomic, weak) IBOutlet UISwitch *microphoneSwitch;
+@property (nonatomic, weak) IBOutlet UILabel *microphoneTextField;
+@property (nonatomic, weak) IBOutlet UIButton *playButton;
+@property (nonatomic, weak) IBOutlet UILabel *playingTextField;
+@property (nonatomic, weak) IBOutlet UISwitch *recordSwitch;
+@property (nonatomic, weak) IBOutlet UILabel *recordingTextField;
+@property (nonatomic, weak) IBOutlet UIButton *recordBtn;
+@property (nonatomic, weak) IBOutlet KZTextAlert *textAlert;
+@property (nonatomic, strong) NSString *songPath;
 @property (nonatomic, assign) BOOL isPlaying;
 @end
 
@@ -52,6 +52,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self){
         [self initializeViewController];
+        
     }
     return self;
 }
@@ -60,6 +61,7 @@
 -(void)viewDidLoad {
     
     [super viewDidLoad];
+    
     self.textAlert = [KZTextAlert textAlert];
     self.textAlert.delegate = self;
     [self.view addSubview:self.textAlert];
@@ -79,12 +81,6 @@
     self.audioPlot.shouldFill      = NO;
     // Mirror
     self.audioPlot.shouldMirror    = NO;
-    
-    /*
-     Start the microphone
-     */
- 
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -151,13 +147,10 @@
  hasAudioReceived:(float **)buffer
    withBufferSize:(UInt32)bufferSize
 withNumberOfChannels:(UInt32)numberOfChannels {
-    // Getting audio data as an array of float buffer arrays. What does that mean? Because the audio is coming in as a stereo signal the data is split into a left and right channel. So buffer[0] corresponds to the float* data for the left channel while buffer[1] corresponds to the float* data for the right channel.
     
-    // See the Thread Safety warning above, but in a nutshell these callbacks happen on a separate audio thread. We wrap any UI updating in a GCD block on the main thread to avoid blocking that audio flow.
+    __weak KZRecordViewController *lWeakSelf_ = self;
     dispatch_async(dispatch_get_main_queue(),^{
-        // All the audio plot needs is the buffer data (float*) and the size. Internally the audio plot will handle all the drawing related code, history management, and freeing its own resources. Hence, one badass line of code gets you a pretty plot :)
-
-        [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
+        [lWeakSelf_.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
     });
 }
 
@@ -166,10 +159,8 @@ withNumberOfChannels:(UInt32)numberOfChannels {
    withBufferSize:(UInt32)bufferSize
 withNumberOfChannels:(UInt32)numberOfChannels {
     
-    // Getting audio data as a buffer list that can be directly fed into the EZRecorder. This is happening on the audio thread - any UI updating needs a GCD main queue block. This will keep appending data to the tail of the audio file.
     if(self.recorder && self.isRecording) {
-        [self.recorder appendDataFromBufferList:bufferList
-                                 withBufferSize:bufferSize];
+        [self.recorder appendDataFromBufferList:bufferList withBufferSize:bufferSize];
     }
 }
 
@@ -179,18 +170,19 @@ withNumberOfChannels:(UInt32)numberOfChannels {
  */
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     
-
 }
 
 #pragma mark - Interruption handlers
 - (IBAction)homeBtnPressed:(id)sender {
+    __weak KZRecordViewController *lWeakSelf_ = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [lWeakSelf_.navigationController popToRootViewControllerAnimated:YES];
     });
 }
 
 - (IBAction)recordBtnPressed:(id)sender {
     if (_isRecording) {
+        
         UIActionSheet *lActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Delete" destructiveButtonTitle:nil otherButtonTitles:@"Save", nil];
         [lActionSheet showInView:self.view];
     } else {
@@ -213,8 +205,6 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    DLog(@"actionSheet: %i",buttonIndex);
-    
     
     [self.recordBtn setTitle:@"Record" forState:UIControlStateNormal];
     self.isRecording = NO;
@@ -242,19 +232,16 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    DLog(@"actionSheet: %i",buttonIndex);
+    DLog(@"actionSheet: %li",(long)buttonIndex);
     if (alertView.tag == 0) {
         switch (buttonIndex) {
             case 0:{
-                
                 break;
             }
             case 1:{
-
                 break;
             }
             case 2:{
-                
                 break;
             }
             default:
@@ -271,7 +258,6 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     self.isRecording = YES;
     [self toggleRecording:YES];
     [self.recordBtn setTitle:@"Stop" forState:UIControlStateNormal];
-
 }
 
 @end

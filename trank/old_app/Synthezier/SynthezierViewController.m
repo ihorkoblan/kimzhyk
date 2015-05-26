@@ -44,6 +44,8 @@
     [mInfoAboutPiano addSubview:mInfoAboutActivepiano];
     mInfoAboutPiano.alpha=0.0f;
     mInfoAboutPiano.center=CGPointMake(-19, 240);
+    
+    [mPlaySound loadPresetInstrument:@(0)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

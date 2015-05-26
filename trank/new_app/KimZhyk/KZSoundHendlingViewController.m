@@ -103,7 +103,10 @@
             
             // Setup the FFT if it's not already setup
             if( !_isFFTSetup ){
-                [self createFFTWithBufferSize:length withAudioData:waveformData];
+                
+//                _A = [self createFFTWithBufferSize:length withAudioData:waveformData];
+                _A = [[KZRainbow instance].fftHelper createFFTWithBufferSize:length withAudioData:waveformData fftSetup:&_FFTSetup];
+                
                 _isFFTSetup = YES;
             }
             
@@ -120,7 +123,7 @@
 /**
  Adapted from http://batmobile.blogs.ilrt.org/fourier-transforms-on-an-iphone/
  */
--(void)createFFTWithBufferSize:(float)bufferSize withAudioData:(float*)data {
+-(COMPLEX_SPLIT)createFFTWithBufferSize:(float)bufferSize withAudioData:(float*)data {
     
     // Setup the length
     _log2n = log2f(bufferSize);
@@ -141,7 +144,7 @@
     // Define complex buffer
     _A.realp = (float *) malloc(nOver2*sizeof(float));
     _A.imagp = (float *) malloc(nOver2*sizeof(float));
-    
+    return _A;
 }
 
 -(void)updateFFTWithBufferSize:(float)bufferSize withAudioData:(float*)data {
@@ -170,20 +173,7 @@
             bin = i;
         }
     }
-    
-    CGFloat delta = 100.0;
-    for (int i=0; i<nOver2; i++) {
-        float mag = _A.realp[i]*_A.realp[i]+_A.imagp[i]*_A.imagp[i];
-        if (mag > fabsf(maxMag * 0.8)) {
-            [_frequencies addObject:@(mag)];
-        }
-    }
-    
-    DLog(@"_frequencies: %@",_frequencies);
-//    float freq = bin*(THIS->sampleRate/bufferCapacity);
-    float freq = bin * (44100 / 1024);
-    
-    
+
     for(int i=0; i<nOver2; i++) {
         // Calculate the magnitude
         float mag = _A.realp[i]*_A.realp[i]+_A.imagp[i]*_A.imagp[i];

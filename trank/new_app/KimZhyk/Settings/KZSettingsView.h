@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KZInstrumentsHelper.h"
 
 @protocol KZSettingsViewDelegate;
 
@@ -21,7 +22,6 @@
 
 @end
 
-
 @protocol KZSettingsViewDelegate <NSObject>
 
 - (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender;
@@ -30,4 +30,6 @@
 - (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView backBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView openInstrumentsBtnPressed:(UIButton *)sender;
+- (void)KZSettingView:(id)settingsView instrumentChosen:(Instrument)instrument;
+
 @end

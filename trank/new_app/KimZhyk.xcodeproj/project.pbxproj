@@ -7,6 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		588034DA1B0248DD0033E004 /* KZWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 588034D91B0248DD0033E004 /* KZWindow.m */; };
+		588034DD1B024B1C0033E004 /* KZFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 588034DC1B024B1C0033E004 /* KZFilter.m */; };
+		58ACE4141B0F0FBD00F1B50B /* 1a_dies.caf in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE40D1B0F0FBD00F1B50B /* 1a_dies.caf */; };
+		58ACE4151B0F0FBD00F1B50B /* 2a_dies.caf in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE40E1B0F0FBD00F1B50B /* 2a_dies.caf */; };
+		58ACE4161B0F0FBD00F1B50B /* 3a_dies.caf in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE40F1B0F0FBD00F1B50B /* 3a_dies.caf */; };
+		58ACE4171B0F0FBD00F1B50B /* 4g.caf in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE4101B0F0FBD00F1B50B /* 4g.caf */; };
+		58ACE4181B0F0FBD00F1B50B /* 5e.caf in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE4111B0F0FBD00F1B50B /* 5e.caf */; };
+		58ACE4191B0F0FBD00F1B50B /* Trombone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE4121B0F0FBD00F1B50B /* Trombone.aupreset */; };
+		58ACE41A1B0F0FBD00F1B50B /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 58ACE4131B0F0FBD00F1B50B /* Vibraphone.aupreset */; };
+		58ACE4531B0F2C7300F1B50B /* KZKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ACE4521B0F2C7300F1B50B /* KZKeyboardManager.m */; };
+		58CC0C2E1B02691100D31642 /* KZRainbow.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CC0C2D1B02691100D31642 /* KZRainbow.m */; };
+		58CC0C311B026A4100D31642 /* KZButterfly.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CC0C301B026A4100D31642 /* KZButterfly.m */; };
+		58CC0C371B028CC800D31642 /* KZFFTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CC0C361B028CC800D31642 /* KZFFTHelper.m */; };
+		58D1C8BD1B1491BF00794C9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D1C8BC1B1491BF00794C9C /* QuartzCore.framework */; };
+		58D1C8C81B1491D900794C9C /* PianoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8BF1B1491D900794C9C /* PianoKey.m */; };
+		58D1C8C91B1491D900794C9C /* PianoKeyBlack.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C11B1491D900794C9C /* PianoKeyBlack.m */; };
+		58D1C8CA1B1491D900794C9C /* PianoKeyWhite.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C31B1491D900794C9C /* PianoKeyWhite.m */; };
+		58D1C8CB1B1491D900794C9C /* PianoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C51B1491D900794C9C /* PianoView.m */; };
+		58D1C8CC1B1491D900794C9C /* UITouch+PianoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C71B1491D900794C9C /* UITouch+PianoKey.m */; };
+		58DAD5531B0E259B00DF31A2 /* EPSSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD5521B0E259B00DF31A2 /* EPSSampler.m */; };
+		58EF77BF1B14C59800CB8469 /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EF77BE1B14C59800CB8469 /* UIButton+Custom.m */; };
+		58EF77DD1B14CBB900CB8469 /* ACCORDEON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C21B14CBB900CB8469 /* ACCORDEON@2x.png */; };
+		58EF77DE1B14CBB900CB8469 /* ACCORDEON_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C31B14CBB900CB8469 /* ACCORDEON_ACTIVE@2x.png */; };
+		58EF77DF1B14CBB900CB8469 /* ACOUSTIC_GUITAR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C41B14CBB900CB8469 /* ACOUSTIC_GUITAR@2x.png */; };
+		58EF77E01B14CBB900CB8469 /* ACOUSTIC_GUITAR_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C51B14CBB900CB8469 /* ACOUSTIC_GUITAR_ACTIVE@2x.png */; };
+		58EF77E11B14CBB900CB8469 /* CELLO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C61B14CBB900CB8469 /* CELLO@2x.png */; };
+		58EF77E21B14CBB900CB8469 /* CELLO_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C71B14CBB900CB8469 /* CELLO_ACTIVE@2x.png */; };
+		58EF77E31B14CBB900CB8469 /* CHURCH_ORGAN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C81B14CBB900CB8469 /* CHURCH_ORGAN@2x.png */; };
+		58EF77E41B14CBB900CB8469 /* CHURCH_ORGAN_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77C91B14CBB900CB8469 /* CHURCH_ORGAN_ACTIVE@2x.png */; };
+		58EF77E51B14CBB900CB8469 /* ELECTRIC_GUITAR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CA1B14CBB900CB8469 /* ELECTRIC_GUITAR@2x.png */; };
+		58EF77E61B14CBB900CB8469 /* ELECTRIC_GUITAR_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CB1B14CBB900CB8469 /* ELECTRIC_GUITAR_ACTIVE@2x.png */; };
+		58EF77E71B14CBB900CB8469 /* FLUTE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CC1B14CBB900CB8469 /* FLUTE@2x.png */; };
+		58EF77E81B14CBB900CB8469 /* FLUTE_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CD1B14CBB900CB8469 /* FLUTE_ACTIVE@2x.png */; };
+		58EF77E91B14CBB900CB8469 /* imgInstrumActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CE1B14CBB900CB8469 /* imgInstrumActive@2x.png */; };
+		58EF77EA1B14CBB900CB8469 /* PIANO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77CF1B14CBB900CB8469 /* PIANO@2x.png */; };
+		58EF77EB1B14CBB900CB8469 /* PIANO_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D01B14CBB900CB8469 /* PIANO_ACTIVE@2x.png */; };
+		58EF77EC1B14CBB900CB8469 /* STRING1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D11B14CBB900CB8469 /* STRING1@2x.png */; };
+		58EF77ED1B14CBB900CB8469 /* STRING1_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D21B14CBB900CB8469 /* STRING1_ACTIVE@2x.png */; };
+		58EF77EE1B14CBB900CB8469 /* STRING2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D31B14CBB900CB8469 /* STRING2@2x.png */; };
+		58EF77EF1B14CBB900CB8469 /* STRING2_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D41B14CBB900CB8469 /* STRING2_ACTIVE@2x.png */; };
+		58EF77F01B14CBB900CB8469 /* TENOR_SAX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D51B14CBB900CB8469 /* TENOR_SAX@2x.png */; };
+		58EF77F11B14CBB900CB8469 /* TENOR_SAX_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D61B14CBB900CB8469 /* TENOR_SAX_ACTIVE@2x.png */; };
+		58EF77F21B14CBB900CB8469 /* TRUMPET_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D71B14CBB900CB8469 /* TRUMPET_1@2x.png */; };
+		58EF77F31B14CBB900CB8469 /* TRUMPET_1_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D81B14CBB900CB8469 /* TRUMPET_1_ACTIVE@2x.png */; };
+		58EF77F41B14CBB900CB8469 /* TRUMPET_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77D91B14CBB900CB8469 /* TRUMPET_2@2x.png */; };
+		58EF77F51B14CBB900CB8469 /* TRUMPET_2_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77DA1B14CBB900CB8469 /* TRUMPET_2_ACTIVE@2x.png */; };
+		58EF77F61B14CBB900CB8469 /* VIOLIN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77DB1B14CBB900CB8469 /* VIOLIN@2x.png */; };
+		58EF77F71B14CBB900CB8469 /* VIOLIN_ACTIVE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EF77DC1B14CBB900CB8469 /* VIOLIN_ACTIVE@2x.png */; };
+		58EF77FA1B14D37B00CB8469 /* KZInstrumentsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EF77F91B14D37B00CB8469 /* KZInstrumentsHelper.m */; };
+		58EF77FD1B14E91000CB8469 /* KZDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EF77FC1B14E91000CB8469 /* KZDesign.m */; };
 		5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */; };
 		5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */; };
 		5DC83D651AC980E400124BB0 /* KZTextAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC83D641AC980E400124BB0 /* KZTextAlert.m */; };
@@ -16,8 +66,6 @@
 		5DC8D0C91AC570F700315372 /* KZMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8D0C71AC570F700315372 /* KZMenuViewController.xib */; };
 		5DCC83EB1ACA787400A7BEFC /* KZSoundHendlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */; };
 		5DCC83EC1ACA787400A7BEFC /* KZSoundHendlingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */; };
-		5DCC83EE1ACA813000A7BEFC /* simple-drum-beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */; };
-		5DCC83F11ACA986300A7BEFC /* KZFFTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */; };
 		5DCECA521AB9C9AB002CDCB1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */; };
 		5DCECA541AB9C9D6002CDCB1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */; };
 		5DD4FD4F1AC3FAF700BAF31E /* KZFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD4FD4E1AC3FAF700BAF31E /* KZFileManager.m */; };
@@ -50,10 +98,6 @@
 		63946FFB17B45B2800EADDD0 /* Black_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF517B45B2800EADDD0 /* Black_key.png */; };
 		63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF617B45B2800EADDD0 /* White_key_active.png */; };
 		63946FFD17B45B2800EADDD0 /* White_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF717B45B2800EADDD0 /* White_key.png */; };
-		7D09726D1911756400A23E8A /* KZPianoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09726C1911756400A23E8A /* KZPianoKey.m */; };
-		7D097271191175DB00A23E8A /* KZKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D097270191175DB00A23E8A /* KZKey.m */; };
-		7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */; };
-		7DFCB7E917B231A3001CDD53 /* KZTubaKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */; };
 		84ABFC041A12B6BE00B6F95D /* Common.c in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC021A12B6BE00B6F95D /* Common.c */; };
 		84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC051A12C14E00B6F95D /* KZSound.m */; };
 		C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF717AD179500050EB5 /* UIKit.framework */; };
@@ -67,14 +111,8 @@
 		C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3864D0D17AD179500050EB5 /* Default-568h@2x.png */; };
 		C3864D1117AD179500050EB5 /* KZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1017AD179500050EB5 /* KZViewController.m */; };
 		C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3864D1217AD179500050EB5 /* KZViewController.xib */; };
-		C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1C17AD17F800050EB5 /* KZKeyboard.m */; };
-		C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */; };
-		C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */; };
-		C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */; };
-		C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */; };
 		C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3417AD1D8100050EB5 /* KZSettingsView.m */; };
 		C3864D3917AD1DD100050EB5 /* KZSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */; };
-		C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */; };
 		C3864D4D17AD4C1000050EB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */; };
 		C3864D4F17AD4C4C00050EB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */; };
 		CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC377B41ABC9A4600EE0CEA /* KZStaveView.m */; };
@@ -90,6 +128,71 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		588034D81B0248DD0033E004 /* KZWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZWindow.h; sourceTree = "<group>"; };
+		588034D91B0248DD0033E004 /* KZWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZWindow.m; sourceTree = "<group>"; };
+		588034DB1B024B1C0033E004 /* KZFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFilter.h; sourceTree = "<group>"; };
+		588034DC1B024B1C0033E004 /* KZFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZFilter.m; sourceTree = "<group>"; };
+		58ACE40D1B0F0FBD00F1B50B /* 1a_dies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1a_dies.caf; sourceTree = "<group>"; };
+		58ACE40E1B0F0FBD00F1B50B /* 2a_dies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2a_dies.caf; sourceTree = "<group>"; };
+		58ACE40F1B0F0FBD00F1B50B /* 3a_dies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3a_dies.caf; sourceTree = "<group>"; };
+		58ACE4101B0F0FBD00F1B50B /* 4g.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4g.caf; sourceTree = "<group>"; };
+		58ACE4111B0F0FBD00F1B50B /* 5e.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5e.caf; sourceTree = "<group>"; };
+		58ACE4121B0F0FBD00F1B50B /* Trombone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Trombone.aupreset; path = KimZhyk/Resources/Trombone.aupreset; sourceTree = "<group>"; };
+		58ACE4131B0F0FBD00F1B50B /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Vibraphone.aupreset; path = KimZhyk/Resources/Vibraphone.aupreset; sourceTree = "<group>"; };
+		58ACE4511B0F2C7300F1B50B /* KZKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZKeyboardManager.h; path = Keyboards/KZKeyboardManager.h; sourceTree = "<group>"; };
+		58ACE4521B0F2C7300F1B50B /* KZKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZKeyboardManager.m; path = Keyboards/KZKeyboardManager.m; sourceTree = "<group>"; };
+		58CC0C2C1B02691100D31642 /* KZRainbow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZRainbow.h; sourceTree = "<group>"; };
+		58CC0C2D1B02691100D31642 /* KZRainbow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZRainbow.m; sourceTree = "<group>"; };
+		58CC0C2F1B026A4100D31642 /* KZButterfly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZButterfly.h; sourceTree = "<group>"; };
+		58CC0C301B026A4100D31642 /* KZButterfly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZButterfly.m; sourceTree = "<group>"; };
+		58CC0C351B028CC800D31642 /* KZFFTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFFTHelper.h; sourceTree = "<group>"; };
+		58CC0C361B028CC800D31642 /* KZFFTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZFFTHelper.m; sourceTree = "<group>"; };
+		58D1C8BC1B1491BF00794C9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58D1C8BE1B1491D900794C9C /* PianoKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PianoKey.h; path = Utils/PianoKey.h; sourceTree = "<group>"; };
+		58D1C8BF1B1491D900794C9C /* PianoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PianoKey.m; path = Utils/PianoKey.m; sourceTree = "<group>"; };
+		58D1C8C01B1491D900794C9C /* PianoKeyBlack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PianoKeyBlack.h; path = Utils/PianoKeyBlack.h; sourceTree = "<group>"; };
+		58D1C8C11B1491D900794C9C /* PianoKeyBlack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PianoKeyBlack.m; path = Utils/PianoKeyBlack.m; sourceTree = "<group>"; };
+		58D1C8C21B1491D900794C9C /* PianoKeyWhite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PianoKeyWhite.h; path = Utils/PianoKeyWhite.h; sourceTree = "<group>"; };
+		58D1C8C31B1491D900794C9C /* PianoKeyWhite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PianoKeyWhite.m; path = Utils/PianoKeyWhite.m; sourceTree = "<group>"; };
+		58D1C8C41B1491D900794C9C /* PianoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PianoView.h; path = Utils/PianoView.h; sourceTree = "<group>"; };
+		58D1C8C51B1491D900794C9C /* PianoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PianoView.m; path = Utils/PianoView.m; sourceTree = "<group>"; };
+		58D1C8C61B1491D900794C9C /* UITouch+PianoKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITouch+PianoKey.h"; path = "Utils/UITouch+PianoKey.h"; sourceTree = "<group>"; };
+		58D1C8C71B1491D900794C9C /* UITouch+PianoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITouch+PianoKey.m"; path = "Utils/UITouch+PianoKey.m"; sourceTree = "<group>"; };
+		58DAD5511B0E259B00DF31A2 /* EPSSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSampler.h; sourceTree = "<group>"; };
+		58DAD5521B0E259B00DF31A2 /* EPSSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSampler.m; sourceTree = "<group>"; };
+		58EF77BD1B14C59800CB8469 /* UIButton+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Custom.h"; path = "Categories/UIButton+Custom.h"; sourceTree = "<group>"; };
+		58EF77BE1B14C59800CB8469 /* UIButton+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Custom.m"; path = "Categories/UIButton+Custom.m"; sourceTree = "<group>"; };
+		58EF77C21B14CBB900CB8469 /* ACCORDEON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ACCORDEON@2x.png"; sourceTree = "<group>"; };
+		58EF77C31B14CBB900CB8469 /* ACCORDEON_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ACCORDEON_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77C41B14CBB900CB8469 /* ACOUSTIC_GUITAR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ACOUSTIC_GUITAR@2x.png"; sourceTree = "<group>"; };
+		58EF77C51B14CBB900CB8469 /* ACOUSTIC_GUITAR_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ACOUSTIC_GUITAR_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77C61B14CBB900CB8469 /* CELLO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CELLO@2x.png"; sourceTree = "<group>"; };
+		58EF77C71B14CBB900CB8469 /* CELLO_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CELLO_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77C81B14CBB900CB8469 /* CHURCH_ORGAN@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CHURCH_ORGAN@2x.png"; sourceTree = "<group>"; };
+		58EF77C91B14CBB900CB8469 /* CHURCH_ORGAN_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CHURCH_ORGAN_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77CA1B14CBB900CB8469 /* ELECTRIC_GUITAR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELECTRIC_GUITAR@2x.png"; sourceTree = "<group>"; };
+		58EF77CB1B14CBB900CB8469 /* ELECTRIC_GUITAR_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ELECTRIC_GUITAR_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77CC1B14CBB900CB8469 /* FLUTE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLUTE@2x.png"; sourceTree = "<group>"; };
+		58EF77CD1B14CBB900CB8469 /* FLUTE_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLUTE_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77CE1B14CBB900CB8469 /* imgInstrumActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imgInstrumActive@2x.png"; sourceTree = "<group>"; };
+		58EF77CF1B14CBB900CB8469 /* PIANO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PIANO@2x.png"; sourceTree = "<group>"; };
+		58EF77D01B14CBB900CB8469 /* PIANO_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PIANO_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77D11B14CBB900CB8469 /* STRING1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STRING1@2x.png"; sourceTree = "<group>"; };
+		58EF77D21B14CBB900CB8469 /* STRING1_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STRING1_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77D31B14CBB900CB8469 /* STRING2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STRING2@2x.png"; sourceTree = "<group>"; };
+		58EF77D41B14CBB900CB8469 /* STRING2_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STRING2_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77D51B14CBB900CB8469 /* TENOR_SAX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TENOR_SAX@2x.png"; sourceTree = "<group>"; };
+		58EF77D61B14CBB900CB8469 /* TENOR_SAX_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TENOR_SAX_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77D71B14CBB900CB8469 /* TRUMPET_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TRUMPET_1@2x.png"; sourceTree = "<group>"; };
+		58EF77D81B14CBB900CB8469 /* TRUMPET_1_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TRUMPET_1_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77D91B14CBB900CB8469 /* TRUMPET_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TRUMPET_2@2x.png"; sourceTree = "<group>"; };
+		58EF77DA1B14CBB900CB8469 /* TRUMPET_2_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TRUMPET_2_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77DB1B14CBB900CB8469 /* VIOLIN@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VIOLIN@2x.png"; sourceTree = "<group>"; };
+		58EF77DC1B14CBB900CB8469 /* VIOLIN_ACTIVE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VIOLIN_ACTIVE@2x.png"; sourceTree = "<group>"; };
+		58EF77F81B14D37B00CB8469 /* KZInstrumentsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZInstrumentsHelper.h; sourceTree = "<group>"; };
+		58EF77F91B14D37B00CB8469 /* KZInstrumentsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZInstrumentsHelper.m; sourceTree = "<group>"; };
+		58EF77FB1B14E91000CB8469 /* KZDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZDesign.h; sourceTree = "<group>"; };
+		58EF77FC1B14E91000CB8469 /* KZDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZDesign.m; sourceTree = "<group>"; };
 		5DC4DF9B1ABAB8F300C21071 /* KZSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZSettingsView.xib; path = Settings/KZSettingsView.xib; sourceTree = "<group>"; };
 		5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoSlider.h; path = Utils/KZPianoSlider.h; sourceTree = "<group>"; };
 		5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoSlider.m; path = Utils/KZPianoSlider.m; sourceTree = "<group>"; };
@@ -104,9 +207,6 @@
 		5DCC83E81ACA787400A7BEFC /* KZSoundHendlingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSoundHendlingViewController.h; sourceTree = "<group>"; };
 		5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSoundHendlingViewController.m; sourceTree = "<group>"; };
 		5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSoundHendlingViewController.xib; sourceTree = "<group>"; };
-		5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "simple-drum-beat.wav"; sourceTree = "<group>"; };
-		5DCC83EF1ACA986300A7BEFC /* KZFFTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFFTHelper.h; sourceTree = "<group>"; };
-		5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZFFTHelper.m; sourceTree = "<group>"; };
 		5DCECA511AB9C9AB002CDCB1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5DD4FD4D1AC3FAF700BAF31E /* KZFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZFileManager.h; sourceTree = "<group>"; };
@@ -152,12 +252,6 @@
 		63946FF517B45B2800EADDD0 /* Black_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Black_key.png; path = KimZhyk/Resources/images/keys/Black_key.png; sourceTree = "<group>"; };
 		63946FF617B45B2800EADDD0 /* White_key_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key_active.png; path = KimZhyk/Resources/images/keys/White_key_active.png; sourceTree = "<group>"; };
 		63946FF717B45B2800EADDD0 /* White_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key.png; path = KimZhyk/Resources/images/keys/White_key.png; sourceTree = "<group>"; };
-		7D09726B1911756400A23E8A /* KZPianoKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoKey.h; path = Custom/KZPianoKey.h; sourceTree = "<group>"; };
-		7D09726C1911756400A23E8A /* KZPianoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoKey.m; path = Custom/KZPianoKey.m; sourceTree = "<group>"; };
-		7D09726F191175DB00A23E8A /* KZKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZKey.h; path = Custom/KZKey.h; sourceTree = "<group>"; };
-		7D097270191175DB00A23E8A /* KZKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZKey.m; path = Custom/KZKey.m; sourceTree = "<group>"; };
-		7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZBajanKeyboard.xib; path = Keyboards/BajanKeyboard/KZBajanKeyboard.xib; sourceTree = "<group>"; };
-		7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KZTubaKeyboard.xib; path = Keyboards/TubaKeyboard/KZTubaKeyboard.xib; sourceTree = "<group>"; };
 		84ABFC021A12B6BE00B6F95D /* Common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Common.c; sourceTree = "<group>"; };
 		84ABFC031A12B6BE00B6F95D /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		84ABFC051A12C14E00B6F95D /* KZSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSound.m; path = Sound/KZSound.m; sourceTree = "<group>"; };
@@ -177,23 +271,11 @@
 		C3864D0F17AD179500050EB5 /* KZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZViewController.h; sourceTree = "<group>"; };
 		C3864D1017AD179500050EB5 /* KZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZViewController.m; sourceTree = "<group>"; };
 		C3864D1317AD179500050EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KZViewController.xib; sourceTree = "<group>"; };
-		C3864D1B17AD17F800050EB5 /* KZKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZKeyboard.h; path = Keyboards/Keyboard/KZKeyboard.h; sourceTree = "<group>"; };
-		C3864D1C17AD17F800050EB5 /* KZKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZKeyboard.m; path = Keyboards/Keyboard/KZKeyboard.m; sourceTree = "<group>"; };
-		C3864D1E17AD182600050EB5 /* KZPianoKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPianoKeyboard.h; path = Keyboards/PianoKeyboard/KZPianoKeyboard.h; sourceTree = "<group>"; };
-		C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPianoKeyboard.m; path = Keyboards/PianoKeyboard/KZPianoKeyboard.m; sourceTree = "<group>"; };
-		C3864D2117AD184F00050EB5 /* KZBajanKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZBajanKeyboard.h; path = Keyboards/BajanKeyboard/KZBajanKeyboard.h; sourceTree = "<group>"; };
-		C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZBajanKeyboard.m; path = Keyboards/BajanKeyboard/KZBajanKeyboard.m; sourceTree = "<group>"; };
-		C3864D2B17AD1C7B00050EB5 /* KZTubaKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZTubaKeyboard.h; path = Keyboards/TubaKeyboard/KZTubaKeyboard.h; sourceTree = "<group>"; };
-		C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZTubaKeyboard.m; path = Keyboards/TubaKeyboard/KZTubaKeyboard.m; sourceTree = "<group>"; };
-		C3864D2F17AD1D3A00050EB5 /* KZGuitarKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZGuitarKeyboard.h; path = Keyboards/Guitar/KZGuitarKeyboard.h; sourceTree = "<group>"; };
-		C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZGuitarKeyboard.m; path = Keyboards/Guitar/KZGuitarKeyboard.m; sourceTree = "<group>"; };
 		C3864D3317AD1D8100050EB5 /* KZSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSettingsView.h; path = Settings/KZSettingsView.h; sourceTree = "<group>"; };
 		C3864D3417AD1D8100050EB5 /* KZSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSettingsView.m; path = Settings/KZSettingsView.m; sourceTree = "<group>"; };
 		C3864D3717AD1DD100050EB5 /* KZSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSynthesizer.h; path = Synthesizer/KZSynthesizer.h; sourceTree = "<group>"; };
 		C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSynthesizer.m; path = Synthesizer/KZSynthesizer.m; sourceTree = "<group>"; };
 		C3864D3B17AD221300050EB5 /* KZGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZGlobal.h; sourceTree = "<group>"; };
-		C3864D4117AD3F2F00050EB5 /* KZAlternativeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZAlternativeKeyboard.h; path = Keyboards/AlternativeKeyboard/KZAlternativeKeyboard.h; sourceTree = "<group>"; };
-		C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZAlternativeKeyboard.m; path = Keyboards/AlternativeKeyboard/KZAlternativeKeyboard.m; sourceTree = "<group>"; };
 		C3864D4517AD405300050EB5 /* KZSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZSound.h; path = Sound/KZSound.h; sourceTree = "<group>"; };
 		C3864D4C17AD4C1000050EB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C3864D4E17AD4C4B00050EB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +303,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D1C8BD1B1491BF00794C9C /* QuartzCore.framework in Frameworks */,
 				5DD4FE2D1AC4266C00BAF31E /* OpenGLES.framework in Frameworks */,
 				5DD4FD7B1AC409FC00BAF31E /* GLKit.framework in Frameworks */,
 				C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */,
@@ -237,9 +320,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58ACE40B1B0F0FBD00F1B50B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				58ACE40C1B0F0FBD00F1B50B /* Tbone */,
+			);
+			name = Sounds;
+			path = KimZhyk/Resources/Sounds;
+			sourceTree = "<group>";
+		};
+		58ACE40C1B0F0FBD00F1B50B /* Tbone */ = {
+			isa = PBXGroup;
+			children = (
+				58ACE40D1B0F0FBD00F1B50B /* 1a_dies.caf */,
+				58ACE40E1B0F0FBD00F1B50B /* 2a_dies.caf */,
+				58ACE40F1B0F0FBD00F1B50B /* 3a_dies.caf */,
+				58ACE4101B0F0FBD00F1B50B /* 4g.caf */,
+				58ACE4111B0F0FBD00F1B50B /* 5e.caf */,
+			);
+			path = Tbone;
+			sourceTree = "<group>";
+		};
+		58EF77C01B14C77700CB8469 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				58EF77BD1B14C59800CB8469 /* UIButton+Custom.h */,
+				58EF77BE1B14C59800CB8469 /* UIButton+Custom.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		58EF77C11B14CBB900CB8469 /* instruments */ = {
+			isa = PBXGroup;
+			children = (
+				58EF77C21B14CBB900CB8469 /* ACCORDEON@2x.png */,
+				58EF77C31B14CBB900CB8469 /* ACCORDEON_ACTIVE@2x.png */,
+				58EF77C41B14CBB900CB8469 /* ACOUSTIC_GUITAR@2x.png */,
+				58EF77C51B14CBB900CB8469 /* ACOUSTIC_GUITAR_ACTIVE@2x.png */,
+				58EF77C61B14CBB900CB8469 /* CELLO@2x.png */,
+				58EF77C71B14CBB900CB8469 /* CELLO_ACTIVE@2x.png */,
+				58EF77C81B14CBB900CB8469 /* CHURCH_ORGAN@2x.png */,
+				58EF77C91B14CBB900CB8469 /* CHURCH_ORGAN_ACTIVE@2x.png */,
+				58EF77CA1B14CBB900CB8469 /* ELECTRIC_GUITAR@2x.png */,
+				58EF77CB1B14CBB900CB8469 /* ELECTRIC_GUITAR_ACTIVE@2x.png */,
+				58EF77CC1B14CBB900CB8469 /* FLUTE@2x.png */,
+				58EF77CD1B14CBB900CB8469 /* FLUTE_ACTIVE@2x.png */,
+				58EF77CE1B14CBB900CB8469 /* imgInstrumActive@2x.png */,
+				58EF77CF1B14CBB900CB8469 /* PIANO@2x.png */,
+				58EF77D01B14CBB900CB8469 /* PIANO_ACTIVE@2x.png */,
+				58EF77D11B14CBB900CB8469 /* STRING1@2x.png */,
+				58EF77D21B14CBB900CB8469 /* STRING1_ACTIVE@2x.png */,
+				58EF77D31B14CBB900CB8469 /* STRING2@2x.png */,
+				58EF77D41B14CBB900CB8469 /* STRING2_ACTIVE@2x.png */,
+				58EF77D51B14CBB900CB8469 /* TENOR_SAX@2x.png */,
+				58EF77D61B14CBB900CB8469 /* TENOR_SAX_ACTIVE@2x.png */,
+				58EF77D71B14CBB900CB8469 /* TRUMPET_1@2x.png */,
+				58EF77D81B14CBB900CB8469 /* TRUMPET_1_ACTIVE@2x.png */,
+				58EF77D91B14CBB900CB8469 /* TRUMPET_2@2x.png */,
+				58EF77DA1B14CBB900CB8469 /* TRUMPET_2_ACTIVE@2x.png */,
+				58EF77DB1B14CBB900CB8469 /* VIOLIN@2x.png */,
+				58EF77DC1B14CBB900CB8469 /* VIOLIN_ACTIVE@2x.png */,
+			);
+			name = instruments;
+			path = KimZhyk/Resources/images/instruments;
+			sourceTree = "<group>";
+		};
+		58EF77FE1B14EA1700CB8469 /* PianoView */ = {
+			isa = PBXGroup;
+			children = (
+				58D1C8C61B1491D900794C9C /* UITouch+PianoKey.h */,
+				58D1C8C71B1491D900794C9C /* UITouch+PianoKey.m */,
+				58D1C8BE1B1491D900794C9C /* PianoKey.h */,
+				58D1C8BF1B1491D900794C9C /* PianoKey.m */,
+				58D1C8C01B1491D900794C9C /* PianoKeyBlack.h */,
+				58D1C8C11B1491D900794C9C /* PianoKeyBlack.m */,
+				58D1C8C21B1491D900794C9C /* PianoKeyWhite.h */,
+				58D1C8C31B1491D900794C9C /* PianoKeyWhite.m */,
+				58D1C8C41B1491D900794C9C /* PianoView.h */,
+				58D1C8C51B1491D900794C9C /* PianoView.m */,
+			);
+			name = PianoView;
+			sourceTree = "<group>";
+		};
 		5DC4DFA11ABB154600C21071 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				58EF77FE1B14EA1700CB8469 /* PianoView */,
 				5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */,
 				5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */,
 				CEC377B31ABC9A4600EE0CEA /* KZStaveView.h */,
@@ -247,8 +413,6 @@
 				5DC83D631AC980E400124BB0 /* KZTextAlert.h */,
 				5DC83D641AC980E400124BB0 /* KZTextAlert.m */,
 				5DC83D661AC9811300124BB0 /* KZTextAlert.xib */,
-				5DCC83EF1ACA986300A7BEFC /* KZFFTHelper.h */,
-				5DCC83F01ACA986300A7BEFC /* KZFFTHelper.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -297,6 +461,9 @@
 		638FE8B917B43D43009212D9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				58ACE40B1B0F0FBD00F1B50B /* Sounds */,
+				58ACE4121B0F0FBD00F1B50B /* Trombone.aupreset */,
+				58ACE4131B0F0FBD00F1B50B /* Vibraphone.aupreset */,
 				638FE8BA17B43DAC009212D9 /* Images */,
 			);
 			name = Resource;
@@ -305,6 +472,7 @@
 		638FE8BA17B43DAC009212D9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				58EF77C11B14CBB900CB8469 /* instruments */,
 				5DD4FE391AC467B100BAF31E /* goon_btn.png */,
 				5DD4FE311AC464B800BAF31E /* pause_btn.png */,
 				5DD4FE321AC464B800BAF31E /* play_btn.png */,
@@ -330,24 +498,6 @@
 			name = keys;
 			sourceTree = "<group>";
 		};
-		7D09726E1911758100A23E8A /* KZPianoKey */ = {
-			isa = PBXGroup;
-			children = (
-				7D09726B1911756400A23E8A /* KZPianoKey.h */,
-				7D09726C1911756400A23E8A /* KZPianoKey.m */,
-			);
-			name = KZPianoKey;
-			sourceTree = "<group>";
-		};
-		7D097272191175E800A23E8A /* KZKey */ = {
-			isa = PBXGroup;
-			children = (
-				7D09726F191175DB00A23E8A /* KZKey.h */,
-				7D097270191175DB00A23E8A /* KZKey.m */,
-			);
-			name = KZKey;
-			sourceTree = "<group>";
-		};
 		C3864CEB17AD179500050EB5 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +519,7 @@
 		C3864CF617AD179500050EB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58D1C8BC1B1491BF00794C9C /* QuartzCore.framework */,
 				5DD4FE2C1AC4266C00BAF31E /* OpenGLES.framework */,
 				5DD4FD7A1AC409FC00BAF31E /* GLKit.framework */,
 				5DCECA531AB9C9D6002CDCB1 /* CoreFoundation.framework */,
@@ -388,6 +539,18 @@
 		C3864CFD17AD179500050EB5 /* KimZhyk */ = {
 			isa = PBXGroup;
 			children = (
+				58DAD5511B0E259B00DF31A2 /* EPSSampler.h */,
+				58DAD5521B0E259B00DF31A2 /* EPSSampler.m */,
+				588034D81B0248DD0033E004 /* KZWindow.h */,
+				588034D91B0248DD0033E004 /* KZWindow.m */,
+				588034DB1B024B1C0033E004 /* KZFilter.h */,
+				588034DC1B024B1C0033E004 /* KZFilter.m */,
+				58CC0C2F1B026A4100D31642 /* KZButterfly.h */,
+				58CC0C301B026A4100D31642 /* KZButterfly.m */,
+				58CC0C351B028CC800D31642 /* KZFFTHelper.h */,
+				58CC0C361B028CC800D31642 /* KZFFTHelper.m */,
+				58CC0C2C1B02691100D31642 /* KZRainbow.h */,
+				58CC0C2D1B02691100D31642 /* KZRainbow.m */,
 				5DD4FDA61AC4214700BAF31E /* EZAudio */,
 				C3864D3B17AD221300050EB5 /* KZGlobal.h */,
 				5DC4DFA11ABB154600C21071 /* Utils */,
@@ -397,14 +560,17 @@
 				C3864D0717AD179500050EB5 /* KZAppDelegate.m */,
 				5DD4FD4D1AC3FAF700BAF31E /* KZFileManager.h */,
 				5DD4FD4E1AC3FAF700BAF31E /* KZFileManager.m */,
-				7D097272191175E800A23E8A /* KZKey */,
-				7D09726E1911758100A23E8A /* KZPianoKey */,
 				C3864D4817AD405700050EB5 /* Sound */,
 				C3864D1A17AD17A600050EB5 /* ViewController */,
 				C3864D2E17AD1C8B00050EB5 /* Keyboards */,
 				C3864D3617AD1D8900050EB5 /* Settings */,
 				C3864D3A17AD1DD600050EB5 /* Synthesizer */,
 				C3864CFE17AD179500050EB5 /* Supporting Files */,
+				58EF77C01B14C77700CB8469 /* Categories */,
+				58EF77F81B14D37B00CB8469 /* KZInstrumentsHelper.h */,
+				58EF77F91B14D37B00CB8469 /* KZInstrumentsHelper.m */,
+				58EF77FB1B14E91000CB8469 /* KZDesign.h */,
+				58EF77FC1B14E91000CB8469 /* KZDesign.m */,
 			);
 			path = KimZhyk;
 			sourceTree = "<group>";
@@ -449,69 +615,17 @@
 				5DCC83E81ACA787400A7BEFC /* KZSoundHendlingViewController.h */,
 				5DCC83E91ACA787400A7BEFC /* KZSoundHendlingViewController.m */,
 				5DCC83EA1ACA787400A7BEFC /* KZSoundHendlingViewController.xib */,
-				5DCC83ED1ACA813000A7BEFC /* simple-drum-beat.wav */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		C3864D2417AD1B4E00050EB5 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D1B17AD17F800050EB5 /* KZKeyboard.h */,
-				C3864D1C17AD17F800050EB5 /* KZKeyboard.m */,
-			);
-			name = Keyboard;
-			sourceTree = "<group>";
-		};
-		C3864D2517AD1B5F00050EB5 /* Piano */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D1E17AD182600050EB5 /* KZPianoKeyboard.h */,
-				C3864D1F17AD182600050EB5 /* KZPianoKeyboard.m */,
-			);
-			name = Piano;
-			sourceTree = "<group>";
-		};
-		C3864D2617AD1B6C00050EB5 /* Bajan */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D2117AD184F00050EB5 /* KZBajanKeyboard.h */,
-				C3864D2217AD184F00050EB5 /* KZBajanKeyboard.m */,
-				7DFCB7E617B23082001CDD53 /* KZBajanKeyboard.xib */,
-			);
-			name = Bajan;
-			sourceTree = "<group>";
-		};
-		C3864D2A17AD1C4900050EB5 /* Tuba */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D2B17AD1C7B00050EB5 /* KZTubaKeyboard.h */,
-				C3864D2C17AD1C7B00050EB5 /* KZTubaKeyboard.m */,
-				7DFCB7E817B231A3001CDD53 /* KZTubaKeyboard.xib */,
-			);
-			name = Tuba;
 			sourceTree = "<group>";
 		};
 		C3864D2E17AD1C8B00050EB5 /* Keyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C3864D2417AD1B4E00050EB5 /* Keyboard */,
-				C3864D2517AD1B5F00050EB5 /* Piano */,
-				C3864D2617AD1B6C00050EB5 /* Bajan */,
-				C3864D2A17AD1C4900050EB5 /* Tuba */,
-				C3864D3217AD1D4100050EB5 /* Guitar */,
-				C3864D4417AD3F3300050EB5 /* Alternative */,
+				58ACE4511B0F2C7300F1B50B /* KZKeyboardManager.h */,
+				58ACE4521B0F2C7300F1B50B /* KZKeyboardManager.m */,
 			);
 			name = Keyboards;
-			sourceTree = "<group>";
-		};
-		C3864D3217AD1D4100050EB5 /* Guitar */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D2F17AD1D3A00050EB5 /* KZGuitarKeyboard.h */,
-				C3864D3017AD1D3A00050EB5 /* KZGuitarKeyboard.m */,
-			);
-			name = Guitar;
 			sourceTree = "<group>";
 		};
 		C3864D3617AD1D8900050EB5 /* Settings */ = {
@@ -531,15 +645,6 @@
 				C3864D3817AD1DD100050EB5 /* KZSynthesizer.m */,
 			);
 			name = Synthesizer;
-			sourceTree = "<group>";
-		};
-		C3864D4417AD3F3300050EB5 /* Alternative */ = {
-			isa = PBXGroup;
-			children = (
-				C3864D4117AD3F2F00050EB5 /* KZAlternativeKeyboard.h */,
-				C3864D4217AD3F2F00050EB5 /* KZAlternativeKeyboard.m */,
-			);
-			name = Alternative;
 			sourceTree = "<group>";
 		};
 		C3864D4817AD405700050EB5 /* Sound */ = {
@@ -610,35 +715,66 @@
 			files = (
 				5DD4FE341AC464B800BAF31E /* pause_btn.png in Resources */,
 				C3864D0217AD179500050EB5 /* InfoPlist.strings in Resources */,
+				58EF77F11B14CBB900CB8469 /* TENOR_SAX_ACTIVE@2x.png in Resources */,
 				5DD4FE351AC464B800BAF31E /* play_btn.png in Resources */,
-				5DCC83EE1ACA813000A7BEFC /* simple-drum-beat.wav in Resources */,
+				58EF77DD1B14CBB900CB8469 /* ACCORDEON@2x.png in Resources */,
+				58EF77DE1B14CBB900CB8469 /* ACCORDEON_ACTIVE@2x.png in Resources */,
+				58EF77F31B14CBB900CB8469 /* TRUMPET_1_ACTIVE@2x.png in Resources */,
 				C3864D0A17AD179500050EB5 /* Default.png in Resources */,
+				58EF77EC1B14CBB900CB8469 /* STRING1@2x.png in Resources */,
+				58EF77EA1B14CBB900CB8469 /* PIANO@2x.png in Resources */,
 				CECDFEBF1AB05C150062ECBB /* KZRecordViewController.xib in Resources */,
 				5DD4FE3A1AC467B100BAF31E /* goon_btn.png in Resources */,
 				5DC4DF9C1ABAB8F300C21071 /* KZSettingsView.xib in Resources */,
 				5DC8D0C91AC570F700315372 /* KZMenuViewController.xib in Resources */,
 				CED037BF1AC719CA006D8BD5 /* KZSongsListViewController.xib in Resources */,
+				58EF77F71B14CBB900CB8469 /* VIOLIN_ACTIVE@2x.png in Resources */,
 				C3864D0C17AD179500050EB5 /* Default@2x.png in Resources */,
+				58EF77E81B14CBB900CB8469 /* FLUTE_ACTIVE@2x.png in Resources */,
+				58EF77EE1B14CBB900CB8469 /* STRING2@2x.png in Resources */,
+				58ACE4191B0F0FBD00F1B50B /* Trombone.aupreset in Resources */,
 				5DD4FE381AC4664E00BAF31E /* stop_btn.png in Resources */,
 				C3864D0E17AD179500050EB5 /* Default-568h@2x.png in Resources */,
+				58EF77F61B14CBB900CB8469 /* VIOLIN@2x.png in Resources */,
+				58EF77E61B14CBB900CB8469 /* ELECTRIC_GUITAR_ACTIVE@2x.png in Resources */,
 				C3864D1417AD179500050EB5 /* KZViewController.xib in Resources */,
-				7DFCB7E717B23082001CDD53 /* KZBajanKeyboard.xib in Resources */,
+				58EF77E21B14CBB900CB8469 /* CELLO_ACTIVE@2x.png in Resources */,
 				5DD4FDCF1AC4214800BAF31E /* VERSION in Resources */,
-				7DFCB7E917B231A3001CDD53 /* KZTubaKeyboard.xib in Resources */,
+				58EF77E71B14CBB900CB8469 /* FLUTE@2x.png in Resources */,
+				58ACE4181B0F0FBD00F1B50B /* 5e.caf in Resources */,
+				58EF77F01B14CBB900CB8469 /* TENOR_SAX@2x.png in Resources */,
 				CED037BA1AC70CE8006D8BD5 /* KZRecordNavigationViewController.xib in Resources */,
+				58EF77ED1B14CBB900CB8469 /* STRING1_ACTIVE@2x.png in Resources */,
+				58EF77F21B14CBB900CB8469 /* TRUMPET_1@2x.png in Resources */,
 				63946FFA17B45B2800EADDD0 /* Black_key_active.png in Resources */,
+				58EF77EF1B14CBB900CB8469 /* STRING2_ACTIVE@2x.png in Resources */,
 				63946FFB17B45B2800EADDD0 /* Black_key.png in Resources */,
 				63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */,
+				58ACE4141B0F0FBD00F1B50B /* 1a_dies.caf in Resources */,
+				58EF77E01B14CBB900CB8469 /* ACOUSTIC_GUITAR_ACTIVE@2x.png in Resources */,
+				58EF77E11B14CBB900CB8469 /* CELLO@2x.png in Resources */,
+				58ACE4161B0F0FBD00F1B50B /* 3a_dies.caf in Resources */,
+				58EF77E31B14CBB900CB8469 /* CHURCH_ORGAN@2x.png in Resources */,
+				58EF77E91B14CBB900CB8469 /* imgInstrumActive@2x.png in Resources */,
+				58ACE4151B0F0FBD00F1B50B /* 2a_dies.caf in Resources */,
+				58EF77DF1B14CBB900CB8469 /* ACOUSTIC_GUITAR@2x.png in Resources */,
 				63946FFD17B45B2800EADDD0 /* White_key.png in Resources */,
 				63922F4F17BAC14500040730 /* Bayan_key_black_active.png in Resources */,
 				5DCC83EC1ACA787400A7BEFC /* KZSoundHendlingViewController.xib in Resources */,
+				58EF77E41B14CBB900CB8469 /* CHURCH_ORGAN_ACTIVE@2x.png in Resources */,
 				63922F5017BAC14500040730 /* Bayan_key_black.png in Resources */,
+				58EF77EB1B14CBB900CB8469 /* PIANO_ACTIVE@2x.png in Resources */,
+				58EF77F51B14CBB900CB8469 /* TRUMPET_2_ACTIVE@2x.png in Resources */,
 				5DD4FDCE1AC4214800BAF31E /* CHANGELOG in Resources */,
 				5DD4FE361AC464B800BAF31E /* record_btn.png in Resources */,
+				58EF77E51B14CBB900CB8469 /* ELECTRIC_GUITAR@2x.png in Resources */,
 				CED037C41AC71C4F006D8BD5 /* KZAboutViewController.xib in Resources */,
+				58EF77F41B14CBB900CB8469 /* TRUMPET_2@2x.png in Resources */,
 				5DC83D671AC9811300124BB0 /* KZTextAlert.xib in Resources */,
 				63922F5117BAC14500040730 /* Bayan_key_white_active.png in Resources */,
+				58ACE41A1B0F0FBD00F1B50B /* Vibraphone.aupreset in Resources */,
 				63922F5217BAC14500040730 /* Bayan_key_white.png in Resources */,
+				58ACE4171B0F0FBD00F1B50B /* 4g.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,38 +789,44 @@
 				5DD4FDC81AC4214800BAF31E /* EZAudioPlotGLKViewController.m in Sources */,
 				C3864D0417AD179500050EB5 /* main.m in Sources */,
 				C3864D0817AD179500050EB5 /* KZAppDelegate.m in Sources */,
+				58D1C8CB1B1491D900794C9C /* PianoView.m in Sources */,
 				5DD4FDC91AC4214800BAF31E /* EZMicrophone.m in Sources */,
 				5DD4FDC71AC4214800BAF31E /* EZAudioPlotGL.m in Sources */,
+				58D1C8C91B1491D900794C9C /* PianoKeyBlack.m in Sources */,
 				C3864D1117AD179500050EB5 /* KZViewController.m in Sources */,
-				C3864D1D17AD17F800050EB5 /* KZKeyboard.m in Sources */,
+				58D1C8CC1B1491D900794C9C /* UITouch+PianoKey.m in Sources */,
 				CECDFEBE1AB05C150062ECBB /* KZRecordViewController.m in Sources */,
-				7D097271191175DB00A23E8A /* KZKey.m in Sources */,
 				5DD4FDC31AC4214800BAF31E /* EZAudio.m in Sources */,
+				58D1C8C81B1491D900794C9C /* PianoKey.m in Sources */,
 				5DD4FDC51AC4214800BAF31E /* EZAudioPlayer.m in Sources */,
-				C3864D2017AD182600050EB5 /* KZPianoKeyboard.m in Sources */,
-				C3864D2317AD184F00050EB5 /* KZBajanKeyboard.m in Sources */,
+				588034DA1B0248DD0033E004 /* KZWindow.m in Sources */,
+				58CC0C371B028CC800D31642 /* KZFFTHelper.m in Sources */,
+				58CC0C311B026A4100D31642 /* KZButterfly.m in Sources */,
 				5DC83D651AC980E400124BB0 /* KZTextAlert.m in Sources */,
 				5DD4FD4F1AC3FAF700BAF31E /* KZFileManager.m in Sources */,
 				5DD4FDCB1AC4214800BAF31E /* EZPlot.m in Sources */,
 				5DC8D0C31AC5433C00315372 /* KZLockView.m in Sources */,
 				5DD4FDC41AC4214800BAF31E /* EZAudioFile.m in Sources */,
+				58EF77FD1B14E91000CB8469 /* KZDesign.m in Sources */,
 				5DD4FDC61AC4214800BAF31E /* EZAudioPlot.m in Sources */,
 				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
-				C3864D2D17AD1C7B00050EB5 /* KZTubaKeyboard.m in Sources */,
 				5DD4FDC21AC4214800BAF31E /* AEFloatConverter.m in Sources */,
+				58EF77FA1B14D37B00CB8469 /* KZInstrumentsHelper.m in Sources */,
 				5DC8D0C81AC570F700315372 /* KZMenuViewController.m in Sources */,
 				5DCC83EB1ACA787400A7BEFC /* KZSoundHendlingViewController.m in Sources */,
 				CEC377B51ABC9A4600EE0CEA /* KZStaveView.m in Sources */,
-				5DCC83F11ACA986300A7BEFC /* KZFFTHelper.m in Sources */,
 				5DD4FDCD1AC4214800BAF31E /* TPCircularBuffer.c in Sources */,
+				58ACE4531B0F2C7300F1B50B /* KZKeyboardManager.m in Sources */,
 				5DC4DFA01ABB153F00C21071 /* KZPianoSlider.m in Sources */,
-				C3864D3117AD1D3A00050EB5 /* KZGuitarKeyboard.m in Sources */,
+				58EF77BF1B14C59800CB8469 /* UIButton+Custom.m in Sources */,
+				58CC0C2E1B02691100D31642 /* KZRainbow.m in Sources */,
+				588034DD1B024B1C0033E004 /* KZFilter.m in Sources */,
 				C3864D3517AD1D8100050EB5 /* KZSettingsView.m in Sources */,
+				58DAD5531B0E259B00DF31A2 /* EPSSampler.m in Sources */,
 				5DD4FDCC1AC4214800BAF31E /* EZRecorder.m in Sources */,
 				C3864D3917AD1DD100050EB5 /* KZSynthesizer.m in Sources */,
 				CED037C31AC71C4F006D8BD5 /* KZAboutViewController.m in Sources */,
-				7D09726D1911756400A23E8A /* KZPianoKey.m in Sources */,
-				C3864D4317AD3F3000050EB5 /* KZAlternativeKeyboard.m in Sources */,
+				58D1C8CA1B1491D900794C9C /* PianoKeyWhite.m in Sources */,
 				CED037BE1AC719CA006D8BD5 /* KZSongsListViewController.m in Sources */,
 				5DD4FDCA1AC4214800BAF31E /* EZOutput.m in Sources */,
 				84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */,
@@ -717,8 +859,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -740,7 +882,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -749,8 +891,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -765,7 +907,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -785,7 +927,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -796,7 +938,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -804,7 +946,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2274d46f-50ec-4fae-955c-1237b364a5cb";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

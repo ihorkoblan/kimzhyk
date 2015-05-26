@@ -221,7 +221,6 @@ enum {
     DLog(@"Attempting to load preset '%@'\n", presetURL);
 
 	[self loadSynthFromPresetURL: presetURL];
-  
 }
 // Load a synthesizer preset file and apply it to the Sampler unit
 - (OSStatus) loadSynthFromPresetURL: (NSURL *) pPresetURL {

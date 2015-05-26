@@ -13,9 +13,6 @@
 		20CD31A115B849E4007ADA03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD31A015B849E4007ADA03 /* main.m */; };
 		20CD31A415B849E5007ADA03 /* SynthezierAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD31A315B849E5007ADA03 /* SynthezierAppDelegate.m */; };
 		20CD31AA15B849E5007ADA03 /* SynthezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD31A915B849E5007ADA03 /* SynthezierViewController.m */; };
-		20CD31B415B849E5007ADA03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CD319315B849E4007ADA03 /* UIKit.framework */; };
-		20CD31B515B849E5007ADA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CD319515B849E4007ADA03 /* Foundation.framework */; };
-		20CD31B615B849E5007ADA03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CD319715B849E4007ADA03 /* CoreGraphics.framework */; };
 		84817DD7196BC8D000FF113F /* KZDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 84817DD6196BC8D000FF113F /* KZDisplay.m */; };
 		84817DDB196BD6D800FF113F /* KZVolumerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84817DDA196BD6D800FF113F /* KZVolumerView.m */; };
 		8495D208196B107E00869665 /* KZSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495D207196B107E00869665 /* KZSettings.m */; };
@@ -203,16 +200,6 @@
 		CEF7C8B915DB0219009CEE2A /* switchcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF7C8B715DB0219009CEE2A /* switchcircle.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		20CD31B715B849E5007ADA03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20CD318615B849E4007ADA03 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20CD318E15B849E4007ADA03;
-			remoteInfo = Synthezier;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		20CD318F15B849E4007ADA03 /* Synthezier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synthezier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CD319315B849E4007ADA03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -225,7 +212,6 @@
 		20CD31A315B849E5007ADA03 /* SynthezierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynthezierAppDelegate.m; sourceTree = "<group>"; };
 		20CD31A815B849E5007ADA03 /* SynthezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthezierViewController.h; sourceTree = "<group>"; };
 		20CD31A915B849E5007ADA03 /* SynthezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynthezierViewController.m; sourceTree = "<group>"; };
-		20CD31B315B849E5007ADA03 /* SynthezierTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynthezierTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84817DD5196BC8D000FF113F /* KZDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZDisplay.h; sourceTree = "<group>"; };
 		84817DD6196BC8D000FF113F /* KZDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZDisplay.m; sourceTree = "<group>"; };
 		84817DD9196BD6D800FF113F /* KZVolumerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVolumerView.h; sourceTree = "<group>"; };
@@ -436,16 +422,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20CD31AF15B849E5007ADA03 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20CD31B415B849E5007ADA03 /* UIKit.framework in Frameworks */,
-				20CD31B515B849E5007ADA03 /* Foundation.framework in Frameworks */,
-				20CD31B615B849E5007ADA03 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -457,7 +433,6 @@
 				CE607CE0161AFAEB00638490 /* icon@2x.png */,
 				CE607CDE161AFAE500638490 /* icon.png */,
 				20CD319915B849E4007ADA03 /* Synthezier */,
-				20CD31B915B849E5007ADA03 /* SynthezierTests */,
 				20CD319215B849E4007ADA03 /* Frameworks */,
 				20CD319015B849E4007ADA03 /* Products */,
 			);
@@ -467,7 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				20CD318F15B849E4007ADA03 /* Synthezier.app */,
-				20CD31B315B849E5007ADA03 /* SynthezierTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -502,21 +476,6 @@
 				20CD319F15B849E4007ADA03 /* Synthezier-Prefix.pch */,
 				CED8C9C115D170D100AD4260 /* Global.h */,
 				20CD31A015B849E4007ADA03 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		20CD31B915B849E5007ADA03 /* SynthezierTests */ = {
-			isa = PBXGroup;
-			children = (
-				20CD31BA15B849E5007ADA03 /* Supporting Files */,
-			);
-			path = SynthezierTests;
-			sourceTree = "<group>";
-		};
-		20CD31BA15B849E5007ADA03 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1052,25 +1011,6 @@
 			productReference = 20CD318F15B849E4007ADA03 /* Synthezier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		20CD31B215B849E5007ADA03 /* SynthezierTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20CD31C915B849E5007ADA03 /* Build configuration list for PBXNativeTarget "SynthezierTests" */;
-			buildPhases = (
-				20CD31AE15B849E5007ADA03 /* Sources */,
-				20CD31AF15B849E5007ADA03 /* Frameworks */,
-				20CD31B015B849E5007ADA03 /* Resources */,
-				20CD31B115B849E5007ADA03 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20CD31B815B849E5007ADA03 /* PBXTargetDependency */,
-			);
-			name = SynthezierTests;
-			productName = SynthezierTests;
-			productReference = 20CD31B315B849E5007ADA03 /* SynthezierTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1092,7 +1032,6 @@
 			projectRoot = "";
 			targets = (
 				20CD318E15B849E4007ADA03 /* Synthezier */,
-				20CD31B215B849E5007ADA03 /* SynthezierTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1279,30 +1218,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20CD31B015B849E5007ADA03 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		20CD31B115B849E5007ADA03 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20CD318B15B849E4007ADA03 /* Sources */ = {
@@ -1324,22 +1240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20CD31AE15B849E5007ADA03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		20CD31B815B849E5007ADA03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20CD318E15B849E4007ADA03 /* Synthezier */;
-			targetProxy = 20CD31B715B849E5007ADA03 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CECEB1E815D1004100986B2D /* MainWindow.xib */ = {
@@ -1419,6 +1320,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1427,8 +1330,8 @@
 				INFOPLIST_FILE = "Synthezier/Synthezier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1438,6 +1341,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Synthezier/Synthezier-Prefix.pch";
@@ -1445,57 +1350,11 @@
 				INFOPLIST_FILE = "Synthezier/Synthezier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "08B81C7A-7D65-48B3-A047-C1DA196F6B9E";
+				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		20CD31CA15B849E5007ADA03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Synthezier.app/Synthezier";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SynthezierTests/SynthezierTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "SynthezierTests/SynthezierTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		20CD31CB15B849E5007ADA03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Synthezier.app/Synthezier";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SynthezierTests/SynthezierTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "SynthezierTests/SynthezierTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1516,15 +1375,6 @@
 			buildConfigurations = (
 				20CD31C715B849E5007ADA03 /* Debug */,
 				20CD31C815B849E5007ADA03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20CD31C915B849E5007ADA03 /* Build configuration list for PBXNativeTarget "SynthezierTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20CD31CA15B849E5007ADA03 /* Debug */,
-				20CD31CB15B849E5007ADA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

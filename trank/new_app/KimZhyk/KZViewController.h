@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KZPianoKeyboard.h"
-#import "KZPianoKey.h"
 #import "KZSettingsView.h"
 
 @interface KZViewController : UIViewController<KZSettingsViewDelegate> {

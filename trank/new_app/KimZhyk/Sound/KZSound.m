@@ -19,4 +19,12 @@
     return self;
 }
 
+- (KZSound *)initSoundWithNoteNumber:(NSInteger)noteNumber {
+    self = [super init];
+    if (self) {
+        self.noteNumber = noteNumber;
+    }
+    return self;
+}
+
 @end

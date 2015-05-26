@@ -30,7 +30,7 @@
 }
 
 - (IBAction)btnPressed:(id)sender {
-    
+
     UIViewController *lVC = nil;
     switch (((UIButton *)sender).tag) {
         case 1:{
@@ -67,9 +67,7 @@
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
-    [UIView setAnimationTransition:
-     UIViewAnimationTransitionNone
-                           forView:self.navigationController.view cache:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self.navigationController.view cache:NO];
     [self.navigationController pushViewController:lVC animated:YES];
     [UIView commitAnimations];
 }

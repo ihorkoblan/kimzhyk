@@ -7,37 +7,28 @@
 //
 
 #import "KZViewController.h"
-#import "KZPianoKeyboard.h"
-#import "KZBajanKeyboard.h"
 #import "KZSynthesizer.h"
 #import "KZGlobal.h"
 
 #import "KZStaveView.h"
 #import "KZRecordViewController.h"
 #import "KZSongsListViewController.h"
+#import "KZKeyboardManager.h"
+#import "PianoView.h"
 
-@interface KZViewController () {
+#define SCROLLER_TAG 1
+
+@interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate>{
     KZStaveView *_staveView;
 }
 
-@property(nonatomic, strong) KZPianoKeyboard *pianoKeyboard;
+@property (nonatomic, strong) UIScrollView *pianoScrollView;
 @property(nonatomic, strong) KZSettingsView *settingsView;
-
+@property (nonatomic, strong) KZKeyboardManager *keyboardManager;
 @end
 
 
 @implementation KZViewController
-
-#pragma mark - properties
-
-@synthesize pianoKeyboard = _pianoKeyboard;
-
-- (KZPianoKeyboard *)pianoKeyboard {
-    if (_pianoKeyboard == nil) {
-        _pianoKeyboard = [KZPianoKeyboard new];
-    }
-    return _pianoKeyboard;
-}
 
 #pragma mark - autorotate
 //iOS 6+
@@ -55,20 +46,49 @@
     [super viewDidLoad];
     self.view.multipleTouchEnabled = YES;
     self.view.userInteractionEnabled = YES;
+    
     [self mainInit];
+}
 
+- (void)pianoView:(PianoView *)piano keyDown:(short)key {
+    DLog(@"key down: %i",key);
+}
+
+- (void)pianoView:(PianoView *)piano keyUp:(short)key {
+    DLog(@"key up: %i",key);
 }
 
 - (void)mainInit {
-//    keyboardView
-    
     CGFloat lOffset = 200.0;
-    _pianoKeyboard = [[KZPianoKeyboard alloc] initWithFrame:CGRectMake(0.0,
-                                                                       self.view.bounds.size.height - lOffset,
-                                                                       self.view.bounds.size.width,
+    
+    CGFloat pianoWidth = 1800.0f;
+    UIScrollView *scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
+                                                                            self.view.bounds.size.height - lOffset,
+                                                                            self.view.bounds.size.width,
+                                                                            20.0)];
+    scroller.backgroundColor = [UIColor yellowColor];
+    scroller.delegate = self;
+    scroller.contentSize = CGSizeMake(pianoWidth, 20.0);
+    scroller.tag = SCROLLER_TAG;
+    [self.view addSubview:scroller];
+    
+    
+    self.pianoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
+                                                                        self.view.bounds.size.height - lOffset+20,
+                                                                        self.view.bounds.size.width,
+                                                                        lOffset - 20.0)];
+    self.pianoScrollView.contentSize = CGSizeMake(pianoWidth, self.pianoScrollView.bounds.size.height);
+    [self.view addSubview:self.pianoScrollView];
+    self.pianoScrollView.gestureRecognizers =  nil;
+    self.pianoScrollView.delegate = self;
+    PianoView *pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
+                                                                       0.0,
+                                                                       self.pianoScrollView.contentSize.width,
                                                                        lOffset)];
-    _pianoKeyboard.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:_pianoKeyboard];
+    pianoView.multipleTouchEnabled = YES;
+    [self.pianoScrollView addSubview:pianoView];
+    
+    self.keyboardManager = [[KZKeyboardManager alloc] initWithPiano:pianoView];
     
 //    settingsView
     self.settingsView = [KZSettingsView settingsView];
@@ -77,56 +97,14 @@
     [self.view addSubview:self.settingsView];
 }
 
-- (void)frequencyChangedWithValue:(CGFloat)newFrequency {
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        float maxMag = newFrequency;
-        int counter = 0;
-        while (maxMag > 55.000f) {
-            counter++;
-            maxMag/=2.0f;
-        }
-        
-        NSString *note = nil;
-        if ((maxMag >= 27.500f) && (maxMag < 29.135f)) {
-            note = @"A";
-        } else if ((maxMag >= 29.135f) && (maxMag < 30.868f)) {
-            note = @"A#";
-        } else if ((maxMag >= 30.868f) && (maxMag < 32.703f)) {
-            note = @"H";
-        } else if ((maxMag >= 32.703f) && (maxMag < 34.648f)) {
-            note = @"C";
-        } else if ((maxMag >= 34.648f) && (maxMag < 36.708f)) {
-            note = @"C#";
-        } else if ((maxMag >= 36.708f) && (maxMag < 38.891f)) {
-            note = @"D";
-        } else if ((maxMag >= 38.891f) && (maxMag < 41.203f)) {
-            note = @"D#";
-        } else if ((maxMag >= 41.203f) && (maxMag < 43.654f)) {
-            note = @"E";
-        } else if ((maxMag >= 43.654f) && (maxMag < 46.249f)) {
-            note = @"F";
-        } else if ((maxMag >= 46.249f) && (maxMag < 48.999f)) {
-            note = @"F#";
-        } else if ((maxMag >= 48.999f) && (maxMag < 51.913f)) {
-            note = @"G";
-        } else if ((maxMag >= 51.913f) && (maxMag < 55.000f)) {
-            note = @"G#";
-        }
-    
-        int keyNumber = 12 * log2f(newFrequency / 27.5);
-        [_infoLabel setText:[NSString stringWithFormat:@"freq: %.3f N: %i",newFrequency,keyNumber]];
-        [_infoLabel setNeedsDisplay];
-    });
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.tag == SCROLLER_TAG) {
+        self.pianoScrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, self.pianoScrollView.contentOffset.y);
+    }
 }
 
-- (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender {
-
-}
-
-- (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender {
-
+- (void)KZSettingView:(id)settingsView instrumentChosen:(Instrument)instrument {
+    self.keyboardManager.instrument = instrument;
 }
 
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
@@ -154,4 +132,5 @@
         sIsOpen = !sIsOpen;
     }
 }
+
 @end
