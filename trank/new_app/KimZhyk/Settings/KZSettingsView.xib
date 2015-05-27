@@ -35,10 +35,6 @@
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="d50-Bd-Zm8"/>
                     </connections>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbD-EQ-der">
-                    <rect key="frame" x="8" y="8" width="552" height="144"/>
-                    <color key="backgroundColor" red="0.63529411759999999" green="0.68627450980000004" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instrument" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWY-eg-1DY">
                     <rect key="frame" x="147" y="238" width="283" height="31"/>
                     <color key="backgroundColor" red="0.57254901960000004" green="0.62745098040000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,16 +56,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <connections>
-                <outlet property="_instrumentsScrollView" destination="hbD-EQ-der" id="Hax-rn-he3"/>
-            </connections>
             <point key="canvasLocation" x="149" y="150"/>
         </view>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tkn-LT-2ZL">
-            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.98823529409999999" green="0.9672179877" blue="0.22293104250000001" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="559.5" y="70"/>
-        </imageView>
     </objects>
 </document>

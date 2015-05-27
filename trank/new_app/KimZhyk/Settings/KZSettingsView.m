@@ -31,12 +31,13 @@
     
     KZInstrumentSelectionView *selectionView = [[KZInstrumentSelectionView alloc] initWithFrame:CGRectMake(10.0, 10.0, self.bounds.size.width - 20.0, 130.0)];
     selectionView.delegate_ = self;
-    selectionView.delegate = self;
     [self addSubview:selectionView];
 }
 
 - (void)KZInstrumentSelectionView:(id)sender selectedInstrument:(Instrument)instrument {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:instrumentChosen:)]) {
+        [self.delegate KZSettingView:self instrumentChosen:instrument];
+    }
 }
 
 + (KZSettingsView *)settingsView {
@@ -49,64 +50,6 @@
         }
     }
     return resultView;
-}
-
-- (void)instrumentBtnPressed:(id)sender {
-    __weak UIButton *lBtn = sender;
-    Instrument lMusicianInstrument = instrumentPiano;
-    switch (lBtn.tag) {
-        case 1000: {
-            lMusicianInstrument = instrumentPiano;
-            break;
-        }
-        case 1001: {
-            lMusicianInstrument = instrumentTrombone;
-            break;
-        }
-        case 1002: {
-            lMusicianInstrument = instrumentAccordeon;
-            break;
-        }
-        case 1003: {
-            lMusicianInstrument = instrumentTennorSax;
-            break;
-        }
-        case 1004: {
-            lMusicianInstrument = instrumentChurchOrgan;
-            break;
-        }
-        case 1005: {
-            lMusicianInstrument = instrumentFlute;
-            break;
-        }
-        case 1006: {
-            lMusicianInstrument = instrumentCello;
-            break;
-        }
-        case 1007: {
-            lMusicianInstrument = instrumentAcousticGuitar;
-            break;
-        }
-
-        default: {
-            lMusicianInstrument = instrumentPiano;
-            break;
-        }
-    }
-    
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:instrumentChosen:)]) {
-        [self.delegate KZSettingView:self instrumentChosen:lMusicianInstrument];
-    }
-    
-    for (NSInteger i = 0; i < [KZInstrumentsHelper instrumentImageNames].count; i++) {
-        __weak UIButton *lButton = (UIButton *)[_instrumentsScrollView viewWithTag:1000 + i];
-        if (lBtn.tag == lButton.tag) {
-            lButton.layer.borderColor = [UIColor blueColor].CGColor;
-        } else {
-            lButton.layer.borderColor = [UIColor greenColor].CGColor;
-        }
-    }
 }
 
 - (IBAction)buttonPressed:(id)sender {

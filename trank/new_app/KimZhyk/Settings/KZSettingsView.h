@@ -12,9 +12,7 @@
 
 @protocol KZSettingsViewDelegate;
 
-@interface KZSettingsView : UIView<KZInstrumentSelectionViewDelegate> {
-    IBOutlet UIScrollView *_instrumentsScrollView;
-}
+@interface KZSettingsView : UIView<KZInstrumentSelectionViewDelegate> 
 
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *infoLabel;
 @property (nonatomic, unsafe_unretained) id<KZSettingsViewDelegate> delegate;
@@ -25,8 +23,6 @@
 
 @protocol KZSettingsViewDelegate <NSObject>
 
-- (void)KZSettingView:(id)settingsView startListeningBtnPressed:(UIButton *)sender;
-- (void)KZSettingView:(id)settingsView stopListeningBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender;
 - (void)KZSettingView:(id)settingsView backBtnPressed:(UIButton *)sender;

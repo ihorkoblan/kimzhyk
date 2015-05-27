@@ -160,7 +160,6 @@ logTheError:
 - (OSStatus)loadSynthFromPresetURL:(NSURL *)presetURL {
     
     NSDictionary *file = [[NSDictionary alloc] initWithContentsOfURL:presetURL];
-    DLog(@"file: %@", file);
     
 	CFDataRef propertyResourceData = 0;
 	Boolean   status;
