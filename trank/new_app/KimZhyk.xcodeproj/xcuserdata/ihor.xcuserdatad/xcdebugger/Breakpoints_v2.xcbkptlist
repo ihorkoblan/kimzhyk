@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KimZhyk/Custom/KZKey.m"
-            timestampString = "454265437.883627"
+            filePath = "KimZhyk/Keyboards/KZKeyboardManager.m"
+            timestampString = "454415948.340192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-initWithKeyType:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-setInstrument:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,45 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KimZhyk/Custom/KZKey.m"
-            timestampString = "454265483.604787"
+            filePath = "KimZhyk/Settings/KZSettingsView.m"
+            timestampString = "454417106.084213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-init"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KimZhyk/EPSSampler.m"
-            timestampString = "454359334.414276"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "-setPresetURL:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KimZhyk/KZInstrumentsHelper.m"
-            timestampString = "454359670.518557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "+aupresetFileNameForInstrument:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-KZInstrumentSelectionView:selectedInstrument:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

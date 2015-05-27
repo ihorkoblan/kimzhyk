@@ -29,6 +29,11 @@
 
 - (void)setInstrument:(Instrument)instrument {
     _instrument = instrument;
+    
+    id lURL = [[KZInstrumentsHelper instrumentImageNames] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%@ == %@",kInstrumentTypeKey,@(_instrument)]];
+    DLog(@"url: %@",lURL);
+    
+    
     self.sampler.presetURL = [KZInstrumentsHelper aupresetFileNameForInstrument:instrument];
 }
 
@@ -42,14 +47,4 @@
     [self.sampler stopPlayingNote:key];
 }
 
-
-
-//+ (KZKeyboardManager *)manager {
-//    static KZKeyboardManager *lManager = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        lManager = [KZKeyboardManager new];
-//    });
-//    return lManager;
-//}
 @end

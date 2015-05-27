@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "KZInstrumentsHelper.h"
+#import "KZInstrumentSelectionView.h"
 
 @protocol KZSettingsViewDelegate;
 
-@interface KZSettingsView : UIView {
+@interface KZSettingsView : UIView<KZInstrumentSelectionViewDelegate> {
     IBOutlet UIScrollView *_instrumentsScrollView;
 }
 

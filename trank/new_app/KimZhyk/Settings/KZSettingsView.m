@@ -10,14 +10,14 @@
 #import "KZStaveView.h"
 #import "UIButton+Custom.h"
 #import "KZInstrumentsHelper.h"
+#import "KZInstrumentSelectionView.h"
 
 @implementation KZSettingsView
 @synthesize delegate;
 
 
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
 
@@ -28,22 +28,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _instrumentsScrollView.layer.cornerRadius = 15.0f;
-    _instrumentsScrollView.layer.masksToBounds = YES;
-    _instrumentsScrollView.layer.borderWidth = 3.0f;
-    _instrumentsScrollView.layer.borderColor = [UIColor whiteColor].CGColor;
     
-    _instrumentsScrollView.contentSize = CGSizeMake([KZInstrumentsHelper instrumentImageNames].count * _instrumentsScrollView.bounds.size.height - 20.0, _instrumentsScrollView.bounds.size.height);
+    KZInstrumentSelectionView *selectionView = [[KZInstrumentSelectionView alloc] initWithFrame:CGRectMake(10.0, 10.0, self.bounds.size.width - 20.0, 130.0)];
+    selectionView.delegate_ = self;
+    selectionView.delegate = self;
+    [self addSubview:selectionView];
+}
+
+- (void)KZInstrumentSelectionView:(id)sender selectedInstrument:(Instrument)instrument {
     
-    
-    for (int i = 0; i < [KZInstrumentsHelper instrumentImageNames].count; i++) {
-        UIButton *lButton = [UIButton newInstrumentBtnWithSize:CGSizeMake(_instrumentsScrollView.bounds.size.height- 20.0, _instrumentsScrollView.bounds.size.height - 20.0)];
-        [lButton setImage:[UIImage imageNamed:[KZInstrumentsHelper instrumentImageNames][i]] forState:UIControlStateNormal];
-        lButton.tag = 1000 + i;
-        lButton.center = CGPointMake(i * (lButton.bounds.size.width + 15.0) + lButton.bounds.size.width/2.0 + 20.0, _instrumentsScrollView.bounds.size.height / 2.0);
-        [_instrumentsScrollView addSubview:lButton];
-        [lButton addTarget:self action:@selector(instrumentBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
-    }
 }
 
 + (KZSettingsView *)settingsView {
@@ -60,7 +53,6 @@
 
 - (void)instrumentBtnPressed:(id)sender {
     __weak UIButton *lBtn = sender;
-    DLog(@"tag: %li",(long)lBtn.tag);
     Instrument lMusicianInstrument = instrumentPiano;
     switch (lBtn.tag) {
         case 1000: {

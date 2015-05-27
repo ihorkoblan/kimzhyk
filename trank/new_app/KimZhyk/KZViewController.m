@@ -7,7 +7,6 @@
 //
 
 #import "KZViewController.h"
-#import "KZSynthesizer.h"
 #import "KZGlobal.h"
 
 #import "KZStaveView.h"
@@ -19,7 +18,7 @@
 #define SCROLLER_TAG 1
 
 @interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate>{
-    KZStaveView *_staveView;
+
 }
 
 @property (nonatomic, strong) UIScrollView *pianoScrollView;

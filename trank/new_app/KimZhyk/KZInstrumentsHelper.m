@@ -8,10 +8,14 @@
 
 #import "KZInstrumentsHelper.h"
 
+
+
 @implementation KZInstrumentsHelper
 
 + (NSURL *)aupresetFileNameForInstrument:(Instrument)intrument {
     NSURL *lAupresetURL = nil;
+    
+    
     
     switch (intrument) {
         case instrumentPiano: {
@@ -53,7 +57,49 @@
 }
 
 + (NSArray *)instrumentImageNames {
-    return @[@"PIANO.png",@"TRUMPET_1.png",@"ACCORDEON.png",@"TENOR_SAX.png",@"CHURCH_ORGAN.png",@"FLUTE.png",@"CELLO.png",@"ACOUSTIC_GUITAR.png"];;
+    
+    return @[
+                 @{
+                     kInstrumentImageKey        : @"PIANO.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"piano" ofType:@"aupreset"]],
+                     kInstrumentTypeKey         : @(instrumentPiano)
+                  },
+                 @{
+                     kInstrumentImageKey        : @"TRUMPET_1.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Trombone" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentTrombone)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"ACCORDEON.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"accordeon" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentAccordeon)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"TENOR_SAX.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"tenor_sax" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentTennorSax)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"CHURCH_ORGAN.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"church_organ" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentChurchOrgan)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"FLUTE.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"flute" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentFlute)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"CELLO.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"cello" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentCello)
+                     },
+                 @{
+                     kInstrumentImageKey        : @"ACOUSTIC_GUITAR.png",
+                     kInstrumentAupresetKey     : [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"acoustic_guitar" ofType:@"aupreset"]],
+                     kInstrumentAupresetKey     : @(instrumentAcousticGuitar)
+                     },
+            ];
 }
 
 @end

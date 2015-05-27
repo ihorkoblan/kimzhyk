@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>24DB72C0-5C35-4BB4-AEDE-F1582742B252</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>KimZhyk</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
 		<string>https://github.com/ihorkoblan/kimzhyk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trank/new_app/KimZhyk.xcodeproj/project.xcworkspace</string>
+	<string>trank/new_app/KimZhyk.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>32A0C84F1FFFEAF68A95FA786FB6811DBF71ED10</key>
