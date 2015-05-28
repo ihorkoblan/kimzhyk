@@ -11,7 +11,6 @@
 #define DOCUMENTS [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 @interface KZFileManager : NSObject
-
 + (KZFileManager *)manager;
 + (NSString *)defaultFolderPath;
 + (NSArray *)itemsAtDefaultFolder;
@@ -20,5 +19,4 @@
 + (BOOL)removeFileAtPath:(NSString *)path;
 + (BOOL)removeFileWithTitle:(NSString *)fileTitle;
 + (BOOL)fileExistAtPath:(NSString *)path;
-
 @end

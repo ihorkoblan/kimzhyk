@@ -11,6 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import "KZNoteRecorder.h"
 
 enum {
 	kMIDIMessage_NoteOn  = 0x9,
@@ -20,7 +21,10 @@ enum {
 #define kMidiVelocityMinimum 0
 #define kMidiVelocityMaximum 127
 
-@interface EPSSampler ()
+@interface EPSSampler () {
+    NSTimeInterval _noteInterval;
+    KZNoteRecorder *_noteRecorder;
+}
 
 @property (readwrite) Float64 graphSampleRate;
 @property (readwrite) AUGraph   *processingGraph;
@@ -53,6 +57,7 @@ enum {
 		[self configureAndStartAudioProcessingGraph:self.processingGraph];
         
 		[self loadSynthFromPresetURL:url];
+        _noteRecorder = [KZNoteRecorder new];
 	}
 	return self;
 }

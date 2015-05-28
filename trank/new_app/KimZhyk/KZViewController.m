@@ -14,11 +14,12 @@
 #import "KZSongsListViewController.h"
 #import "KZKeyboardManager.h"
 #import "PianoView.h"
+#import "KZNoteRecorder.h"
 
 #define SCROLLER_TAG 1
 
 @interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate>{
-
+    KZNoteRecorder *_noteRecorder;
 }
 
 @property (nonatomic, strong) UIScrollView *pianoScrollView;
@@ -71,7 +72,6 @@
     scroller.tag = SCROLLER_TAG;
     [self.view addSubview:scroller];
     
-    
     self.pianoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
                                                                         self.view.bounds.size.height - lOffset+20,
                                                                         self.view.bounds.size.width,
@@ -80,6 +80,7 @@
     [self.view addSubview:self.pianoScrollView];
     self.pianoScrollView.gestureRecognizers =  nil;
     self.pianoScrollView.delegate = self;
+    
     PianoView *pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
                                                                        0.0,
                                                                        self.pianoScrollView.contentSize.width,
@@ -94,6 +95,8 @@
     self.settingsView.delegate = self;
     self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, -40.0f);
     [self.view addSubview:self.settingsView];
+    
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -107,8 +110,7 @@
 }
 
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
-    KZRecordViewController *recordVC = [[KZRecordViewController alloc] initWithNibName:@"KZRecordViewController" bundle:nil];
-    [self presentViewController:recordVC animated:YES completion:nil];
+    
 }
 
 - (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender {

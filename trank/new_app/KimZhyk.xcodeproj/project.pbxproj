@@ -25,6 +25,7 @@
 		58D1C8CB1B1491D900794C9C /* PianoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C51B1491D900794C9C /* PianoView.m */; };
 		58D1C8CC1B1491D900794C9C /* UITouch+PianoKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1C8C71B1491D900794C9C /* UITouch+PianoKey.m */; };
 		58DAD5531B0E259B00DF31A2 /* EPSSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD5521B0E259B00DF31A2 /* EPSSampler.m */; };
+		58E598651B16221900A8FAD0 /* KZNoteRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E598641B16221900A8FAD0 /* KZNoteRecorder.m */; };
 		58E7C4161B15BB3B00EA21F7 /* KZInstrumentSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E7C4151B15BB3B00EA21F7 /* KZInstrumentSelectionView.m */; };
 		58E7C4241B15D52C00EA21F7 /* accordeon.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 58E7C41D1B15D52C00EA21F7 /* accordeon.aupreset */; };
 		58E7C4251B15D52C00EA21F7 /* acoustic_guitar.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 58E7C41E1B15D52C00EA21F7 /* acoustic_guitar.aupreset */; };
@@ -164,6 +165,8 @@
 		58D1C8C71B1491D900794C9C /* UITouch+PianoKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITouch+PianoKey.m"; path = "Utils/UITouch+PianoKey.m"; sourceTree = "<group>"; };
 		58DAD5511B0E259B00DF31A2 /* EPSSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSampler.h; sourceTree = "<group>"; };
 		58DAD5521B0E259B00DF31A2 /* EPSSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSampler.m; sourceTree = "<group>"; };
+		58E598631B16221900A8FAD0 /* KZNoteRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZNoteRecorder.h; sourceTree = "<group>"; };
+		58E598641B16221900A8FAD0 /* KZNoteRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZNoteRecorder.m; sourceTree = "<group>"; };
 		58E7C4141B15BB3B00EA21F7 /* KZInstrumentSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZInstrumentSelectionView.h; sourceTree = "<group>"; };
 		58E7C4151B15BB3B00EA21F7 /* KZInstrumentSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZInstrumentSelectionView.m; sourceTree = "<group>"; };
 		58E7C41D1B15D52C00EA21F7 /* accordeon.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = accordeon.aupreset; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				5DC83D661AC9811300124BB0 /* KZTextAlert.xib */,
 				58E7C4141B15BB3B00EA21F7 /* KZInstrumentSelectionView.h */,
 				58E7C4151B15BB3B00EA21F7 /* KZInstrumentSelectionView.m */,
+				58E598631B16221900A8FAD0 /* KZNoteRecorder.h */,
+				58E598641B16221900A8FAD0 /* KZNoteRecorder.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				5DD4FDC41AC4214800BAF31E /* EZAudioFile.m in Sources */,
 				58EF77FD1B14E91000CB8469 /* KZDesign.m in Sources */,
 				5DD4FDC61AC4214800BAF31E /* EZAudioPlot.m in Sources */,
+				58E598651B16221900A8FAD0 /* KZNoteRecorder.m in Sources */,
 				84ABFC041A12B6BE00B6F95D /* Common.c in Sources */,
 				5DD4FDC21AC4214800BAF31E /* AEFloatConverter.m in Sources */,
 				58EF77FA1B14D37B00CB8469 /* KZInstrumentsHelper.m in Sources */,

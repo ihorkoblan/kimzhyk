@@ -9,8 +9,10 @@
 #import "KZKeyboardManager.h"
 #import "EPSSampler.h"
 #import "PianoView.h"
-
-@interface KZKeyboardManager() <PianoViewDelegate>
+#import "KZNoteRecorder.h"
+@interface KZKeyboardManager() <PianoViewDelegate> {
+    KZNoteRecorder *_noteRecorder;
+}
 @property (nonatomic, strong) EPSSampler *sampler;
 @end
 
@@ -36,11 +38,13 @@
 - (void)pianoView:(PianoView *)piano keyDown:(short)key {
     DLog(@"key pressed :%i",key);
     [self.sampler startPlayingNote:key withVelocity:1.0];
+    
 }
 
 - (void)pianoView:(PianoView *)piano keyUp:(short)key {
     DLog(@"key released: %i",key);
     [self.sampler stopPlayingNote:key];
+    
 }
 
 @end

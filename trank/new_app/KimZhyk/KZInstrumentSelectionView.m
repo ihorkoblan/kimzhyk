@@ -9,13 +9,6 @@
 #import "KZInstrumentSelectionView.h"
 #import "UIButton+Custom.h"
 
-@interface KZInstrumentSelectionView() {
-
-}
-
-@end
-
-
 @implementation KZInstrumentSelectionView
 
 - (instancetype)initWithFrame:(CGRect)frame selectedInstrument:(Instrument)instrument {
@@ -75,11 +68,10 @@
 
 - (void)updateInstruments {
     for (int i = 0; i < self.subviews.count; i++) {
+        ((UIButton *)self.subviews[i]).layer.borderWidth = 3.0;
         if ([self.subviews[i] isKindOfClass:[UIButton class]] && (i == self.selectedInstrument)) {
-            ((UIButton *)self.subviews[i]).layer.borderWidth = 3.0;
             ((UIButton *)self.subviews[i]).layer.borderColor = [UIColor blueColor].CGColor;
         } else {
-            ((UIButton *)self.subviews[i]).layer.borderWidth = 3.0;
             ((UIButton *)self.subviews[i]).layer.borderColor = [UIColor brownColor].CGColor;
         }
     }

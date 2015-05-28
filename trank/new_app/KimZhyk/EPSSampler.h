@@ -13,6 +13,7 @@
 
 @interface EPSSampler : NSObject <AVAudioSessionDelegate>
 
+@property (nonatomic, assign) BOOL isRecording;
 @property (nonatomic, strong) NSURL *presetURL;
 
 - (id)initWithPresetURL:(NSURL *)url;

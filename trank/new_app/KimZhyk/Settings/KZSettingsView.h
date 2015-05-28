@@ -14,8 +14,11 @@
 
 @interface KZSettingsView : UIView<KZInstrumentSelectionViewDelegate> 
 
+
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *infoLabel;
 @property (nonatomic, unsafe_unretained) id<KZSettingsViewDelegate> delegate;
+@property (nonatomic, strong) NSString *note;
+@property (nonatomic, strong) NSString *instrument;
 
 + (KZSettingsView *)settingsView;
 

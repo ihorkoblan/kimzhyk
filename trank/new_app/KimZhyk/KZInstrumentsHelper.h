@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString  * const kInstrumentImageKey = @"instrument_image_key";
+static NSString  * const kInstrumentImageKey    = @"instrument_image_key";
 static NSString  * const kInstrumentAupresetKey = @"instrument_aupreset_key";
-static NSString  * const kInstrumentTypeKey = @"instrument_type_key";
+static NSString  * const kInstrumentTypeKey     = @"instrument_type_key";
+static NSString  * const kInstrumentNameKey     = @"instrument_name_key";
 
 typedef NS_ENUM(int, Instrument) {
     instrumentPiano,
@@ -25,6 +26,7 @@ typedef NS_ENUM(int, Instrument) {
 
 @interface KZInstrumentsHelper : NSObject
 
++ (NSDictionary *)dictionaryForInstrument:(Instrument)instrument;
 + (NSURL *)aupresetFileNameForInstrument:(Instrument)intrument;
 + (NSArray *)instrumentImageNames;
 
