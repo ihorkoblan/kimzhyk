@@ -12,6 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
 #import "KZNoteRecorder.h"
+#import "DBNote.h"
 
 enum {
 	kMIDIMessage_NoteOn  = 0x9,
@@ -77,7 +78,10 @@ enum {
 	require_noerr(result = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, onVelocity, 0), logTheError);
 	logTheError:
 	
-	if (result != noErr) {
+    
+    if (result == noErr) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNoteStartedPlayNotification object:@(note)];
+    } else {
 		NSLog(@"Unable to start playing the low note. Error code: %d '%.4s'\n", (int)result, (const char *)&result);
 	}
 }
@@ -97,6 +101,11 @@ logTheError:
 	{
 		NSLog(@"Unable to stop playing the low note. Error code: %d '%.4s'\n", (int)result, (const char *)&result);
 	}
+    if (result == noErr) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNoteStopedPlayNotification object:@(note)];
+    } else {
+       NSLog(@"Unable to stop playing the low note. Error code: %d '%.4s'\n", (int)result, (const char *)&result);
+    }
 }
 
 - (AUGraph)processingGraph {
@@ -132,6 +141,7 @@ logTheError:
 
 	result = AUGraphOpen(self.processingGraph);
 	NSCAssert(result == noErr, @"Unable to open the audio processing graph. Error code: %d '%.4s'", (int)result, (const char *)&result);
+    //20 ДЕН 2йка тіл кольору
 
 	result = AUGraphConnectNodeInput(self.processingGraph, samplerNode, 0, ioNode, 0);
 	NSCAssert(result == noErr, @"Unable to interconnect the nodes in the audio processing graph. Error code: %d '%.4s'", (int)result, (const char *)&result);
@@ -193,6 +203,7 @@ logTheError:
 		&errorRef
 		);
 
+    
     if ([(__bridge id)presetPropertyList isKindOfClass:[NSDictionary class]]) {
         NSDictionary *lConverFiles = (__bridge NSDictionary*)presetPropertyList;
         NSDictionary *lSoundList = [lConverFiles objectForKey:@"file-references"];

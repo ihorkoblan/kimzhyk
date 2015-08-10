@@ -13,6 +13,7 @@
     NSMutableArray *_keysArray;
     KZSettingsView *_settingsView;
     UILabel *_infoLabel;
+    BOOL _isRecording;
 }
 
 @end

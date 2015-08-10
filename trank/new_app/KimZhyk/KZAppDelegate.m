@@ -11,20 +11,18 @@
 #import "KZViewController.h"
 #import "KZMenuViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "KZRainbow.h"
+
 
 @implementation KZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-
-    
     
     NSError *err = NULL;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
     if( err ){
         NSLog(@"There was an error creating the audio session");
     }
+    
     [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
     if (err) {
         NSLog(@"There was an error sending the audio to the speakers");

@@ -15,16 +15,20 @@
 #import "KZKeyboardManager.h"
 #import "PianoView.h"
 #import "KZNoteRecorder.h"
+#import "KZSongRecorder.h"
+#import "KZTextAlert.h"
 
 #define SCROLLER_TAG 1
+#define SAVE_ALERT_TAG 3
 
-@interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate>{
+@interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate, UIAlertViewDelegate, KZTextAlertDelegate>{
     KZNoteRecorder *_noteRecorder;
 }
 
 @property (nonatomic, strong) UIScrollView *pianoScrollView;
 @property(nonatomic, strong) KZSettingsView *settingsView;
 @property (nonatomic, strong) KZKeyboardManager *keyboardManager;
+@property (nonatomic, strong) KZSongRecorder *recorder;
 @end
 
 
@@ -51,14 +55,17 @@
 }
 
 - (void)pianoView:(PianoView *)piano keyDown:(short)key {
-    DLog(@"key down: %i",key);
+
 }
 
 - (void)pianoView:(PianoView *)piano keyUp:(short)key {
-    DLog(@"key up: %i",key);
+
 }
 
 - (void)mainInit {
+    
+    _isRecording = NO;
+    self.recorder = [KZSongRecorder new];
     CGFloat lOffset = 200.0;
     
     CGFloat pianoWidth = 1800.0f;
@@ -95,8 +102,6 @@
     self.settingsView.delegate = self;
     self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, -40.0f);
     [self.view addSubview:self.settingsView];
-    
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -110,7 +115,17 @@
 }
 
 - (void)KZSettingView:(id)settingsView recordBtnPressed:(UIButton *)sender {
-    
+    _isRecording = !_isRecording;
+    UIButton *recBtn = sender;
+    recBtn.backgroundColor = _isRecording ? [UIColor redColor] : [UIColor blueColor];
+    if (_isRecording) {
+        [self.recorder startRecord];
+    } else {
+        UIAlertView *lAlertView = [[UIAlertView alloc] initWithTitle:nil message:@"Do you want to save?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Save", nil];
+        lAlertView.tag = SAVE_ALERT_TAG;
+        [lAlertView show];
+        [self.recorder stopRecord];
+    }
 }
 
 - (void)KZSettingView:(id)settingsView openBtnPressed:(UIButton *)sender {
@@ -126,12 +141,42 @@
 - (void)KZSettingView:(id)settingsView openInstrumentsBtnPressed:(UIButton *)sender {
     if (self.settingsView) {
         static BOOL sIsOpen = NO;
-        
         [UIView animateWithDuration:0.3 animations:^{
             self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, sIsOpen ? -40.0f : self.view.bounds.size.height / 2.0f);
         }];
         sIsOpen = !sIsOpen;
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == SAVE_ALERT_TAG) {
+        if (buttonIndex == 0) {
+            
+            
+            
+            
+        } else if (buttonIndex == 1) {
+            KZTextAlert *lTextAlert = [KZTextAlert textAlert];
+            [self.view addSubview:lTextAlert];
+            lTextAlert.delegate = self;
+            lTextAlert.center = CGPointMake(self.view.bounds.size.width / 2.0, - lTextAlert.bounds.size.height);
+            [UIView animateWithDuration:0.3 animations:^{
+                lTextAlert.center = CGPointMake(self.view.bounds.size.width /2.0, self.view.bounds.size.height /2.0);
+            }];
+        }
+    }
+}
+
+- (void)KZTextAlert:(KZTextAlert *)textAlert gotText:(NSString *)text {
+    if ([self.recorder saveSongWithName:text]) {
+        
+    }
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        textAlert.center = CGPointMake(self.view.bounds.size.width / 2.0, - textAlert.bounds.size.height);
+    } completion:^(BOOL finished) {
+        [textAlert removeFromSuperview];
+    }];
 }
 
 @end

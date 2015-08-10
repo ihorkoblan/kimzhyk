@@ -10,6 +10,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
+static NSString *kNoteStartedPlayNotification = @"note_started_play";
+static NSString *kNoteStopedPlayNotification = @"note_stoped_play";
 
 @interface EPSSampler : NSObject <AVAudioSessionDelegate>
 

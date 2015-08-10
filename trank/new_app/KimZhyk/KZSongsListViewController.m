@@ -9,21 +9,28 @@
 #import "KZSongsListViewController.h"
 #import "KZRecordNavigationViewController.h"
 #import "KZFileManager.h"
-
-
+#import "DBManager.h"
+#import "DBSong.h"
+#import "KZPlaySongViewController.h"
 
 @interface KZSongsListViewController () {
 
 }
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *songs;
 @end
 
 @implementation KZSongsListViewController
 
+- (NSArray *)songs {
+    _songs = [DBManager fetchWithEntity:@"DBSong" predicate:nil sortDescriptors:nil];
+    return _songs ? _songs : [NSArray array];
+}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+        self.songs = [DBManager fetchWithEntity:@"DBSong" predicate:nil sortDescriptors:nil];
     }
     return self;
 }
@@ -49,7 +56,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [KZFileManager itemsAtDefaultFolder].count;
+    return self.songs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,7 +66,7 @@
     if (!lCell) {
         lCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:lCellIdentifier];
     }
-    lCell.textLabel.text = [KZFileManager itemsAtDefaultFolder][indexPath.row];
+    lCell.textLabel.text = ((DBSong *)self.songs[indexPath.row]).name;
     return lCell;
 }
 
@@ -72,7 +79,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
     
-        [KZFileManager removeFileAtPath:[NSString stringWithFormat:@"%@/%@",[KZFileManager defaultFolderPath],[KZFileManager itemsAtDefaultFolder][indexPath.row]]];
+        [DBManager deleteObject:self.songs[indexPath.row]];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
 
@@ -83,10 +91,9 @@
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    KZRecordNavigationViewController *lRecNavVC = [[KZRecordNavigationViewController alloc] initWithNibName:@"KZRecordNavigationViewController" bundle:nil];
-    NSURL *lURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",[KZFileManager defaultFolderPath],(NSString *)[KZFileManager itemsAtDefaultFolder][indexPath.row]]];
-    lRecNavVC.songUrl = lURL;
-    [self.navigationController pushViewController:lRecNavVC animated:YES];
+    DBSong *song = self.songs[indexPath.row];
+    KZPlaySongViewController *lPlaySongVC = [[KZPlaySongViewController alloc] initWithSong:song];
+    [self.navigationController pushViewController:lPlaySongVC animated:YES];
 }
 
 - (IBAction)backBtnPressed:(id)sender {

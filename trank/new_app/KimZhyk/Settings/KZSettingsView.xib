@@ -44,7 +44,7 @@
                 </label>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIb-b0-uwX">
                     <rect key="frame" x="374" y="238" width="82" height="70"/>
-                    <color key="backgroundColor" red="0.6705882353" green="0.0" blue="0.06048559640877979" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.20944289405437794" green="0.21720231529156903" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="REC">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

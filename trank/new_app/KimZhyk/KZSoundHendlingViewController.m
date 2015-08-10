@@ -104,8 +104,8 @@
             // Setup the FFT if it's not already setup
             if( !_isFFTSetup ){
                 
-//                _A = [self createFFTWithBufferSize:length withAudioData:waveformData];
-                _A = [[KZRainbow instance].fftHelper createFFTWithBufferSize:length withAudioData:waveformData fftSetup:&_FFTSetup];
+                _A = [self createFFTWithBufferSize:length withAudioData:waveformData];
+//                _A = [[KZRainbow instance].fftHelper createFFTWithBufferSize:length withAudioData:waveformData fftSetup:&_FFTSetup];
                 
                 _isFFTSetup = YES;
             }

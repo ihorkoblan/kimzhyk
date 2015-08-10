@@ -290,7 +290,7 @@
 						<key>min key</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>1a_dies.caf</string>
+						<string>acordeon1g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -392,7 +392,7 @@
 			</dict>
 		</array>
 		<key>name</key>
-		<string>Trombone</string>
+		<string>Accordeon</string>
 		<key>output</key>
 		<integer>0</integer>
 	</dict>
@@ -411,15 +411,15 @@
 	<key>file-references</key>
 	<dict>
 		<key>Sample:1</key>
-		<string>1a_dies.caf</string>
+		<string>acordeon1g.mp3</string>
 		<key>Sample:2</key>
-		<string>2a_dies.caf</string>
+		<string>acordeon2g.mp3</string>
 		<key>Sample:3</key>
-		<string>3a_dies.caf</string>
+		<string>acordeon3g.mp3</string>
 		<key>Sample:4</key>
-		<string>4g.caf</string>
+		<string>acordeon4g.mp3</string>
 		<key>Sample:5</key>
-		<string>5e.caf</string>
+		<string>acordeon5g.mp3</string>
 	</dict>
 	<key>fine tune</key>
 	<integer>0</integer>
@@ -428,7 +428,7 @@
 	<key>manufacturer</key>
 	<integer>1634758764</integer>
 	<key>name</key>
-	<string>Trombone</string>
+	<string>accordeon</string>
 	<key>output</key>
 	<integer>0</integer>
 	<key>pan</key>

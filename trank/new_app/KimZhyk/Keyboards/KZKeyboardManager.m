@@ -36,13 +36,11 @@
 }
 
 - (void)pianoView:(PianoView *)piano keyDown:(short)key {
-    DLog(@"key pressed :%i",key);
     [self.sampler startPlayingNote:key withVelocity:1.0];
     
 }
 
 - (void)pianoView:(PianoView *)piano keyUp:(short)key {
-    DLog(@"key released: %i",key);
     [self.sampler stopPlayingNote:key];
     
 }

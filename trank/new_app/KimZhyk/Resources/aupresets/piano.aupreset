@@ -290,7 +290,7 @@
 						<key>min key</key>
 						<integer>0</integer>
 						<key>name</key>
-						<string>1a_dies.caf</string>
+						<string>piano1g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -312,7 +312,7 @@
 						<key>min key</key>
 						<integer>38</integer>
 						<key>name</key>
-						<string>2a_dies.caf</string>
+						<string>piano2g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -334,7 +334,7 @@
 						<key>min key</key>
 						<integer>51</integer>
 						<key>name</key>
-						<string>3a_dies.caf</string>
+						<string>piano3g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -356,7 +356,7 @@
 						<key>min key</key>
 						<integer>62</integer>
 						<key>name</key>
-						<string>4g.caf</string>
+						<string>piano4g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -378,7 +378,7 @@
 						<key>min key</key>
 						<integer>75</integer>
 						<key>name</key>
-						<string>5e.caf</string>
+						<string>piano5g.mp3</string>
 						<key>output</key>
 						<integer>0</integer>
 						<key>root key</key>
@@ -392,7 +392,7 @@
 			</dict>
 		</array>
 		<key>name</key>
-		<string>Trombone</string>
+		<string>piano</string>
 		<key>output</key>
 		<integer>0</integer>
 	</dict>
@@ -411,15 +411,15 @@
 	<key>file-references</key>
 	<dict>
 		<key>Sample:1</key>
-		<string>1a_dies.caf</string>
+		<string>piano1g.mp3</string>
 		<key>Sample:2</key>
-		<string>2a_dies.caf</string>
+		<string>piano2g.mp3</string>
 		<key>Sample:3</key>
-		<string>3a_dies.caf</string>
+		<string>piano3g.mp3</string>
 		<key>Sample:4</key>
-		<string>4g.caf</string>
+		<string>piano4g.mp4</string>
 		<key>Sample:5</key>
-		<string>5e.caf</string>
+		<string>piano5g.mp4</string>
 	</dict>
 	<key>fine tune</key>
 	<integer>0</integer>
@@ -428,7 +428,7 @@
 	<key>manufacturer</key>
 	<integer>1634758764</integer>
 	<key>name</key>
-	<string>Trombone</string>
+	<string>piano</string>
 	<key>output</key>
 	<integer>0</integer>
 	<key>pan</key>

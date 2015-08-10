@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
-#import "KZRainbow.h"
 
 @interface KZSoundHendlingViewController : UIViewController
 
