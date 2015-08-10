@@ -56,6 +56,8 @@ enum {
 		[self createAUGraph];
 		[self configureAndStartAudioProcessingGraph:self.processingGraph];
         
+        //ergsergsegs
+        
 		[self loadSynthFromPresetURL:url];
         _noteRecorder = [KZNoteRecorder new];
 	}
