@@ -9,7 +9,7 @@
 #import "KZViewController.h"
 #import "KZGlobal.h"
 
-#import "KZStaveView.h"
+//#import "KZStaveView.h"
 #import "KZRecordViewController.h"
 #import "KZSongsListViewController.h"
 #import "KZKeyboardManager.h"
@@ -23,12 +23,15 @@
 
 @interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate, UIAlertViewDelegate, KZTextAlertDelegate>{
     KZNoteRecorder *_noteRecorder;
+    PianoView *pianoView;
+    UIScrollView *scroller;
 }
 
 @property (nonatomic, strong) UIScrollView *pianoScrollView;
 @property(nonatomic, strong) KZSettingsView *settingsView;
 @property (nonatomic, strong) KZKeyboardManager *keyboardManager;
 @property (nonatomic, strong) KZSongRecorder *recorder;
+
 @end
 
 
@@ -67,9 +70,8 @@
     _isRecording = NO;
     self.recorder = [KZSongRecorder new];
     CGFloat lOffset = 200.0;
-    
     CGFloat pianoWidth = 1800.0f;
-    UIScrollView *scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
+    scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
                                                                             self.view.bounds.size.height - lOffset,
                                                                             self.view.bounds.size.width,
                                                                             20.0)];
@@ -88,7 +90,7 @@
     self.pianoScrollView.gestureRecognizers =  nil;
     self.pianoScrollView.delegate = self;
     
-    PianoView *pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
+    pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
                                                                        0.0,
                                                                        self.pianoScrollView.contentSize.width,
                                                                        lOffset)];
@@ -147,6 +149,17 @@
         sIsOpen = !sIsOpen;
     }
 }
+
+
+- (void)KZSettingView:(id)settingsView sliderValueChanged:(CGFloat)value {
+
+    pianoView.whiteKeyWidth = value;
+    scroller.backgroundColor = [UIColor redColor];
+    scroller.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
+    
+    
+}
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == SAVE_ALERT_TAG) {

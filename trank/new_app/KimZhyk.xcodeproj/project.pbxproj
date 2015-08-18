@@ -4832,6 +4832,8 @@
 		63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF617B45B2800EADDD0 /* White_key_active.png */; };
 		63946FFD17B45B2800EADDD0 /* White_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF717B45B2800EADDD0 /* White_key.png */; };
 		84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC051A12C14E00B6F95D /* KZSound.m */; };
+		84C74BB21B81E0EB005ABEFB /* KZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */; };
+		84C74BB31B81E0EB005ABEFB /* KZSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */; };
 		C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF717AD179500050EB5 /* UIKit.framework */; };
 		C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF917AD179500050EB5 /* Foundation.framework */; };
 		C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CFB17AD179500050EB5 /* CoreGraphics.framework */; };
@@ -9719,6 +9721,9 @@
 		63946FF617B45B2800EADDD0 /* White_key_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key_active.png; path = KimZhyk/Resources/images/keys/White_key_active.png; sourceTree = "<group>"; };
 		63946FF717B45B2800EADDD0 /* White_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key.png; path = KimZhyk/Resources/images/keys/White_key.png; sourceTree = "<group>"; };
 		84ABFC051A12C14E00B6F95D /* KZSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSound.m; path = Sound/KZSound.m; sourceTree = "<group>"; };
+		84C74BAF1B81E0EB005ABEFB /* KZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSettingsViewController.h; sourceTree = "<group>"; };
+		84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSettingsViewController.m; sourceTree = "<group>"; };
+		84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSettingsViewController.xib; sourceTree = "<group>"; };
 		C3864CF417AD179500050EB5 /* KimZhyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimZhyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3864CF717AD179500050EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3864CF917AD179500050EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -23440,6 +23445,9 @@
 				5DC8D0C51AC570F700315372 /* KZMenuViewController.h */,
 				5DC8D0C61AC570F700315372 /* KZMenuViewController.m */,
 				5DC8D0C71AC570F700315372 /* KZMenuViewController.xib */,
+				84C74BAF1B81E0EB005ABEFB /* KZSettingsViewController.h */,
+				84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */,
+				84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */,
 				CED037BB1AC719CA006D8BD5 /* KZSongsListViewController.h */,
 				CED037BC1AC719CA006D8BD5 /* KZSongsListViewController.m */,
 				CED037BD1AC719CA006D8BD5 /* KZSongsListViewController.xib */,
@@ -27567,6 +27575,7 @@
 				58FD23FB1B186E1C00CA8642 /* corgan1g.mp3 in Resources */,
 				58FD25A41B186E1C00CA8642 /* eguitar1g.mp3 in Resources */,
 				58FD28201B186E1C00CA8642 /* flute2g.mp3 in Resources */,
+				84C74BB31B81E0EB005ABEFB /* KZSettingsViewController.xib in Resources */,
 				58FD1C511B186E1C00CA8642 /* cello4g.mp3 in Resources */,
 				58FD190F1B186E1C00CA8642 /* corgan5g.mp3 in Resources */,
 				58FD23F31B186E1C00CA8642 /* aguitar3g.mp3 in Resources */,
@@ -28387,6 +28396,7 @@
 				58DAD5531B0E259B00DF31A2 /* EPSSampler.m in Sources */,
 				5DD4FDCC1AC4214800BAF31E /* EZRecorder.m in Sources */,
 				CED037C31AC71C4F006D8BD5 /* KZAboutViewController.m in Sources */,
+				84C74BB21B81E0EB005ABEFB /* KZSettingsViewController.m in Sources */,
 				58D1C8CA1B1491D900794C9C /* PianoKeyWhite.m in Sources */,
 				CED037BE1AC719CA006D8BD5 /* KZSongsListViewController.m in Sources */,
 				5DD4FDCA1AC4214800BAF31E /* EZOutput.m in Sources */,

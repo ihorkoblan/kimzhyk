@@ -19,10 +19,13 @@ This could easily be changed to create a piano with any number of keys in any nu
 // Piano Key
 #import "PianoKey.h"
 
+#import "KZSettingsView.h"
+
 // Declare a piano view delegate
 @protocol PianoViewDelegate;
 
-@interface PianoView : UIView <PianoKeyDelegate>
+@interface PianoView : UIView <PianoKeyDelegate,KZSettingsViewDelegate>
+@property (nonatomic,readwrite) float whiteKeyWidth;
 
 @property (nonatomic) IBOutlet id <PianoViewDelegate> delegate;
 

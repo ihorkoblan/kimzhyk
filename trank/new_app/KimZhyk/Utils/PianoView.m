@@ -11,6 +11,7 @@
 #import "PianoKeyBlack.h"
 #import "PianoKeyWhite.h"
 
+
 #import "PianoView.h"
 
 @interface PianoView()
@@ -19,15 +20,16 @@
 @property (nonatomic) NSArray *whiteKeys;
 @property (nonatomic) NSArray *blackKeys;
 @property (nonatomic) NSArray *allKeys;
-
 @end
 
 @implementation PianoView {
-    float whiteKeyWidth;
+    
+    
 }
+@synthesize whiteKeyWidth = _whiteKeyWidth;
 
 #pragma mark - Setup
-
+_whiteKeyWidth = 18.f;
 -(id)init {
     self = [super init];
     if (self) {
@@ -44,6 +46,10 @@
 
 #pragma mark - Piano Keys
 
+- (void)setWhiteKeyWidth:(float)whiteKeyWidth {
+    _whiteKeyWidth = whiteKeyWidth;
+    [self layoutPianoKeys];
+}
 
 -(void)layoutPianoKeys {
     // Check if keys have already been created
@@ -53,10 +59,14 @@
     NSMutableArray *tempWhiteKeys = !alreadyCreated ? [[NSMutableArray alloc] init] : nil;
     NSMutableArray *tempBlackKeys = !alreadyCreated ? [[NSMutableArray alloc] init] : nil;
     NSMutableArray *tempAllKeys = !alreadyCreated ? [[NSMutableArray alloc] init] : nil;
-    
     // Set up the piano key sizes
-    whiteKeyWidth = (self.bounds.size.width/TOTAL_WHITE_KEYS);
-    float blackWidth = whiteKeyWidth/1.5;
+    //_whiteKeyWidth = _whiteKeyWidth +15;
+   if (_whiteKeyWidth == 0.f)
+    {
+        _whiteKeyWidth = 28.f;
+    
+    }
+    float blackWidth = _whiteKeyWidth/1.5;
     float blackHeight = self.bounds.size.height/2;
     
     // Create a variable to hold the current key index
@@ -71,7 +81,7 @@
     for (int i = 0; i < TOTAL_WHITE_KEYS; i++) {
         
         // Setup the white key frame
-        CGRect whiteKeyFrame = CGRectMake(whiteKeyWidth*i, 0, whiteKeyWidth, self.bounds.size.height);
+        CGRect whiteKeyFrame = CGRectMake(_whiteKeyWidth*i, 0, _whiteKeyWidth, self.bounds.size.height);
         
         // Check if keys already exisits
         if (alreadyCreated) {

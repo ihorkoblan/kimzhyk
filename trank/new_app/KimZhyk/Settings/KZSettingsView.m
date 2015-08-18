@@ -7,7 +7,7 @@
 //
 
 #import "KZSettingsView.h"
-#import "KZStaveView.h"
+//#import "KZStaveView.h"
 #import "UIButton+Custom.h"
 #import "KZInstrumentsHelper.h"
 #import "KZInstrumentSelectionView.h"
@@ -20,12 +20,22 @@
     IBOutlet UILabel *_instrumentLabel;
     IBOutlet UILabel *_noteLabel;
     IBOutlet UIButton *_recorBtn;
+    //ndfdgusdguihwind juwbu jdnd dhdsij 
 }
 
 @end
 
 @implementation KZSettingsView
-@synthesize delegate;
+@synthesize delegate, keyWidthSlider;
+
+- (IBAction)ChangeKeyWidth {
+    
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:sliderValueChanged:)]) {
+        [self.delegate KZSettingView:self sliderValueChanged:keyWidthSlider.value];
+    }
+    
+}
 
 - (void)setInstrument:(NSString *)instrument {
     _instrument = instrument;
