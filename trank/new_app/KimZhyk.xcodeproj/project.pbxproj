@@ -4834,6 +4834,8 @@
 		84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC051A12C14E00B6F95D /* KZSound.m */; };
 		84C74BB21B81E0EB005ABEFB /* KZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */; };
 		84C74BB31B81E0EB005ABEFB /* KZSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */; };
+		84D259431B83366500053333 /* KeyDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D259411B83366500053333 /* KeyDown.png */; };
+		84D259441B83366500053333 /* KeyUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D259421B83366500053333 /* KeyUp.png */; };
 		C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF717AD179500050EB5 /* UIKit.framework */; };
 		C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF917AD179500050EB5 /* Foundation.framework */; };
 		C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CFB17AD179500050EB5 /* CoreGraphics.framework */; };
@@ -9724,6 +9726,8 @@
 		84C74BAF1B81E0EB005ABEFB /* KZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSettingsViewController.h; sourceTree = "<group>"; };
 		84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSettingsViewController.m; sourceTree = "<group>"; };
 		84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSettingsViewController.xib; sourceTree = "<group>"; };
+		84D259411B83366500053333 /* KeyDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyDown.png; sourceTree = "<group>"; };
+		84D259421B83366500053333 /* KeyUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyUp.png; sourceTree = "<group>"; };
 		C3864CF417AD179500050EB5 /* KimZhyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimZhyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3864CF717AD179500050EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3864CF917AD179500050EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -23322,6 +23326,8 @@
 		638FE8BA17B43DAC009212D9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84D259411B83366500053333 /* KeyDown.png */,
+				84D259421B83366500053333 /* KeyUp.png */,
 				58EF77C11B14CBB900CB8469 /* instruments */,
 				5DD4FE391AC467B100BAF31E /* goon_btn.png */,
 				5DD4FE311AC464B800BAF31E /* pause_btn.png */,
@@ -26696,6 +26702,7 @@
 				58FD25901B186E1C00CA8642 /* acordeon1g.mp3 in Resources */,
 				58FD24CA1B186E1C00CA8642 /* cello3g.mp3 in Resources */,
 				58FD285E1B186E1C00CA8642 /* corgan4g.mp3 in Resources */,
+				84D259431B83366500053333 /* KeyDown.png in Resources */,
 				58FD1BB01B186E1C00CA8642 /* flute3g.mp3 in Resources */,
 				58FD1D661B186E1C00CA8642 /* cello1g.mp3 in Resources */,
 				58FD19571B186E1C00CA8642 /* eguitar2g.mp3 in Resources */,
@@ -26826,6 +26833,7 @@
 				58FD22FB1B186E1C00CA8642 /* acordeon5g.mp3 in Resources */,
 				58FD23DF1B186E1C00CA8642 /* eguitar3g.mp3 in Resources */,
 				58FD28671B186E1C00CA8642 /* flute3g.mp3 in Resources */,
+				84D259441B83366500053333 /* KeyUp.png in Resources */,
 				58FD19CD1B186E1C00CA8642 /* piano5g.mp3 in Resources */,
 				58FD20C21B186E1C00CA8642 /* piano1g.mp3 in Resources */,
 				58FD24EB1B186E1C00CA8642 /* cello1g.mp3 in Resources */,

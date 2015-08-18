@@ -29,7 +29,7 @@
 @synthesize whiteKeyWidth = _whiteKeyWidth;
 
 #pragma mark - Setup
-_whiteKeyWidth = 18.f;
+
 -(id)init {
     self = [super init];
     if (self) {
@@ -63,7 +63,7 @@ _whiteKeyWidth = 18.f;
     //_whiteKeyWidth = _whiteKeyWidth +15;
    if (_whiteKeyWidth == 0.f)
     {
-        _whiteKeyWidth = 28.f;
+        _whiteKeyWidth = 34;
     
     }
     float blackWidth = _whiteKeyWidth/1.5;

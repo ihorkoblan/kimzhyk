@@ -144,9 +144,14 @@
     if (self.settingsView) {
         static BOOL sIsOpen = NO;
         [UIView animateWithDuration:0.3 animations:^{
+            
             self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, sIsOpen ? -40.0f : self.view.bounds.size.height / 2.0f);
         }];
         sIsOpen = !sIsOpen;
+        if (!sIsOpen) {
+            [ sender setBackgroundImage:[UIImage imageNamed:@"KeyDown.png"] forState:UIControlStateNormal];
+        }
+        else [ sender setBackgroundImage:[UIImage imageNamed:@"KeyUp.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -154,7 +159,6 @@
 - (void)KZSettingView:(id)settingsView sliderValueChanged:(CGFloat)value {
 
     pianoView.whiteKeyWidth = value;
-    scroller.backgroundColor = [UIColor redColor];
     scroller.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
     
     

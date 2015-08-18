@@ -98,8 +98,10 @@
             break;
         }
         case OPENCLOSE_BTN_TAG: {
+            
             if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:openInstrumentsBtnPressed:)]) {
                 [self.delegate performSelector:@selector(KZSettingView:openInstrumentsBtnPressed:) withObject:self withObject:sender];
+                
             }
             break;
         }
