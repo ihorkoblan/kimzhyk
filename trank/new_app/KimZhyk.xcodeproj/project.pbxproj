@@ -4832,10 +4832,14 @@
 		63946FFC17B45B2800EADDD0 /* White_key_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF617B45B2800EADDD0 /* White_key_active.png */; };
 		63946FFD17B45B2800EADDD0 /* White_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 63946FF717B45B2800EADDD0 /* White_key.png */; };
 		84ABFC061A12C14E00B6F95D /* KZSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABFC051A12C14E00B6F95D /* KZSound.m */; };
+		84C568D71B8B5BFA00E694F7 /* Scroller1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84C568D61B8B5BFA00E694F7 /* Scroller1.jpg */; };
+		84C6F7091B8610DF00447FC4 /* OwnSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C6F7081B8610DF00447FC4 /* OwnSlider.m */; };
 		84C74BB21B81E0EB005ABEFB /* KZSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */; };
 		84C74BB31B81E0EB005ABEFB /* KZSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */; };
 		84D259431B83366500053333 /* KeyDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D259411B83366500053333 /* KeyDown.png */; };
 		84D259441B83366500053333 /* KeyUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D259421B83366500053333 /* KeyUp.png */; };
+		84D259461B837F4900053333 /* Scroller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84D259451B837F4900053333 /* Scroller.jpg */; };
+		84D2594C1B83961300053333 /* ScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2594B1B83961300053333 /* ScrollerView.m */; };
 		C3864CF817AD179500050EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF717AD179500050EB5 /* UIKit.framework */; };
 		C3864CFA17AD179500050EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CF917AD179500050EB5 /* Foundation.framework */; };
 		C3864CFC17AD179500050EB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3864CFB17AD179500050EB5 /* CoreGraphics.framework */; };
@@ -9723,11 +9727,17 @@
 		63946FF617B45B2800EADDD0 /* White_key_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key_active.png; path = KimZhyk/Resources/images/keys/White_key_active.png; sourceTree = "<group>"; };
 		63946FF717B45B2800EADDD0 /* White_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White_key.png; path = KimZhyk/Resources/images/keys/White_key.png; sourceTree = "<group>"; };
 		84ABFC051A12C14E00B6F95D /* KZSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZSound.m; path = Sound/KZSound.m; sourceTree = "<group>"; };
+		84C568D61B8B5BFA00E694F7 /* Scroller1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scroller1.jpg; sourceTree = "<group>"; };
+		84C6F7071B8610DF00447FC4 /* OwnSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnSlider.h; sourceTree = "<group>"; };
+		84C6F7081B8610DF00447FC4 /* OwnSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnSlider.m; sourceTree = "<group>"; };
 		84C74BAF1B81E0EB005ABEFB /* KZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSettingsViewController.h; sourceTree = "<group>"; };
 		84C74BB01B81E0EB005ABEFB /* KZSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSettingsViewController.m; sourceTree = "<group>"; };
 		84C74BB11B81E0EB005ABEFB /* KZSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZSettingsViewController.xib; sourceTree = "<group>"; };
 		84D259411B83366500053333 /* KeyDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyDown.png; sourceTree = "<group>"; };
 		84D259421B83366500053333 /* KeyUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyUp.png; sourceTree = "<group>"; };
+		84D259451B837F4900053333 /* Scroller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scroller.jpg; sourceTree = "<group>"; };
+		84D2594A1B83961300053333 /* ScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollerView.h; sourceTree = "<group>"; };
+		84D2594B1B83961300053333 /* ScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerView.m; sourceTree = "<group>"; };
 		C3864CF417AD179500050EB5 /* KimZhyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimZhyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3864CF717AD179500050EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3864CF917AD179500050EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -23261,6 +23271,8 @@
 				58EF77FE1B14EA1700CB8469 /* PianoView */,
 				5DC4DF9E1ABB153F00C21071 /* KZPianoSlider.h */,
 				5DC4DF9F1ABB153F00C21071 /* KZPianoSlider.m */,
+				84C6F7071B8610DF00447FC4 /* OwnSlider.h */,
+				84C6F7081B8610DF00447FC4 /* OwnSlider.m */,
 				5DC83D631AC980E400124BB0 /* KZTextAlert.h */,
 				5DC83D641AC980E400124BB0 /* KZTextAlert.m */,
 				5DC83D661AC9811300124BB0 /* KZTextAlert.xib */,
@@ -23326,6 +23338,8 @@
 		638FE8BA17B43DAC009212D9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84D259451B837F4900053333 /* Scroller.jpg */,
+				84C568D61B8B5BFA00E694F7 /* Scroller1.jpg */,
 				84D259411B83366500053333 /* KeyDown.png */,
 				84D259421B83366500053333 /* KeyUp.png */,
 				58EF77C11B14CBB900CB8469 /* instruments */,
@@ -23352,6 +23366,15 @@
 				63946FF717B45B2800EADDD0 /* White_key.png */,
 			);
 			name = keys;
+			sourceTree = "<group>";
+		};
+		84D259491B8395DA00053333 /* Scroller */ = {
+			isa = PBXGroup;
+			children = (
+				84D2594A1B83961300053333 /* ScrollerView.h */,
+				84D2594B1B83961300053333 /* ScrollerView.m */,
+			);
+			name = Scroller;
 			sourceTree = "<group>";
 		};
 		C3864CEB17AD179500050EB5 = {
@@ -23396,6 +23419,7 @@
 		C3864CFD17AD179500050EB5 /* KimZhyk */ = {
 			isa = PBXGroup;
 			children = (
+				84D259491B8395DA00053333 /* Scroller */,
 				580FC9C41B2363FC0078E0C0 /* KZSongRecorder.h */,
 				580FC9C51B2363FC0078E0C0 /* KZSongRecorder.m */,
 				580FC9BD1B23620A0078E0C0 /* DB */,
@@ -24707,6 +24731,7 @@
 				58FD222C1B186E1C00CA8642 /* aguitar3g.mp3 in Resources */,
 				58FD1E471B186E1C00CA8642 /* flute1g.mp3 in Resources */,
 				58FD20A61B186E1C00CA8642 /* acordeon3g.mp3 in Resources */,
+				84C568D71B8B5BFA00E694F7 /* Scroller1.jpg in Resources */,
 				58FD282A1B186E1C00CA8642 /* acordeon2g.mp3 in Resources */,
 				58FD260A1B186E1C00CA8642 /* corgan3g.mp3 in Resources */,
 				58FD1E9E1B186E1C00CA8642 /* aguitar3g.mp3 in Resources */,
@@ -27692,6 +27717,7 @@
 				58FD1F3B1B186E1C00CA8642 /* eguitar5g.mp3 in Resources */,
 				58FD195D1B186E1C00CA8642 /* flute3g.mp3 in Resources */,
 				58FD2B161B186E1D00CA8642 /* tsax4g.mp3 in Resources */,
+				84D259461B837F4900053333 /* Scroller.jpg in Resources */,
 				58FD20E61B186E1C00CA8642 /* piano2g.mp3 in Resources */,
 				58FD1E371B186E1C00CA8642 /* aguitar5g.mp3 in Resources */,
 				58FD1F6C1B186E1C00CA8642 /* acordeon4g.mp3 in Resources */,
@@ -28386,8 +28412,10 @@
 				5DD4FD4F1AC3FAF700BAF31E /* KZFileManager.m in Sources */,
 				5DD4FDCB1AC4214800BAF31E /* EZPlot.m in Sources */,
 				5DC8D0C31AC5433C00315372 /* KZLockView.m in Sources */,
+				84C6F7091B8610DF00447FC4 /* OwnSlider.m in Sources */,
 				5DD4FDC41AC4214800BAF31E /* EZAudioFile.m in Sources */,
 				58EF77FD1B14E91000CB8469 /* KZDesign.m in Sources */,
+				84D2594C1B83961300053333 /* ScrollerView.m in Sources */,
 				5DD4FDC61AC4214800BAF31E /* EZAudioPlot.m in Sources */,
 				58E598651B16221900A8FAD0 /* KZNoteRecorder.m in Sources */,
 				580FC9B61B2360370078E0C0 /* KimZhykDB.xcdatamodeld in Sources */,
@@ -28498,7 +28526,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -28506,7 +28534,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
+				PROVISIONING_PROFILE = "61a7827a-28e2-443b-af86-4247b63e2b1e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -28517,7 +28545,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Koblan (8929G5TUQF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Koblan (8929G5TUQF)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -28525,7 +28553,7 @@
 				INFOPLIST_FILE = "KimZhyk/KimZhyk-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1a7c7cd2-b771-4add-9b1a-1aabc9ed1704";
+				PROVISIONING_PROFILE = "61a7827a-28e2-443b-af86-4247b63e2b1e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

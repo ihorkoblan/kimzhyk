@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-o8-aW3">
-                    <rect key="frame" x="13" y="238" width="82" height="70"/>
+                    <rect key="frame" x="15" y="242" width="82" height="70"/>
                     <color key="backgroundColor" red="0.56862745100000001" green="0.62352941179999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="HOME">
@@ -24,14 +24,14 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instrument" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWY-eg-1DY">
-                    <rect key="frame" x="143" y="273" width="217" height="35"/>
+                    <rect key="frame" x="145" y="277" width="217" height="35"/>
                     <color key="backgroundColor" red="0.57254901960000004" green="0.62745098040000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIb-b0-uwX">
-                    <rect key="frame" x="374" y="238" width="82" height="70"/>
+                    <rect key="frame" x="376" y="242" width="82" height="70"/>
                     <color key="backgroundColor" red="0.20944289405437794" green="0.21720231529156903" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="REC">
@@ -42,20 +42,20 @@
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="TdE-bZ-pA0"/>
                     </connections>
                 </button>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="34" minValue="28" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="VzO-NC-0Xe">
-                    <rect key="frame" x="141" y="238" width="221" height="31"/>
-                    <connections>
-                        <action selector="ChangeKeyWidth" destination="iN0-l3-epB" eventType="valueChanged" id="Xhw-3g-qVt"/>
-                    </connections>
-                </slider>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNw-NM-OjE">
-                    <rect key="frame" x="470" y="238" width="82" height="70"/>
+                    <rect key="frame" x="472" y="242" width="82" height="70"/>
                     <color key="backgroundColor" red="0.57254901960000004" green="0.62745098040000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" backgroundImage="KeyDown.png"/>
                     <connections>
                         <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="d50-Bd-Zm8"/>
                     </connections>
                 </button>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="34" minValue="28" maxValue="46" translatesAutoresizingMaskIntoConstraints="NO" id="VzO-NC-0Xe">
+                    <rect key="frame" x="143" y="242" width="221" height="31"/>
+                    <connections>
+                        <action selector="ChangeKeyWidth" destination="iN0-l3-epB" eventType="valueChanged" id="Xhw-3g-qVt"/>
+                    </connections>
+                </slider>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -67,7 +67,7 @@
                 <outlet property="_instrumentLabel" destination="NWY-eg-1DY" id="gST-pg-LEE"/>
                 <outlet property="keyWidthSlider" destination="VzO-NC-0Xe" id="zvZ-wY-yoT"/>
             </connections>
-            <point key="canvasLocation" x="149" y="150"/>
+            <point key="canvasLocation" x="169" y="170"/>
         </view>
     </objects>
     <resources>

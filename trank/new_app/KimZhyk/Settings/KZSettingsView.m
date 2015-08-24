@@ -26,10 +26,12 @@
 @end
 
 @implementation KZSettingsView
-@synthesize delegate, keyWidthSlider;
+@synthesize delegate, keyWidthSlider, valueOfKeyWidth;
 
 - (IBAction)ChangeKeyWidth {
     
+    valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
+    [ valueOfKeyWidth setFloat: keyWidthSlider.value forKey:@"Value" ];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:sliderValueChanged:)]) {
         [self.delegate KZSettingView:self sliderValueChanged:keyWidthSlider.value];

@@ -17,20 +17,28 @@
 #import "KZNoteRecorder.h"
 #import "KZSongRecorder.h"
 #import "KZTextAlert.h"
+#import "OwnSlider.h"
+
 
 #define SCROLLER_TAG 1
 #define SAVE_ALERT_TAG 3
 
-@interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate, UIAlertViewDelegate, KZTextAlertDelegate>{
+
+@interface KZViewController () <PianoViewDelegate, UIScrollViewDelegate, UIAlertViewDelegate, KZTextAlertDelegate, OwnSliderDelegate>{
     KZNoteRecorder *_noteRecorder;
     PianoView *pianoView;
-    UIScrollView *scroller;
+    OwnSlider *ownslider;
+    
+    
 }
 
 @property (nonatomic, strong) UIScrollView *pianoScrollView;
-@property(nonatomic, strong) KZSettingsView *settingsView;
+@property (nonatomic, strong) UIScrollView *scroller;
+@property (nonatomic, strong) UIView *lOwnScroller;
+@property (nonatomic, strong) KZSettingsView *settingsView;
 @property (nonatomic, strong) KZKeyboardManager *keyboardManager;
 @property (nonatomic, strong) KZSongRecorder *recorder;
+@property (nonatomic) CGFloat width;
 
 @end
 
@@ -70,26 +78,18 @@
     _isRecording = NO;
     self.recorder = [KZSongRecorder new];
     CGFloat lOffset = 200.0;
-    CGFloat pianoWidth = 1800.0f;
-    scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
-                                                                            self.view.bounds.size.height - lOffset,
-                                                                            self.view.bounds.size.width,
-                                                                            20.0)];
-    scroller.backgroundColor = [UIColor yellowColor];
-    scroller.delegate = self;
-    scroller.contentSize = CGSizeMake(pianoWidth, 20.0);
-    scroller.tag = SCROLLER_TAG;
-    [self.view addSubview:scroller];
+    CGFloat pianoWidth = 34 * TOTAL_WHITE_KEYS ;
     
     self.pianoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
                                                                         self.view.bounds.size.height - lOffset+20,
                                                                         self.view.bounds.size.width,
                                                                         lOffset - 20.0)];
-    self.pianoScrollView.contentSize = CGSizeMake(pianoWidth, self.pianoScrollView.bounds.size.height);
+    self.pianoScrollView.contentSize = CGSizeMake( pianoWidth, self.pianoScrollView.bounds.size.height);
     [self.view addSubview:self.pianoScrollView];
     self.pianoScrollView.gestureRecognizers =  nil;
     self.pianoScrollView.delegate = self;
-    
+
+// PianoView
     pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
                                                                        0.0,
                                                                        self.pianoScrollView.contentSize.width,
@@ -99,18 +99,40 @@
     
     self.keyboardManager = [[KZKeyboardManager alloc] initWithPiano:pianoView];
     
+    
+    // Own_Slider
+    
+    ownslider = [[OwnSlider alloc] initWithFrame:CGRectMake(0.0,
+                                                            self.view.bounds.size.height - 205.0f,
+                                                            self.view.bounds.size.width,
+                                                            40.0f)];
+    [self.view addSubview:ownslider];
+    ownslider.delegate = self;
+
+    
 //    settingsView
     self.settingsView = [KZSettingsView settingsView];
     self.settingsView.delegate = self;
-    self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, -40.0f);
+    self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, -50.0f);
     [self.view addSubview:self.settingsView];
+
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.tag == SCROLLER_TAG) {
-        self.pianoScrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, self.pianoScrollView.contentOffset.y);
-    }
+
+-(void) OwnSlider:(id)ownslider changedvalue:(CGFloat)value whithscrollersize:(CGFloat)sizeOfScroler {
+
+    CGFloat k = self.pianoScrollView.contentSize.width / (self.view.bounds.size.width);
+    self.pianoScrollView.contentOffset = CGPointMake( value * k, self.pianoScrollView.contentOffset.y);
 }
+
+/*- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.tag == SCROLLER_TAG) {
+        self.pianoScrollView.contentOffset = CGPointMake(self.view.bounds.size.width - scrollView.contentOffset.x, self.pianoScrollView.contentOffset.y);
+        CGFloat k = self.view.bounds.size.width / self.scroller.contentSize.width;
+        self.lOwnScroller.center = CGPointMake(self.view.bounds.size.width - (scrollView.contentOffset.x + self.view.bounds.size.width/2.0)*k,  self.lOwnScroller.center.y);
+    }
+} */
 
 - (void)KZSettingView:(id)settingsView instrumentChosen:(Instrument)instrument {
     self.keyboardManager.instrument = instrument;
@@ -145,7 +167,7 @@
         static BOOL sIsOpen = NO;
         [UIView animateWithDuration:0.3 animations:^{
             
-            self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, sIsOpen ? -40.0f : self.view.bounds.size.height / 2.0f);
+            self.settingsView.center = CGPointMake(self.view.bounds.size.width / 2.0f, sIsOpen ? -50.0f : self.view.bounds.size.height / 2.0f);
         }];
         sIsOpen = !sIsOpen;
         if (!sIsOpen) {
@@ -159,7 +181,8 @@
 - (void)KZSettingView:(id)settingsView sliderValueChanged:(CGFloat)value {
 
     pianoView.whiteKeyWidth = value;
-    scroller.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
+    self.pianoScrollView.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
+    ownslider.pianowidth = TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth;
     
     
 }

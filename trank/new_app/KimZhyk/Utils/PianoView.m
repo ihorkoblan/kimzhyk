@@ -10,7 +10,7 @@
 #import "UITouch+PianoKey.h"
 #import "PianoKeyBlack.h"
 #import "PianoKeyWhite.h"
-
+#import "KZSettingsView.h"
 
 #import "PianoView.h"
 
@@ -49,6 +49,7 @@
 - (void)setWhiteKeyWidth:(float)whiteKeyWidth {
     _whiteKeyWidth = whiteKeyWidth;
     [self layoutPianoKeys];
+    
 }
 
 -(void)layoutPianoKeys {
