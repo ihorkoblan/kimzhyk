@@ -20,21 +20,18 @@
     IBOutlet UILabel *_instrumentLabel;
     IBOutlet UILabel *_noteLabel;
     IBOutlet UIButton *_recorBtn;
-    //ndfdgusdguihwind juwbu jdnd dhdsij 
+     
 }
 
 @end
 
 @implementation KZSettingsView
-@synthesize delegate, keyWidthSlider, valueOfKeyWidth;
+@synthesize delegate, keyWidthSlider;
 
 - (IBAction)ChangeKeyWidth {
     
-    valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
-    [ valueOfKeyWidth setFloat: keyWidthSlider.value forKey:@"Value" ];
-    
     if (self.delegate && [self.delegate respondsToSelector:@selector(KZSettingView:sliderValueChanged:)]) {
-        [self.delegate KZSettingView:self sliderValueChanged:keyWidthSlider.value];
+        [self.delegate KZSettingView:self sliderValueChanged: keyWidthSlider.value];
     }
     
 }
@@ -49,13 +46,17 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-
+        
     }
     return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    NSUserDefaults *valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
+    [ valueOfKeyWidth setFloat: keyWidthSlider.value forKey:@"ValueOfSlider" ];
+    [ valueOfKeyWidth synchronize];
     
     KZInstrumentSelectionView *selectionView = [[KZInstrumentSelectionView alloc] initWithFrame:CGRectMake(10.0, 10.0, self.bounds.size.width - 20.0, 130.0)];
     selectionView.delegate_ = self;

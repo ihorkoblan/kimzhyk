@@ -19,7 +19,6 @@
 @property (nonatomic, unsafe_unretained) id<KZSettingsViewDelegate> delegate;
 @property (nonatomic, strong) NSString *note;
 @property (nonatomic, strong) NSString *instrument;
-@property (nonatomic, strong) NSUserDefaults *valueOfKeyWidth;
 
 + (KZSettingsView *)settingsView;
 - (IBAction)ChangeKeyWidth;

@@ -61,10 +61,11 @@
     NSMutableArray *tempBlackKeys = !alreadyCreated ? [[NSMutableArray alloc] init] : nil;
     NSMutableArray *tempAllKeys = !alreadyCreated ? [[NSMutableArray alloc] init] : nil;
     // Set up the piano key sizes
-    //_whiteKeyWidth = _whiteKeyWidth +15;
-   if (_whiteKeyWidth == 0.f)
+   if (_whiteKeyWidth == 0.0f)
     {
-        _whiteKeyWidth = 34;
+        NSUserDefaults *valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
+        _whiteKeyWidth = [ valueOfKeyWidth floatForKey:@"ValueOfSlider"];
+        
     
     }
     float blackWidth = _whiteKeyWidth/1.5;

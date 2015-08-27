@@ -78,13 +78,15 @@
     _isRecording = NO;
     self.recorder = [KZSongRecorder new];
     CGFloat lOffset = 200.0;
-    CGFloat pianoWidth = 34 * TOTAL_WHITE_KEYS ;
+    
+    NSUserDefaults *valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
+    CGFloat lPianoWidth = ([valueOfKeyWidth floatForKey:@"ValueOfSlider"] * TOTAL_WHITE_KEYS) ;
     
     self.pianoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,
                                                                         self.view.bounds.size.height - lOffset+20,
                                                                         self.view.bounds.size.width,
                                                                         lOffset - 20.0)];
-    self.pianoScrollView.contentSize = CGSizeMake( pianoWidth, self.pianoScrollView.bounds.size.height);
+    self.pianoScrollView.contentSize = CGSizeMake( lPianoWidth, self.pianoScrollView.bounds.size.height);
     [self.view addSubview:self.pianoScrollView];
     self.pianoScrollView.gestureRecognizers =  nil;
     self.pianoScrollView.delegate = self;
@@ -92,7 +94,7 @@
 // PianoView
     pianoView = [[PianoView alloc] initWithFrame:CGRectMake(0.0,
                                                                        0.0,
-                                                                       self.pianoScrollView.contentSize.width,
+                                                                       lPianoWidth,
                                                                        lOffset)];
     pianoView.multipleTouchEnabled = YES;
     [self.pianoScrollView addSubview:pianoView];
@@ -122,17 +124,11 @@
 -(void) OwnSlider:(id)ownslider changedvalue:(CGFloat)value whithscrollersize:(CGFloat)sizeOfScroler {
 
     CGFloat k = self.pianoScrollView.contentSize.width / (self.view.bounds.size.width);
-    self.pianoScrollView.contentOffset = CGPointMake( value * k, self.pianoScrollView.contentOffset.y);
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.pianoScrollView.contentOffset = CGPointMake( value * k, self.pianoScrollView.contentOffset.y);
+    }];
 }
-
-/*- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    if (scrollView.tag == SCROLLER_TAG) {
-        self.pianoScrollView.contentOffset = CGPointMake(self.view.bounds.size.width - scrollView.contentOffset.x, self.pianoScrollView.contentOffset.y);
-        CGFloat k = self.view.bounds.size.width / self.scroller.contentSize.width;
-        self.lOwnScroller.center = CGPointMake(self.view.bounds.size.width - (scrollView.contentOffset.x + self.view.bounds.size.width/2.0)*k,  self.lOwnScroller.center.y);
-    }
-} */
 
 - (void)KZSettingView:(id)settingsView instrumentChosen:(Instrument)instrument {
     self.keyboardManager.instrument = instrument;
@@ -182,6 +178,7 @@
 
     pianoView.whiteKeyWidth = value;
     self.pianoScrollView.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
+    pianoView.frame = CGRectMake(0.0f,0.0f,TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 200.f);
     ownslider.pianowidth = TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth;
     
     

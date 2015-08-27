@@ -7,16 +7,23 @@
 //
 
 #import "OwnSlider.h"
+#import "KZSettingsView.h"
+#import "PianoView.h"
 CGFloat delta;
 CGFloat scrollerIndicatorWidth;
 CGFloat indicatorPosition;
+
 @implementation OwnSlider
 
-@synthesize lSliderIndicator, delegate, touchLocation, pianowidth ;
+@synthesize lSliderIndicator, delegate, touchLocation, pianowidth;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
+    if ( self ) {
+    
+        NSUserDefaults *valueOfKeyWidth = [ NSUserDefaults standardUserDefaults];
+        scrollerIndicatorWidth = (self.bounds.size.width * self.bounds.size.width ) /
+                                 ([ valueOfKeyWidth floatForKey:@"ValueOfSlider"] * TOTAL_WHITE_KEYS);
         [self layoutOwnSlider];
     }
     return self;
@@ -25,7 +32,13 @@ CGFloat indicatorPosition;
 - (void)setPianowidth:(CGFloat)pianowidth {
     
     scrollerIndicatorWidth = (self.bounds.size.width * self.bounds.size.width )/ pianowidth;
-    lSliderIndicator.frame = CGRectMake(indicatorPosition, 0.0f, scrollerIndicatorWidth, 40.0f);
+    if ((indicatorPosition + lSliderIndicator.frame.size.width) >= self.bounds.size.width)
+    {
+        indicatorPosition = indicatorPosition  - ((indicatorPosition + lSliderIndicator.frame.size.width) - self.bounds.size.width);
+        lSliderIndicator.frame = CGRectMake(indicatorPosition, 0.0f, scrollerIndicatorWidth, 40.0f);
+    }
+           lSliderIndicator.frame = CGRectMake(indicatorPosition, 0.0f, scrollerIndicatorWidth, 40.0f);
+    
 }
 
 
@@ -36,13 +49,7 @@ CGFloat indicatorPosition;
     lSliderBackImage.image = [UIImage imageNamed:@"Scroller1.jpg"];
     [self addSubview:lSliderBackImage];
     
-    if (scrollerIndicatorWidth == 0)
-    {
-        scrollerIndicatorWidth = (self.bounds.size.width * self.bounds.size.width )/ (34 * 52);
-    }
-    
-    
-    
+
     lSliderIndicator = [[UIView alloc] initWithFrame: CGRectMake( 0.0f,
                                                                   0.0f,
                                                                   scrollerIndicatorWidth,
