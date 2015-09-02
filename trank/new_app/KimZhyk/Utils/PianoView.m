@@ -48,7 +48,10 @@
 
 - (void)setWhiteKeyWidth:(float)whiteKeyWidth {
     _whiteKeyWidth = whiteKeyWidth;
+    [UIView animateWithDuration:0.3 animations:^{
+
     [self layoutPianoKeys];
+        }];
     
 }
 
@@ -89,7 +92,9 @@
             // Use existing key
             PianoKeyWhite *whiteKey = self.whiteKeys[i];
             // Set its new frame
-            whiteKey.frame = whiteKeyFrame;
+            [UIView animateWithDuration:0.3 animations:^{
+                whiteKey.frame = whiteKeyFrame;
+            }];
         } else {
             // Create a new white piano key next to the last one
             PianoKeyWhite *whiteKey = [PianoKeyWhite newKeyWithFrame: whiteKeyFrame];
@@ -128,7 +133,11 @@
                     // Use existing key
                     PianoKeyBlack *blackKey = self.blackKeys[currentBlackKey];
                     // Set its new frame
+                    [UIView animateWithDuration:0.3 animations:^{
+                        
                     blackKey.frame = blackKeyFrame;
+                    
+                                       }];
                 } else {
                     // Create a new black key
                     PianoKeyBlack *blackKey = [PianoKeyBlack newKeyWithFrame:blackKeyFrame];

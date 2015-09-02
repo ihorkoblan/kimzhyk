@@ -125,9 +125,9 @@
 
     CGFloat k = self.pianoScrollView.contentSize.width / (self.view.bounds.size.width);
     [UIView animateWithDuration:0.3 animations:^{
-        
-        self.pianoScrollView.contentOffset = CGPointMake( value * k, self.pianoScrollView.contentOffset.y);
-    }];
+    
+    self.pianoScrollView.contentOffset = CGPointMake(k * value, self.pianoScrollView.contentOffset.y);
+           }];
 }
 
 - (void)KZSettingView:(id)settingsView instrumentChosen:(Instrument)instrument {
@@ -180,6 +180,16 @@
     self.pianoScrollView.contentSize = CGSizeMake(TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 20.0);
     pianoView.frame = CGRectMake(0.0f,0.0f,TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth, 200.f);
     ownslider.pianowidth = TOTAL_WHITE_KEYS * pianoView.whiteKeyWidth;
+    
+    NSUserDefaults *ownSliderValue = [ NSUserDefaults standardUserDefaults];
+    
+    CGFloat k = self.pianoScrollView.contentSize.width / self.view.bounds.size.width;
+    [UIView animateWithDuration:0.3 animations:^{
+        
+    self.pianoScrollView.contentOffset = CGPointMake(k * [ ownSliderValue floatForKey:@"OwnSliderValue"],
+                                                         self.pianoScrollView.contentOffset.y);
+    }];
+    
     
     
 }

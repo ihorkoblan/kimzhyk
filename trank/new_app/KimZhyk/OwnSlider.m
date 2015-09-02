@@ -38,12 +38,14 @@ CGFloat indicatorPosition;
     
     if ((indicatorPosition + lSliderIndicator.frame.size.width) >= self.bounds.size.width)
     {
-        indicatorPosition = indicatorPosition  - ((indicatorPosition + lSliderIndicator.frame.size.width) - self.bounds.size.width);
-        
-        lSliderIndicator.frame = CGRectMake(indicatorPosition , 0.0f, scrollerIndicatorWidth, 40.0f);
+        indicatorPosition = self.bounds.size.width - scrollerIndicatorWidth;
     }
     
         lSliderIndicator.frame = CGRectMake(indicatorPosition , 0.0f, scrollerIndicatorWidth, 40.0f);
+    NSUserDefaults *ownSliderValue = [ NSUserDefaults standardUserDefaults];
+    [ ownSliderValue setFloat: indicatorPosition forKey:@"OwnSliderValue"];
+    [ ownSliderValue synchronize];
+
     
 }
 
@@ -109,7 +111,7 @@ CGFloat indicatorPosition;
         indicatorPosition = lSliderIndicator.center.x - lSliderIndicator.frame.size.width / 2.0 ;
         
         [self.delegate OwnSlider: self
-                    changedvalue: lSliderIndicator.center.x - (lSliderIndicator.frame.size.width / 2.0)
+                    changedvalue: indicatorPosition
                whithscrollersize: lSliderIndicator.frame.size.width ];
     }
 }
