@@ -15,7 +15,7 @@ CGFloat indicatorPosition;
 
 @implementation OwnSlider
 
-@synthesize lSliderIndicator, delegate, touchLocation, pianowidth;
+@synthesize lSliderIndicator, delegate, touchLocation, pianowidth = _pianowidth ;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -31,13 +31,19 @@ CGFloat indicatorPosition;
 
 - (void)setPianowidth:(CGFloat)pianowidth {
     
-    scrollerIndicatorWidth = (self.bounds.size.width * self.bounds.size.width )/ pianowidth;
+    
+    _pianowidth = pianowidth;
+    scrollerIndicatorWidth = (self.bounds.size.width * self.bounds.size.width )/_pianowidth;
+   
+    
     if ((indicatorPosition + lSliderIndicator.frame.size.width) >= self.bounds.size.width)
     {
         indicatorPosition = indicatorPosition  - ((indicatorPosition + lSliderIndicator.frame.size.width) - self.bounds.size.width);
-        lSliderIndicator.frame = CGRectMake(indicatorPosition, 0.0f, scrollerIndicatorWidth, 40.0f);
+        
+        lSliderIndicator.frame = CGRectMake(indicatorPosition , 0.0f, scrollerIndicatorWidth, 40.0f);
     }
-           lSliderIndicator.frame = CGRectMake(indicatorPosition, 0.0f, scrollerIndicatorWidth, 40.0f);
+    
+        lSliderIndicator.frame = CGRectMake(indicatorPosition , 0.0f, scrollerIndicatorWidth, 40.0f);
     
 }
 

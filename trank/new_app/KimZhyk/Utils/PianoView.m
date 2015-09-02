@@ -84,7 +84,6 @@
         
         // Setup the white key frame
         CGRect whiteKeyFrame = CGRectMake(_whiteKeyWidth*i, 0, _whiteKeyWidth, self.bounds.size.height);
-        
         // Check if keys already exisits
         if (alreadyCreated) {
             // Use existing key
